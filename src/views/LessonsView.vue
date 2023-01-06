@@ -1,7 +1,9 @@
+<script setup>
+import LessonsVue from '../components/Lessons.vue';
+</script>
+
 <template>
-  <div class="lesson">
-    <h1>This is LESSONS PAGE</h1>
-  </div>
+  <LessonsVue/>
 </template>
 
 <style>

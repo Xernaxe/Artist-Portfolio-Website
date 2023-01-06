@@ -10,9 +10,6 @@
           <routerLink to="/contact" class="buttonLink">Contact</routerLink>
         </div>
       </div>
-      <div class="discoverRight">
-        VIDEO
-      </div>
     </div>
   </section>
 </template>
@@ -23,7 +20,11 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+
+.discoverSection{
+  width: 750px;
+}
 .buttonLink{
   padding:12px 75px;
   border-radius: 10px;

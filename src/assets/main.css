@@ -8,3 +8,14 @@ a{
 li{
   list-style-type: none;
 }
+
+section{
+  width: 954px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body{
+  background: linear-gradient(0deg, rgba(34,37,46,1) 70%, rgba(55,7,88,1) 100%);
+}
