@@ -1,8 +1,7 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import GalleryVue from './components/Gallery.vue';
-import HelloWorld from './components/HelloWorld.vue'
-import NavbarVue from './components/Navbar.vue';
+import GalleryVue from './components/globalComponents/Gallery.vue';
+import NavbarVue from './components/globalComponents/Navbar.vue';
 
 </script>
 

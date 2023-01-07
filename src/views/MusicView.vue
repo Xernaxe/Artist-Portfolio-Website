@@ -1,7 +1,9 @@
+<script setup>
+import SongsSectionVue from "../components/musicPage/SongsSection.vue"
+</script>
+
 <template>
-  <div class="music">
-    <h1>This is MUSIC PAGE</h1>
-  </div>
+  <SongsSectionVue/>
 </template>
 
 <style>

@@ -1,7 +1,7 @@
 <script setup>
-import EssayVue from "../components/Essay.vue";
-import MusicVue from "../components/Music.vue";
-import StoryVue from "../components/Story.vue";
+import EssayVue from "../components/storyPage/Essay.vue";
+import MusicVue from "../components/globalComponents/Music.vue";
+import StoryVue from "../components/storyPage/Story.vue";
 </script>
 
 <template>

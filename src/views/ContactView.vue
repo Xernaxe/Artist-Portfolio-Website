@@ -1,5 +1,5 @@
 <script setup>
-import HeroVue from '../components/Hero.vue';
+import HeroVue from '../components/homePage/Hero.vue';
 </script>
 
 

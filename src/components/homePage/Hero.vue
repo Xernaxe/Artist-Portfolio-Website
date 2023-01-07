@@ -1,7 +1,7 @@
 <template>
   <section class="heroSection">
     <div class="heroWrapperLeft">
-      <img class="heroImg" src="../assets/heroImg.png" alt="Photo of me">
+      <img class="heroImg" src="../../assets/heroImg.png" alt="Photo of me">
     </div>
     <div class="heroWrapperRight">
       <h1 class="heroHeader">Jan’Sedlák</h1>
@@ -39,6 +39,7 @@ export default {
   align-items: center;
   gap: 40px;
   margin: 40px 0;
+  flex-direction: row;
 }
 
 

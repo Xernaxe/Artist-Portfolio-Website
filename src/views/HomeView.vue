@@ -1,7 +1,7 @@
 <script setup>
-import DiscoverVue from '../components/Discover.vue';
-import HeroVue from '../components/Hero.vue';
-import MusicVue from '../components/Music.vue';
+import DiscoverVue from '../components/homePage/Discover.vue';
+import HeroVue from '../components/homePage/Hero.vue';
+import MusicVue from '../components/globalComponents/Music.vue';
 </script>
 
 <template>
