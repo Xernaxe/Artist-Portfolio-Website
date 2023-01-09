@@ -1,8 +1,10 @@
 @import './base.css';
+*{
+  color: #F1F1E6;
+}
 
 a{
   text-decoration: none;
-  color: black;
 }
 
 li{
@@ -18,4 +20,11 @@ section{
 
 body{
   background: linear-gradient(0deg, rgba(34,37,46,1) 70%, rgba(55,7,88,1) 100%);
+}
+
+.sectionH,
+.songsH {
+  text-align: center;
+  margin: 20px;
+  color: #9D9171;
 }

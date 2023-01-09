@@ -1,12 +1,13 @@
 <template>
   <section class="gallery">
     <div v-if="galleryArr" class="galleryInWrapper">
-      <div class="1">1</div>
-      <div class="1">2</div>
-      <div class="1">3</div>
-      <div class="1">4</div>
-      <div class="1">5</div>
-      <div class="1">5</div>
+      <img class="galleryImg" src="../../assets/heroImg.png" alt="Photo of me">
+      <img class="galleryImg" src="../../assets/heroImg.png" alt="Photo of me">
+      <img class="galleryImg" src="../../assets/heroImg.png" alt="Photo of me">
+      <img class="galleryImg" src="../../assets/heroImg.png" alt="Photo of me">
+      <img class="galleryImg" src="../../assets/heroImg.png" alt="Photo of me">
+      <img class="galleryImg" src="../../assets/heroImg.png" alt="Photo of me">
+      <img class="galleryImg" src="../../assets/heroImg.png" alt="Photo of me">
     </div>
     <div v-else class="loading">Loading...</div>
   </section>
@@ -29,4 +30,18 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+.gallery{
+  width: 100%;
+}
+.galleryInWrapper{
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+
+.galleryImg{
+  width: 286.6px;
+  border-radius: 10px;
+}
+</style>

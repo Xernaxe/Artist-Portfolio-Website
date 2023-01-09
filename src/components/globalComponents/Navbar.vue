@@ -5,7 +5,7 @@
         <ul class="navUL">
           <li v-for="item in orderedNavItems" :key="item.text">
             <div class="navDiv" v-if="item.active">
-              <p class="navLogo">Jan's</p>
+              <p class="navLogo">Jan'S</p>
               <routerLink :to="item.path">{{ item.text }}</routerLink>
             </div>
             <routerLink

@@ -22,21 +22,35 @@ export default {
 
 <style scoped>
 
-.discoverSection{
-  width: 750px;
+
+.discoverP{
+  text-align: center;
+  font-size: 24px;
+  color: #9D9171;
 }
+
 .buttonLink{
-  padding:12px 75px;
+  padding:9px 75px;
+  width: 220px;
+  text-align: center;
   border-radius: 10px;
-  background-color: bisque;
+  background: linear-gradient(0deg, rgba(157,145,113,1) 0%, rgba(215,215,215,1) 100%);
+  color: #201D1C;
   flex-basis: 50%;
 }
 
-.discoverWrapper{
+.discoverLeft{
   display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .buttonsWrapper{
   display: flex;
+  gap: 25px;
+}
+
+.discoverSection{
+  margin: 80px 0 100px;
 }
 </style>

@@ -3,8 +3,8 @@
     <blockquote class="blockquote">
       {{ quote }}
     </blockquote>
+    <p class="musicP">Black Coal Meadow - Jan Sedlák Trio</p>
     <div class="musicPlayer">
-      <p class="musicP">Black Coal Meadow - Jan Sedlák Trio</p>
       <div class="musicControls">
         <div class="controlsPlay">PLAY</div>
         <div class="controlsPause">PAUSE</div>
@@ -26,13 +26,21 @@ export default {
 
 <style scoped>
 
+.musicSection{
+  gap: 15px;
+  width: 750px;
+}
+
 .blockquote{
   text-align: center;
-  width: 924px;
 }
 
 .musicControls{
   display: flex;
 }
 
+.musicP{
+  font-style: italic;
+  font-size: 12px;
+}
 </style>

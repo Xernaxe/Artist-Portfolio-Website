@@ -4,17 +4,19 @@
       <img class="heroImg" src="../../assets/heroImg.png" alt="Photo of me">
     </div>
     <div class="heroWrapperRight">
-      <h1 class="heroHeader">Jan’Sedlák</h1>
-      <p class="heroP">“To me, there is great power in connecting people. I believe that through music, we can communicate regardless language barriers. Let music help us find a way to each other."</p>
-      <div class="socialsWrapper">
-        <img class="socialsImg" src="" alt="">
-        <img class="socialsImg" src="" alt="">
-        <img class="socialsImg" src="" alt="">
-        <img class="socialsImg" src="" alt="">
-        <img class="socialsImg" src="" alt="">
-        <img class="socialsImg" src="" alt="">
+      <div class="heroInWrapper">
+
+        <h1 class="heroHeader">Jan’Sedlák</h1>
+        <p class="heroP">“To me, there is great  power in connecting people. I believe that through music, we can communicate regardless language barriers. Let music help us find a way to each other."</p>
+        <div class="socialsWrapper">
+          <img class="socialsImg" src="../../assets/facebook.svg" alt="Facebook">
+          <img class="socialsImg" src="../../assets/spotify.svg" alt="Spotify">
+          <img class="socialsImg" src="../../assets/mail.svg" alt="Email">
+          <img class="socialsImg" src="../../assets/youtube.svg" alt="Youtube">
+          <img class="socialsImg" src="../../assets/soundcloud.svg" alt="Soundcloud">
+        </div>
       </div>
-      <!-- <div class="shopButton"> -->
+        <!-- <div class="shopButton"> -->
         <a href="" class="buttonLink">Shop</a>
       <!-- </div> -->
     </div>
@@ -29,15 +31,15 @@ export default {
 
 <style scoped>
 .heroImg{
-  width: 477px;
-  height: 477px;
+  width: 467px;
+  height: 467px;
   border-radius: 15px;
 }
 
 .heroSection{
   display: flex;
-  align-items: center;
-  gap: 40px;
+  align-items: flex-end;
+  gap: 20px;
   margin: 40px 0;
   flex-direction: row;
 }
@@ -45,6 +47,11 @@ export default {
 
 .heroWrapperRight{
   width: 440px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  
 }
 
 .heroHeader{
@@ -52,9 +59,12 @@ export default {
 }
 
 .buttonLink{
-  padding:12px 75px;
+  padding:9px 75px;
   border-radius: 10px;
-  background-color: bisque;
+  background: linear-gradient(0deg, rgba(157,145,113,1) 0%, rgba(215,215,215,1) 100%);
+  width: 220px;
+  text-align: center;
+  color: #201D1C;
 }
 
 .shopButton{
@@ -64,5 +74,18 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.socialsWrapper{
+  display: flex;
+  gap: 30px;
+}
+
+.socialsImg{
+  width: 48px;
+}
+
+.heroP{
+  margin: 10px 0 30px;
 }
 </style>

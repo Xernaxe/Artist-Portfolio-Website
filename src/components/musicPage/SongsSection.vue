@@ -3,8 +3,10 @@
   </script>
 
 <template>
-  <SongsContainerVue :section-text="'Discography'" :headerText="`Albums and EP’s`"/>
-  <SongsContainerVue :headerText="`Singles`"/>
+  <section class="Songs">
+    <SongsContainerVue :section-text="'Discography'" :headerText="`Albums and EP’s`"/>
+    <SongsContainerVue :headerText="`Singles`"/>
+  </section>
 </template>
 
 
