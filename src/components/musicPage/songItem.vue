@@ -1,4 +1,4 @@
-<!-- @click.native is deprecated but due to convenince it should work -->
+<!-- @click.native is deprecated but due to convenience it should work -->
 <template>
   <div class="popup" v-if="showPopup" @click.native="outsideClick">
     <div class="popupBox">

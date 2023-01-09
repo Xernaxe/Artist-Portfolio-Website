@@ -1,15 +1,8 @@
 <template>
   <section class="gallery">
-    <div v-if="galleryArr" class="galleryInWrapper">
-      <img class="galleryImg" src="../../assets/heroImg.png" alt="Photo of me">
-      <img class="galleryImg" src="../../assets/heroImg.png" alt="Photo of me">
-      <img class="galleryImg" src="../../assets/heroImg.png" alt="Photo of me">
-      <img class="galleryImg" src="../../assets/heroImg.png" alt="Photo of me">
-      <img class="galleryImg" src="../../assets/heroImg.png" alt="Photo of me">
-      <img class="galleryImg" src="../../assets/heroImg.png" alt="Photo of me">
-      <img class="galleryImg" src="../../assets/heroImg.png" alt="Photo of me">
+    <div class="galleryInWrapper">
+      <img  v-for="image in arr" :key="image" :src="image" class="galleryImg" />
     </div>
-    <div v-else class="loading">Loading...</div>
   </section>
 </template>
 
@@ -17,31 +10,47 @@
 export default {
   data() {
     return {
-      galleryArr: null
+      galleryArr: null,
+      arr: [
+        "src/assets/heroImg.png",
+        "src/assets/heroImg.png",
+        "src/assets/heroImg.png",
+        "src/assets/heroImg.png",
+        "src/assets/heroImg.png",
+        "src/assets/heroImg.png",
+        "src/assets/heroImg.png",
+      ],
     };
+  },
+  mounted(){
+    this.arr.unshift(this.arr[this.arr.length - 1])
+    this.arr.push(this.arr[1])
   },
   created() {
     fetch("https://vmadev.com/wp-json/wp/v2/posts?&categories=12&per_page=100")
       .then((response) => response.json())
       .then((data) => {
-        this.galleryArr = data
+        this.galleryArr = data;
       });
   },
 };
 </script>
 
 <style scoped>
-.gallery{
+.gallery {
   width: 100%;
-}
-.galleryInWrapper{
-  display: flex;
-  width: 100%;
+  position: relative;
   overflow: hidden;
+  flex-direction: row;
+}
+.galleryInWrapper {
+  display: flex;
+  position: relative;
+  width: 100%;
 }
 
-.galleryImg{
-  width: 286.6px;
+.galleryImg {
+  width: 289px;
   border-radius: 10px;
 }
 </style>
