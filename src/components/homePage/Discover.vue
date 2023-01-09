@@ -57,6 +57,6 @@ export default {
 }
 
 .discoverSection{
-  margin: 80px 0 100px;
+  margin: 70px 0 130px;
 }
 </style>

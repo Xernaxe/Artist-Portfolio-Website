@@ -12,7 +12,7 @@ import MusicContainerVue from './MusicContainer.vue';
 <style scoped>
   .Music{
     gap: 70px;
-    margin-bottom: 70px;
+    margin: 90px 0 130px 0;
   }
 
 </style>

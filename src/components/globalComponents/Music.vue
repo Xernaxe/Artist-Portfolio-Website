@@ -31,7 +31,7 @@ export default {
 .musicSection{
   gap: 15px;
   width: 750px;
-  margin-top: 100px;
+  margin-top: 130px;
 }
 
 .blockquote{
