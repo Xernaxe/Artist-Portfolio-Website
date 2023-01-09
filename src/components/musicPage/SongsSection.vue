@@ -13,7 +13,7 @@
 <style scoped>
 
   .Songs{
-    gap: 130px;
+    gap: 50px;
   }
   
 </style>

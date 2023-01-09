@@ -10,8 +10,8 @@
         <p class="heroP">“To me, there is great  power in connecting people. I believe that through music, we can communicate regardless language barriers. Let music help us find a way to each other."</p>
         <div class="socialsWrapper">
           <img class="socialsImg" src="/facebook.svg" alt="Facebook">
-          <img class="socialsImg" src="/spotify.svg" alt="Spotify">
           <img class="socialsImg" src="/mail.svg" alt="Email">
+          <img class="socialsImg" src="/spotify.svg" alt="Spotify">
           <img class="socialsImg" src="/youtube.svg" alt="Youtube">
           <img class="socialsImg" src="/soundcloud.svg" alt="Soundcloud">
         </div>
@@ -50,8 +50,6 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 30px;
-
-  
 }
 
 .heroHeader{
@@ -59,7 +57,6 @@ export default {
 }
 
 .buttonLink{
-
   border-radius: 10px;
   background: linear-gradient(0deg, rgba(157,145,113,1) 0%, rgba(215,215,215,1) 100%);
   width: 220px;
@@ -72,6 +69,7 @@ export default {
   gap: 15px;
   justify-content: center;
   align-items: center;
+  transition: all .3s ease-in-out;
 }
 
 .shopButton{
@@ -85,6 +83,11 @@ export default {
 
 .socialsImg:hover {
   transform: scale(1.2);
+  cursor: pointer;
+}
+
+.buttonLink:hover {
+  transform: scale(1.1);
   cursor: pointer;
 }
 
