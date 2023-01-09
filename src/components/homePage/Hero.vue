@@ -83,6 +83,11 @@ export default {
   justify-content: center;
 }
 
+.socialsImg:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
 .socialsWrapper{
   display: flex;
   gap: 30px;
@@ -90,6 +95,7 @@ export default {
 
 .socialsImg{
   width: 48px;
+  transition: all .3s ease-in-out;
 }
 
 .heroP{

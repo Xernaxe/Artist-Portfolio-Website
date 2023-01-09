@@ -63,12 +63,13 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin: 10px 0 30px 0;
     cursor: pointer;
   }
 
   .songArrow{
     transition: transform 0.8s;
   }
+
 
 </style>

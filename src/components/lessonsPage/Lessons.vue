@@ -21,6 +21,10 @@ export default {
   .Lessons{
     margin: 110px 0;
   }
+
+  .lessonsYoutubeEMB {
+    border-radius: 15px;
+  }
 .lessonsP{
     text-align: center;
     margin-top: 30px;

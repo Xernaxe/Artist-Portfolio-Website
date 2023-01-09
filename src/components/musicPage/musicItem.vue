@@ -67,6 +67,15 @@ export default {
   gap: 30px;
 }
 
+.link {
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+}
+
+.link:hover {
+  transform: scale(1.2);
+}
+
 .musicYoutubeEMB{
   width: 467px;
   height: 263px;
