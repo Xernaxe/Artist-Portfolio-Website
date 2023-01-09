@@ -16,4 +16,8 @@ export default {
   margin: 130px 0;
 }
 
+.playlistP {
+  text-align: center;
+}
+
 </style>

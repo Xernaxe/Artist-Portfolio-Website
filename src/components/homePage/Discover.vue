@@ -4,7 +4,7 @@
       <div class="discoverLeft">
         <p class="discoverP">Discover more of me and my music by clicking the links underneath</p>
         <div class="buttonsWrapper">
-          <routerLink to="/about" class="buttonLink">About</routerLink>
+          <routerLink to="/about" class="buttonLink">Story</routerLink>
           <routerLink to="/music" class="buttonLink">Music</routerLink>
           <routerLink to="/lessons" class="buttonLink">Lessons</routerLink>
           <routerLink to="/contact" class="buttonLink">Contact</routerLink>
