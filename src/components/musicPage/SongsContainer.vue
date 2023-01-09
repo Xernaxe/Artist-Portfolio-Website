@@ -3,14 +3,14 @@
     <h2 class="sectionH">{{ sectionText }}</h2>
     <h3 class="songsH">{{ headerText }}</h3>
     <div class="songsWrapper" :style="{ height: height + 'px'}">
-      <songItemVue :songName="`Footprints - Path I`" :albumName="`Agne Pasaravičienė/Jan Sedlák`" :imgSrc="`../../src/assets/heroImg.png`"/>
-      <songItemVue :songName="`Xhud`" :albumName="`Glen Montanaro`" :imgSrc="`../../src/assets/heroImg.png`"/>
-      <songItemVue :songName="`Cycle`" :albumName="`The Collective Abroad`" :imgSrc="`../../src/assets/heroImg.png`"/>
-      <songItemVue :songName="`Footprints - Path I`" :albumName="`Agne Pasaravičienė/Jan Sedlák`" :imgSrc="`../../src/assets/heroImg.png`"/>
-      <songItemVue :songName="`Xhud`" :albumName="`Glen Montanaro`" :imgSrc="`../../src/assets/heroImg.png`"/>
-      <songItemVue :songName="`Cycle`" :albumName="`The Collective Abroad`" :imgSrc="`../../src/assets/heroImg.png`"/>
+      <songItemVue :songName="`Footprints - Path I`" :albumName="`Agne Pasaravičienė/Jan Sedlák`" :imgSrc="`/heroImg.png`"/>
+      <songItemVue :songName="`Xhud`" :albumName="`Glen Montanaro`" :imgSrc="`/heroImg.png`"/>
+      <songItemVue :songName="`Cycle`" :albumName="`The Collective Abroad`" :imgSrc="`/heroImg.png`"/>
+      <songItemVue :songName="`Footprints - Path I`" :albumName="`Agne Pasaravičienė/Jan Sedlák`" :imgSrc="`/heroImg.png`"/>
+      <songItemVue :songName="`Xhud`" :albumName="`Glen Montanaro`" :imgSrc="`/heroImg.png`"/>
+      <songItemVue :songName="`Cycle`" :albumName="`The Collective Abroad`" :imgSrc="`/heroImg.png`"/>
     </div>
-    <div class="more" @click="changeHeight" v-if="songsArr.length > 3"><img class="songArrow" src="../../assets/songArrow.svg" alt="Button" :style="height == 340 ? '' : 'transform:rotate(180deg)'"></div>
+    <div class="more" @click="changeHeight" v-if="songsArr.length > 3"><img class="songArrow" src="/songArrow.svg" alt="Button" :style="height == 340 ? '' : 'transform:rotate(180deg)'"></div>
   </div>
 </template>
 
@@ -64,6 +64,7 @@ export default {
     justify-content: center;
     align-items: center;
     margin-top: 20px;
+    cursor: pointer;
   }
 
   .songArrow{

@@ -5,10 +5,14 @@ import StoryVue from "../components/storyPage/Story.vue";
 </script>
 
 <template>
-  <MusicVue quote="“To me, there is great power in connecting people. I believe that through music, we can communicate regardless language barriers. Let music help us find a way to each other."/>
-  <StoryVue/>
-  <EssayVue/>
+  <MusicVue
+    :audioSrc="'./RustyBridges.mp3'"
+    :audioTitle="'Rusty Bridges - The Collective Abroad'"
+    quote="“Once upon a time in my beloved homeland, I was driving my old Škoda 105 back from the 80's over another one of the rusty bridges. About a week before my ride, a similar bridge in the center of Prague collapsed with people on it. As I drive over the bridge, I hear the screws rattling. The bridge rumbles, the car roars. My heart stops beating, my breath stops and my Škoda 105 stops as well.”
+"
+  />
+  <StoryVue />
+  <EssayVue />
 </template>
 
-<style>
-</style>
+<style></style>

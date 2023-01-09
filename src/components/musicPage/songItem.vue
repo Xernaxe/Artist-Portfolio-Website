@@ -2,7 +2,7 @@
 <template>
   <div class="popup" v-if="showPopup" @click.native="outsideClick">
     <div class="popupBox">
-      <img class="close" src="../../assets/close.svg" alt="CLOSE" @click="togglePopup">
+      <img class="close" src="/close.svg" alt="CLOSE" @click="togglePopup">
       <div class="popupCd">
         <img class="popupCdImg" :src="imgSrc" alt="" />
         <div class="popupCdHole"></div>
@@ -12,10 +12,10 @@
         <h3 class="popupAlbumName">{{ albumName }}</h3>
         <h4 class="popupYear">2022</h4>
         <div class="links">
-          <img class="popupLink" src="../../assets/applemusic.svg" alt="Apple music" />
-          <img class="popupLink" src="../../assets/spotify.svg" alt="Spotify" />
-          <img class="popupLink" src="../../assets/youtube.svg" alt="Youtube" />
-          <img class="popupLink" src="../../assets/soundcloud.svg" alt="Soundcloud" />
+          <img class="popupLink" src="/applemusic.svg" alt="Apple music" />
+          <img class="popupLink" src="/spotify.svg" alt="Spotify" />
+          <img class="popupLink" src="/youtube.svg" alt="Youtube" />
+          <img class="popupLink" src="/soundcloud.svg" alt="Soundcloud" />
         </div>
         <h4 class="popupSubHeader">Line-up:</h4>
         <ul class="popupUL">
@@ -125,6 +125,7 @@ export default {
   border-radius: 10px;
   flex-basis: 31%;
   gap: 20px;
+  cursor: pointer;
   width: 300px;
   height: 320px;
   background: linear-gradient(

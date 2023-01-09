@@ -19,11 +19,11 @@ export default {
 <style scoped>
 
   .Lessons{
-    gap: 30px;
     margin: 110px 0;
   }
 .lessonsP{
     text-align: center;
+    margin-top: 30px;
   }
 
   .lessonsYoutubeEMB{

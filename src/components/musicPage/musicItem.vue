@@ -5,10 +5,10 @@
       <h3 class="albumName">{{albumName}}</h3>
       <div class="musicInWrapper">
         <h4 class="songName">{{songName}}</h4>
-        <img src="../../assets/applemusic.svg" alt="Apple music">
-        <img src="../../assets/spotify.svg" alt="Spotify">
-        <img src="../../assets/youtube.svg" alt="Youtube">
-        <img src="../../assets/soundcloud.svg" alt="Soundcloud">
+        <img src="/applemusic.svg" alt="Apple music">
+        <img src="/spotify.svg" alt="Spotify">
+        <img src="/youtube.svg" alt="Youtube">
+        <img src="/soundcloud.svg" alt="Soundcloud">
       </div>
       <p class="musicDescription">
         {{musicDescription}}

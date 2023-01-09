@@ -2,7 +2,7 @@
   <div class="storyItem">
     <h2 class="sectionH">Hi, my name is Jan, nice to meet you!</h2>
     <div class="storyWrapper" :class="reverse ? 'reverseFlex' : 'asd'">
-      <img class="storyImg" src="../../assets/heroImg.png" alt="Photo of me" />
+      <img class="storyImg" src="/heroImg.png" alt="Photo of me" />
       <p class="storyP">
         “Born and raised in the north of Czech Republic - a moon-like landscape
         of coal mines, mountains and brutalist constructions from the era of

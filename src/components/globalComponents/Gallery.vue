@@ -1,6 +1,6 @@
 <template>
   <section class="gallery">
-    <div class="galleryInWrapper">
+    <div class="galleryInWrapper" >
       <img  v-for="image in arr" :key="image" :src="image" class="galleryImg" />
     </div>
   </section>
@@ -9,21 +9,28 @@
 
 
 <script>
+
 export default {
   data() {
     return {
       galleryArr: null,
       arr: [
-        "src/assets/heroImg.png",
-        "src/assets/heroImg.png",
-        "src/assets/heroImg.png",
-        "src/assets/heroImg.png",
-        "src/assets/heroImg.png",
-        "src/assets/heroImg.png",
-        "src/assets/heroImg.png",
+        "/heroImg.png",
+        "/heroImg.png",
+        "/heroImg.png",
+        "/heroImg.png",
+        "/heroImg.png",
+        "/heroImg.png",
+        "/heroImg.png",
       ],
       index: 0,
+      slider: 0,
     };
+  },
+  methods:{
+    slide(){
+
+    }
   },
   created() {
     fetch("https://vmadev.com/wp-json/wp/v2/posts?&categories=12&per_page=100")
@@ -46,7 +53,8 @@ export default {
   display: flex;
   position: relative;
   width: 100%;
-  transform: translateX(-100%);
+  transform: translateX(0);
+  transition: transform 20s;
 }
 
 .galleryImg {

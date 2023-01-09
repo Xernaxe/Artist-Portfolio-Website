@@ -3,15 +3,18 @@
     <blockquote class="blockquote">
       {{ quote }}
     </blockquote>
-    <p class="musicP">Black Coal Meadow - Jan Sedlák Trio</p>
-    <div class="musicPlayer">
+    <p class="musicP">{{ audioTitle }}</p>
+    <audio controls :src="audioSrc" volume="0.5" type="audio/mpeg"></audio>
+    <!-- <div class="musicPlayer">
       <div class="musicControls">
-        <div class="controlsPlay">PLAY</div>
-        <div class="controlsPause">PAUSE</div>
+        <div class="controlsPlay"><img src="../../assets/playerPause.svg" alt=""></div>
+        <div class="controlsPlay" @click="playSong"><img src="../../assets/playerResume.svg" alt=""></div>
       </div>
-    </div>
+    </div> -->
   </section>
 </template>
+
+
 
 <script>
 export default {
@@ -19,8 +22,7 @@ export default {
     quote: String,
     audioSrc: String,
     audioTitle: String,
-  }
-
+  },
 }
 </script>
 
@@ -38,6 +40,11 @@ export default {
 
 .musicControls{
   display: flex;
+  gap: 7.5px;
+}
+
+.controlsPlay{
+  cursor: pointer;
 }
 
 .musicP{

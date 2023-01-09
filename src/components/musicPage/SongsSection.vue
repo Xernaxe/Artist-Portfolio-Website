@@ -10,6 +10,10 @@
 </template>
 
 
-<style>
+<style scoped>
 
+  .Songs{
+    gap: 130px;
+  }
+  
 </style>

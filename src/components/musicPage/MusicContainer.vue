@@ -9,9 +9,9 @@
           @click="Slider('back')"
           :class="index ? '' : 'invisible'"
         >
-        <img style="transform:rotate(180deg)" src="../../assets/musicArrow.svg" alt="NEXT">
+        <img style="transform:rotate(180deg)" src="/musicArrow.svg" alt="NEXT">
         </div>
-        <div class="Next" @click="Slider('next')"><img src="../../assets/musicArrow.svg" alt="NEXT"></div>
+        <div class="Next" @click="Slider('next')"><img src="/musicArrow.svg" alt="NEXT"></div>
       </div>
       <div class="slider">
         <div
@@ -95,6 +95,10 @@ export default {
   position: relative;
   display: flex;
   transition: transform 0.5s;
+}
+
+.Next, .Back{
+  cursor: pointer;
 }
 
 .buttons {

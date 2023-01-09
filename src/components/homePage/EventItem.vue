@@ -1,6 +1,6 @@
 <template>
   <div class="eventItem">
-    <img class="eventImg" src="../../assets/heroImg.png" alt="">
+    <img class="eventImg" src="/heroImg.png" alt="">
 
   </div>
 </template>
