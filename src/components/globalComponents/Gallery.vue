@@ -6,6 +6,8 @@
   </section>
 </template>
 
+
+
 <script>
 export default {
   data() {
@@ -20,11 +22,8 @@ export default {
         "src/assets/heroImg.png",
         "src/assets/heroImg.png",
       ],
+      index: 0,
     };
-  },
-  mounted(){
-    this.arr.unshift(this.arr[this.arr.length - 1])
-    this.arr.push(this.arr[1])
   },
   created() {
     fetch("https://vmadev.com/wp-json/wp/v2/posts?&categories=12&per_page=100")

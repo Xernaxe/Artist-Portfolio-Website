@@ -11,6 +11,9 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+.Playlist{
+  margin: 130px 0;
+}
 
 </style>

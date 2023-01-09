@@ -1,6 +1,6 @@
 <template>
   <div class="storyItem">
-    <h1 class="storyH">Hi, my name is Jan, nice to meet you!</h1>
+    <h2 class="sectionH">Hi, my name is Jan, nice to meet you!</h2>
     <div class="storyWrapper" :class="reverse ? 'reverseFlex' : 'asd'">
       <img class="storyImg" src="../../assets/heroImg.png" alt="Photo of me" />
       <p class="storyP">
@@ -37,6 +37,8 @@ export default {
 <style scoped>
 .storyWrapper{
   display: flex;
+  gap: 20px;
+  align-items: flex-end;
 }
 
 .storyImg{

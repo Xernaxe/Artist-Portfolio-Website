@@ -1,5 +1,6 @@
 <template>
   <section class="Story">
+
     <StoryItemVue/>
     <StoryItemVue :reverse='true'/>
   </section>
@@ -9,6 +10,10 @@
 import StoryItemVue from './StoryItem.vue'
 </script>
 
-<style>
+<style scoped>
+.Story{
+  margin: 130px 0;
+  gap: 130px;
+}
 
 </style>
