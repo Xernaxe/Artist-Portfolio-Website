@@ -37,6 +37,12 @@ export default {
   background: linear-gradient(0deg, rgba(157,145,113,1) 0%, rgba(215,215,215,1) 100%);
   color: #201D1C;
   flex-basis: 50%;
+  transition: all .3s ease-in-out;
+}
+
+.buttonLink:hover {
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
 .discoverLeft{

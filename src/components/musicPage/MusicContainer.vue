@@ -105,7 +105,9 @@ export default {
   display: flex;
   transform: translate(-50%, -50%);
   justify-content: space-between;
+  cursor: pointer;
 }
+
 
 .musicContainer {
   width: inherit;

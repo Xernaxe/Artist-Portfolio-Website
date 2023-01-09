@@ -5,10 +5,10 @@
       <h3 class="albumName">{{albumName}}</h3>
       <div class="musicInWrapper">
         <h4 class="songName">{{songName}}</h4>
-        <img src="../../assets/applemusic.svg" alt="Apple music">
-        <img src="../../assets/spotify.svg" alt="Spotify">
-        <img src="../../assets/youtube.svg" alt="Youtube">
-        <img src="../../assets/soundcloud.svg" alt="Soundcloud">
+        <img class="link" src="../../assets/applemusic.svg" alt="Apple music">
+        <img class="link" src="../../assets/spotify.svg" alt="Spotify">
+        <img class="link" src="../../assets/youtube.svg" alt="Youtube">
+        <img class="link" src="../../assets/soundcloud.svg" alt="Soundcloud">
       </div>
       <p class="musicDescription">
         {{musicDescription}}
@@ -65,6 +65,15 @@ export default {
   flex-direction: column;
   justify-content: flex-end;
   gap: 30px;
+}
+
+.link {
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+}
+
+.link:hover {
+  transform: scale(1.2);
 }
 
 .musicYoutubeEMB{

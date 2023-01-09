@@ -132,6 +132,7 @@ export default {
     rgba(157, 145, 113, 1) 0%,
     rgba(97, 53, 84, 1) 100%
   );
+  cursor: pointer;
 }
 .cdImg, .popupCdImg {
   width: 200px;
