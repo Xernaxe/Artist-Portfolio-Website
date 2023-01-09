@@ -46,6 +46,7 @@ export default {
   display: flex;
   position: relative;
   width: 100%;
+  transform: translateX(-100%);
 }
 
 .galleryImg {
