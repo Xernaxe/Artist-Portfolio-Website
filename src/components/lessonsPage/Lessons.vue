@@ -34,4 +34,18 @@ export default {
     width: 954px;
     height: 537px;
   }
+
+  @media only screen and (max-width: 426px) {
+  
+    .lessonsYoutubeEMB{
+      width: 257px;
+      height: 148px;
+    }
+
+    .lessonsP{
+    width: 80%
+  }
+}
+
+
 </style>

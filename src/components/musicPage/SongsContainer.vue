@@ -71,5 +71,11 @@ export default {
     transition: transform 0.8s;
   }
 
+  @media only screen and (max-width: 376px) {
+  .songsWrapper{
+    gap: 15px;
+    height: 200px!important;
+  }
+}
 
 </style>

@@ -1,42 +1,43 @@
 <template>
   <section class="heroSection">
     <div class="heroWrapperLeft">
-      <img class="heroImg" src="/heroImg.png" alt="Photo of me">
+      <img class="heroImg" src="/heroImg.png" alt="Photo of me" />
     </div>
     <div class="heroWrapperRight">
       <div class="heroInWrapper">
-
         <h1 class="heroHeader">Jan’Sedlák</h1>
-        <p class="heroP">“To me, there is great  power in connecting people. I believe that through music, we can communicate regardless language barriers. Let music help us find a way to each other."</p>
+        <p class="heroP">
+          “To me, there is great power in connecting people. I believe that
+          through music, we can communicate regardless language barriers. Let
+          music help us find a way to each other."
+        </p>
         <div class="socialsWrapper">
-          <img class="socialsImg" src="/facebook.svg" alt="Facebook">
-          <img class="socialsImg" src="/spotify.svg" alt="Spotify">
-          <img class="socialsImg" src="/mail.svg" alt="Email">
-          <img class="socialsImg" src="/youtube.svg" alt="Youtube">
-          <img class="socialsImg" src="/soundcloud.svg" alt="Soundcloud">
+          <img class="socialsImg" src="/facebook.svg" alt="Facebook" />
+          <img class="socialsImg" src="/spotify.svg" alt="Spotify" />
+          <img class="socialsImg" src="/mail.svg" alt="Email" />
+          <img class="socialsImg" src="/youtube.svg" alt="Youtube" />
+          <img class="socialsImg" src="/soundcloud.svg" alt="Soundcloud" />
         </div>
       </div>
-        <!-- <div class="shopButton"> -->
-        <a href="" class="buttonLink"><img src="/bandcamp.svg" alt=""> Shop</a>
+      <!-- <div class="shopButton"> -->
+      <a href="" class="buttonLink"><img src="/bandcamp.svg" alt="" /> Shop</a>
       <!-- </div> -->
     </div>
   </section>
 </template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
 <style scoped>
-.heroImg{
+.heroImg {
   width: 467px;
   height: 467px;
   border-radius: 15px;
 }
 
-.heroSection{
+.heroSection {
   display: flex;
   align-items: flex-end;
   gap: 20px;
@@ -44,28 +45,28 @@ export default {
   flex-direction: row;
 }
 
-
-.heroWrapperRight{
+.heroWrapperRight {
   width: 440px;
   display: flex;
   flex-direction: column;
   gap: 30px;
-
-  
 }
 
-.heroHeader{
+.heroHeader {
   font-size: 2.5rem;
 }
 
-.buttonLink{
-
+.buttonLink {
   border-radius: 10px;
-  background: linear-gradient(0deg, rgba(157,145,113,1) 0%, rgba(215,215,215,1) 100%);
+  background: linear-gradient(
+    0deg,
+    rgba(157, 145, 113, 1) 0%,
+    rgba(215, 215, 215, 1) 100%
+  );
   width: 220px;
   height: 45px;
   text-align: center;
-  color: #201D1C;
+  color: #201d1c;
   font-weight: 600;
   font-size: 18px;
   display: flex;
@@ -74,7 +75,7 @@ export default {
   align-items: center;
 }
 
-.shopButton{
+.shopButton {
   width: 200px;
   height: 45px;
   background-color: bisque;
@@ -88,17 +89,46 @@ export default {
   cursor: pointer;
 }
 
-.socialsWrapper{
+.socialsWrapper {
   display: flex;
   gap: 30px;
 }
 
-.socialsImg{
+.socialsImg {
   width: 48px;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
-.heroP{
+.heroP {
   margin: 10px 0 30px;
+}
+
+@media only screen and (max-width: 376px) {
+  .heroSection {
+    flex-direction: column;
+  }
+
+  .heroImg{
+    width: 257px;
+    height: 257px;
+  }
+
+  .heroWrapperRight{
+    width: 257px;
+    align-items: center;
+  }
+
+  .heroP{
+    text-align: center;
+  }
+
+  .heroHeader{
+    text-align: center;
+  }
+
+  .socialsWrapper{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 </style>

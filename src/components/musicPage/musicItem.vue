@@ -5,10 +5,12 @@
       <h3 class="albumName">{{albumName}}</h3>
       <div class="musicInWrapper">
         <h4 class="songName">{{songName}}</h4>
-        <img src="/applemusic.svg" alt="Apple music">
-        <img src="/spotify.svg" alt="Spotify">
-        <img src="/youtube.svg" alt="Youtube">
-        <img src="/soundcloud.svg" alt="Soundcloud">
+        <div class="socialsWrapper">
+          <img class="musicImg" src="/applemusic.svg" alt="Apple music">
+          <img class="musicImg" src="/spotify.svg" alt="Spotify">
+          <img class="musicImg" src="/youtube.svg" alt="Youtube">
+          <img class="musicImg" src="/soundcloud.svg" alt="Soundcloud">
+        </div>
       </div>
       <p class="musicDescription">
         {{musicDescription}}
@@ -89,4 +91,39 @@ export default {
 .musicDescription{
   color: #F1F1E6;
 }
+
+@media only screen and (max-width: 376px) {
+  .musicItem{
+    flex-direction: column;
+  }
+
+
+  .musicYoutubeEMB{
+    width: 257px;
+    height: 148px;
+  }
+
+  .musicInWrapper{
+    flex-direction: column;
+  }
+
+  .musicImg{
+    width: 48px;
+  }
+
+  .socialsWrapper{
+    display: flex;
+    gap: 20px;
+  }
+
+  .musicWrapper{
+    width: 257px;
+    gap: 10px;
+  }
+
+  .albumName, .songName{
+    text-align: center;
+  }
+}
+
 </style>

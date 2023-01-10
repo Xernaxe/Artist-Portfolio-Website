@@ -221,4 +221,36 @@ export default {
   background: linear-gradient(-20deg, #04070d 0%, #430c4a 100%);
   border-radius: 15px;
 }
+
+@media only screen and (max-width: 376px) {
+  .song{
+    min-width: 140px;
+    width: 140px;
+    min-height: 200px;
+    height: 200px;
+    gap: 10px;
+    justify-content: flex-start;
+    padding-top: 10px;
+  }
+
+  .songAlbum, .songName{
+    font-size: 12px;
+  }
+
+  .cdHole{
+    width: 18px;
+    height: 18px;
+  }
+
+  .cdImg{
+    width: 95px;
+    height: 95px;
+  }
+
+  .cd{
+    width: auto;
+    height: auto;
+  }
+  
+}
 </style>

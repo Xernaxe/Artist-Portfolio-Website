@@ -1,7 +1,12 @@
 <template>
   <section class="gallery">
     <div class="galleryInWrapper" >
-      <img  v-for="image in arr" :key="image" :src="image" class="galleryImg" />
+      <div v-for="image in arr" :key="image" class="imageWrapper">
+        <img  :src="image" class="galleryImg" />
+      </div>
+      <div v-for="image in arr" :key="image" class="imageWrapper">
+        <img  :src="image" class="galleryImg" />
+      </div>
     </div>
   </section>
 </template>
@@ -15,6 +20,9 @@ export default {
     return {
       galleryArr: null,
       arr: [
+        "/heroImg.png",
+        "/heroImg.png",
+        "/heroImg.png",
         "/heroImg.png",
         "/heroImg.png",
         "/heroImg.png",
@@ -43,6 +51,7 @@ export default {
 </script>
 
 <style scoped>
+/* https://www.youtube.com/watch?v=3Z780EOzIQs endless gallery animation */
 .gallery {
   width: 100%;
   position: relative;
@@ -51,14 +60,32 @@ export default {
 }
 .galleryInWrapper {
   display: flex;
-  position: relative;
-  width: 100%;
-  transform: translateX(0);
-  transition: transform 20s;
+  width: calc(289px * 20);
+  animation: move 60s linear infinite;
 }
 
-.galleryImg {
+.imageWrapper{
+  padding: 10px;
   width: 289px;
+  display: flex;
+  align-items: center;
+}
+
+/* .galleryInWrapper:hover{
+  animation-play-state: paused;
+} */
+.galleryImg {
+  width: 100%;
   border-radius: 10px;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-289px * 10));
+  }
+  
 }
 </style>

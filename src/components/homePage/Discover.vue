@@ -20,7 +20,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 
 
 .discoverP{
@@ -58,5 +58,11 @@ export default {
 
 .discoverSection{
   margin: 80px 0 100px;
+}
+
+@media only screen and (max-width: 376px) {
+  .buttonsWrapper{
+    flex-wrap: wrap;
+  }
 }
 </style>

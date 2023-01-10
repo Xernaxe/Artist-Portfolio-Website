@@ -49,4 +49,15 @@ export default {
 .reverseFlex{
   flex-direction: row-reverse;
 }
+
+@media only screen and (max-width: 376px) {
+  .storyWrapper{
+    flex-direction: column;
+  }
+
+  .storyImg{
+  width: 257px;
+  height: 257px;
+}
+}
 </style>

@@ -33,4 +33,10 @@ export default {
   gap: 20px;
 }
 
+@media only screen and (max-width: 376px) {
+  .eventsWrapper{
+    flex-wrap: wrap;
+  }
+}
+
 </style>

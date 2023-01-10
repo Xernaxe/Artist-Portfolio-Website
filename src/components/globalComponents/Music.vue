@@ -51,4 +51,12 @@ export default {
   font-style: italic;
   font-size: 12px;
 }
+
+@media only screen and (max-width: 376px) {
+  .musicSection{
+    width: 275px;
+  }
+  
+}
+
 </style>

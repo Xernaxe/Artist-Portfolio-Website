@@ -28,4 +28,15 @@ export default {
   height: 400px;
 }
 
+@media only screen and (max-width: 376px) {
+  .playlistP{
+    width: 257px;
+  }
+
+  .youtubeEMB{
+    width: 257px;
+    height: 257px;
+  }
+}
+
 </style>

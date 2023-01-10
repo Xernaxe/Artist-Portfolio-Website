@@ -24,4 +24,10 @@ export default {
   text-align: center;
   width: 750px;
 }
+
+@media only screen and (max-width: 376px) {
+  .essayP{
+    width: 257px;
+  }
+}
 </style>

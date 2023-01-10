@@ -16,4 +16,10 @@
     gap: 130px;
   }
   
+  @media only screen and (max-width: 376px) {
+  .Songs{
+    width: 297px;
+    gap: 15px;
+  }
+}
 </style>

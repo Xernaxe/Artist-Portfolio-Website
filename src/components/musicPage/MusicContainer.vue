@@ -9,9 +9,9 @@
           @click="Slider('back')"
           :class="index ? '' : 'invisible'"
         >
-        <img style="transform:rotate(180deg)" src="/musicArrow.svg" alt="NEXT">
+        <img class="arrow" style="transform:rotate(180deg)" src="/musicArrow.svg" alt="NEXT">
         </div>
-        <div class="Next" @click="Slider('next')"><img src="/musicArrow.svg" alt="NEXT"></div>
+        <div class="Next" @click="Slider('next')"><img class="arrow" src="/musicArrow.svg" alt="NEXT"></div>
       </div>
       <div class="slider">
         <div
@@ -119,6 +119,20 @@ export default {
 
 .invisible {
   visibility: hidden;
+}
+
+@media only screen and (max-width: 376px) {
+  .slider{
+    width: 257px;
+  }
+
+  .buttons{
+    top: 37%;
+  }
+
+  .arrow{
+    width: 20px;
+  }
 }
 
 

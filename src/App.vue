@@ -6,6 +6,7 @@ import NavbarVue from './components/globalComponents/Navbar.vue';
 </script>
 
 <template>
+  <div class="bg"><img class='imgBg' src="../public/bg.svg" alt=""></div>
   <NavbarVue/>
   <main>
     <RouterView />
@@ -19,6 +20,15 @@ import NavbarVue from './components/globalComponents/Navbar.vue';
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    
+  }
+
+  .imgBg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
   }
 
 
