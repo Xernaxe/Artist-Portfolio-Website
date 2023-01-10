@@ -26,6 +26,7 @@ export default {
 .youtubeEMB{
   width: 954px;
   height: 400px;
+  border-radius: 15px;
 }
 
 @media only screen and (max-width: 376px) {

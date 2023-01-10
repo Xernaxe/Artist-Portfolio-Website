@@ -12,11 +12,11 @@
           music help us find a way to each other."
         </p>
         <div class="socialsWrapper">
-          <img class="socialsImg" src="/facebook.svg" alt="Facebook" />
-          <img class="socialsImg" src="/spotify.svg" alt="Spotify" />
-          <img class="socialsImg" src="/mail.svg" alt="Email" />
-          <img class="socialsImg" src="/youtube.svg" alt="Youtube" />
-          <img class="socialsImg" src="/soundcloud.svg" alt="Soundcloud" />
+          <img class="socialsImg" src="/facebook.svg" alt="Facebook">
+          <img class="socialsImg" src="/mail.svg" alt="Email">
+          <img class="socialsImg" src="/spotify.svg" alt="Spotify">
+          <img class="socialsImg" src="/youtube.svg" alt="Youtube">
+          <img class="socialsImg" src="/soundcloud.svg" alt="Soundcloud">
         </div>
       </div>
       <!-- <div class="shopButton"> -->
@@ -56,7 +56,7 @@ export default {};
   font-size: 2.5rem;
 }
 
-.buttonLink {
+.buttonLink{
   border-radius: 10px;
   background: linear-gradient(
     0deg,
@@ -73,6 +73,7 @@ export default {};
   gap: 15px;
   justify-content: center;
   align-items: center;
+  transition: all .3s ease-in-out;
 }
 
 .shopButton {
@@ -89,7 +90,12 @@ export default {};
   cursor: pointer;
 }
 
-.socialsWrapper {
+.buttonLink:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.socialsWrapper{
   display: flex;
   gap: 30px;
 }

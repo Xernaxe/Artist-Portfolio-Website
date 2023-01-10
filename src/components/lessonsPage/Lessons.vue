@@ -19,7 +19,7 @@ export default {
 <style scoped>
 
   .Lessons{
-    margin: 110px 0;
+    margin: 110px 0 130px 0;
   }
 
   .lessonsYoutubeEMB {

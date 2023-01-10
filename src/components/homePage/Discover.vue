@@ -57,7 +57,7 @@ export default {
 }
 
 .discoverSection{
-  margin: 80px 0 100px;
+  margin: 70px 0 130px;
 }
 
 @media only screen and (max-width: 376px) {
