@@ -25,7 +25,7 @@ export default {
 
 .Events{
   display: flex;
-  margin: 130px 0 70px 0;
+  margin: 130px 0 0 0;
 }
 
 .eventsWrapper{
