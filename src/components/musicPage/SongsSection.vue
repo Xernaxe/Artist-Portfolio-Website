@@ -1,11 +1,18 @@
-  <script setup>
-  import SongsContainerVue from "./SongsContainer.vue";
-  </script>
+<script setup>
+import SongsContainerVue from "./SongsContainer.vue";
+</script>
 
 <template>
   <section class="Songs">
-    <SongsContainerVue  :dataArr="epArr" :section-text="'Discography'" :headerText="`Albums and EP’s`"/>
-    <SongsContainerVue :dataArr="singlesArr" :headerText="`Singles`"/>
+    <img class="loading" v-if="isLoading1" src="/loading.svg" alt="Loading" />
+    <SongsContainerVue
+      v-else
+      :dataArr="epArr"
+      :section-text="'Discography'"
+      :headerText="`Albums and EP’s`"
+    />
+    <img class="loading" v-if="isLoading2" src="/loading.svg" alt="Loading" />
+    <SongsContainerVue v-else :dataArr="singlesArr" :headerText="`Singles`" />
   </section>
 </template>
 
@@ -15,33 +22,34 @@ export default {
     return {
       epArr: [],
       singlesArr: [],
+      isLoading1: true,
+      isLoading2: true,
     };
   },
   created() {
     fetch("https://vmadev.com/wp-json/wp/v2/posts?&categories=19&per_page=100")
       .then((response) => response.json())
       .then((data) => {
+        this.isLoading1 = false;
         this.epArr = data;
-        console.log(data);
       });
     fetch("https://vmadev.com/wp-json/wp/v2/posts?&categories=20&per_page=100")
       .then((response) => response.json())
       .then((data) => {
+        this.isLoading2 = false;
         this.singlesArr = data;
-        console.log(data);
       });
   },
 };
 </script>
 
 <style scoped>
+.Songs {
+  gap: 50px;
+}
 
-  .Songs{
-    gap: 50px;
-  }
-  
-  @media only screen and (max-width: 376px) {
-  .Songs{
+@media only screen and (max-width: 376px) {
+  .Songs {
     width: 297px;
     gap: 15px;
   }

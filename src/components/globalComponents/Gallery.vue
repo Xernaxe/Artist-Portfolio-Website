@@ -1,39 +1,33 @@
 <template>
   <section class="gallery">
-    <div class="galleryInWrapper" >
+    <img class="loading" v-if="isLoading1" src="/loading.svg" alt="Loading" />
+    <div class="galleryInWrapper">
       <div v-for="image in galleryArr" :key="image.id" class="imageWrapper">
-        <img  :src="image.acf.img.url" class="galleryImg" />
+        <img :src="image.acf.img.url" class="galleryImg" />
       </div>
       <div v-for="image in galleryArr" :key="image.id" class="imageWrapper">
-        <img  :src="image.acf.img.url" class="galleryImg" />
+        <img :src="image.acf.img.url" class="galleryImg" />
       </div>
     </div>
   </section>
 </template>
 
-
-
 <script>
-
 export default {
   data() {
     return {
       galleryArr: [],
       index: 0,
       slider: 0,
+      isLoading1: true,
     };
-  },
-  methods:{
-    slide(){
-
-    }
   },
   created() {
     fetch("https://vmadev.com/wp-json/wp/v2/posts?&categories=21&per_page=100")
       .then((response) => response.json())
       .then((data) => {
+        this.isLoading1 = false;
         this.galleryArr = data;
-        console.log(data);
       });
   },
 };
@@ -54,7 +48,7 @@ export default {
   animation: move 60s linear infinite;
 }
 
-.imageWrapper{
+.imageWrapper {
   padding: 10px;
   min-width: 289px;
   display: flex;
@@ -76,6 +70,5 @@ export default {
   100% {
     transform: translateX(calc(-289px * 10));
   }
-  
 }
 </style>
