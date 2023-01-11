@@ -1,7 +1,7 @@
 <template>
   <section class="heroSection">
     <div class="heroWrapperLeft">
-      <img class="heroImg" src="/heroImg.png" alt="Photo of me" />
+      <img class="heroImg" src="/heroImage.png" alt="Photo of me" />
     </div>
     <div class="heroWrapperRight">
       <div class="heroInWrapper">
@@ -12,15 +12,25 @@
           music help us find a way to each other."
         </p>
         <div class="socialsWrapper">
-          <img class="socialsImg" src="/facebook.svg" alt="Facebook">
-          <img class="socialsImg" src="/mail.svg" alt="Email">
-          <img class="socialsImg" src="/spotify.svg" alt="Spotify">
-          <img class="socialsImg" src="/youtube.svg" alt="Youtube">
-          <img class="socialsImg" src="/soundcloud.svg" alt="Soundcloud">
+          <a href="">
+            <img class="socialsImg" src="/facebook.svg" alt="Facebook">
+          </a>
+          <a href="">
+            <img class="socialsImg" src="/mail.svg" alt="Email">
+          </a>
+          <a href="">
+            <img class="socialsImg" src="/spotify.svg" alt="Spotify">
+          </a>
+          <a href="">
+            <img class="socialsImg" src="/youtube.svg" alt="Youtube">
+          </a>
+          <a href="">
+            <img class="socialsImg" src="/soundcloud.svg" alt="Soundcloud">
+          </a>
         </div>
       </div>
       <!-- <div class="shopButton"> -->
-      <a href="" class="buttonLink"><img src="/bandcamp.svg" alt="" /> Shop</a>
+      <a href="https://jansedlakmusic.bandcamp.com/" class="buttonLink"><img src="/bandcamp.svg" alt="Shop" /> Shop</a>
       <!-- </div> -->
     </div>
   </section>
@@ -98,6 +108,7 @@ export default {};
 .socialsWrapper{
   display: flex;
   gap: 30px;
+  align-items: center;
 }
 
 .socialsImg {

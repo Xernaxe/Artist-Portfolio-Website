@@ -6,10 +6,18 @@
       <div class="musicInWrapper">
         <h4 class="songName">{{songName}}</h4>
         <div class="socialsWrapper">
-          <img class="musicImg" src="/applemusic.svg" alt="Apple music">
-          <img class="musicImg" src="/spotify.svg" alt="Spotify">
-          <img class="musicImg" src="/youtube.svg" alt="Youtube">
-          <img class="musicImg" src="/soundcloud.svg" alt="Soundcloud">
+          <a :href="applemusicLink" v-if="applemusicLink">
+            <img class="musicImg" src="/applemusic.svg" alt="Apple music" />
+          </a>
+          <a :href="spotifyLink" v-if="spotifyLink">
+            <img class="musicImg" src="/spotify.svg" alt="Spotify" />
+          </a>
+          <a :href="youtubeLink" v-if="youtubeLink">
+            <img class="musicImg" src="/youtube.svg" alt="Youtube" />
+          </a>
+          <a :href="soundcloudLink" v-if="soundcloudLink">
+            <img class="musicImg" src="/soundcloud.svg" alt="Soundcloud" />
+          </a>
         </div>
       </div>
       <p class="musicDescription">
@@ -23,7 +31,7 @@
 export default {
   data(){
     return{
-
+      
     }
   },
   props:{
@@ -43,6 +51,18 @@ export default {
       type: String,
       required: true
     },
+    applemusicLink:{
+      type: String,
+    },
+    spotifyLink:{
+      type: String,
+    },
+    youtubeLink:{
+      type: String,
+    },
+    soundcloudLink:{
+      type: String,
+    }
   }
 }
 </script>
@@ -77,7 +97,12 @@ export default {
 .link:hover {
   transform: scale(1.2);
 }
-
+.socialsWrapper{
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+}
 .musicYoutubeEMB{
   width: 467px;
   height: 263px;

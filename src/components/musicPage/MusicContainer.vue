@@ -9,9 +9,17 @@
           @click="Slider('back')"
           :class="index ? '' : 'invisible'"
         >
-        <img class="arrow" style="transform:rotate(180deg)" src="/musicArrow.svg" alt="NEXT">
+          <img
+            class="arrow"
+            style="transform: rotate(180deg)"
+            src="/musicArrow.svg"
+            alt="NEXT"
+          />
         </div>
-        <div class="Next" @click="Slider('next')"><img class="arrow" src="/musicArrow.svg" alt="NEXT"></div>
+        <div class="Next" @click="Slider('next')"
+          :class="index == dataArr.length - 1 ? 'invisible' : ''">
+          <img class="arrow" src="/musicArrow.svg" alt="NEXT" />
+        </div>
       </div>
       <div class="slider">
         <div
@@ -19,17 +27,16 @@
           :style="{ transform: `translateX(-${index}00%)` }"
         >
           <musicItemVue
-            :song-name="item1.songName"
-            :music-description="item1.musicDescription"
-            :album-name="item1.albumName"
-            :songURL="item1.songURL"
-          />
-
-          <musicItemVue
-            :song-name="item2.songName"
-            :music-description="item2.musicDescription"
-            :album-name="item2.albumName"
-            :songURL="item2.songURL"
+            v-for="item in dataArr"
+            :key="item.id"
+            :song-name="item.acf.songName"
+            :music-description="item.acf.description"
+            :album-name="item.acf.albumname"
+            :songURL="item.acf.url"
+            :applemusicLink="item.acf.applemusic"
+            :spotify-link="item.acf.spotify"
+            :youtube-link="item.acf.youtube"
+            :soundcloud-link="item.acf.soundcloud"
           />
         </div>
       </div>
@@ -45,18 +52,6 @@ import musicItemVue from "./musicItem.vue";
 export default {
   data() {
     return {
-      item1: {
-        songName: "Propagnosia",
-        albumName: "The Collective Abroad",
-        songURL: "https://www.youtube.com/embed/Dd6n-_Wf-aU",
-        musicDescription: `The Collective Abroad performs contemporary improvised music originating from band members' music scenes: Berlin (DE), Hamburg (DE), Amsterdam (NL), Tallinn (EE), Basel (CH) and Aalborg (DK). The music combines the groove of modern jazz with an intimate atmosphere of Nordic folk and explosive power of a world-class horn section.`,
-      },
-      item2: {
-        songName: "171662a",
-        albumName: "T125125",
-        songURL: "https://www.youtube.com/embed/Dd6n-_Wf-aU",
-        musicDescription: `1231251251`,
-      },
       index: 0,
     };
   },
@@ -81,7 +76,11 @@ export default {
       type: String,
       required: false,
     },
-  },
+    dataArr: {
+      type: Array,
+      required: true,
+    },
+  }
 };
 </script>
 
@@ -97,7 +96,8 @@ export default {
   transition: transform 0.5s;
 }
 
-.Next, .Back{
+.Next,
+.Back {
   cursor: pointer;
 }
 
@@ -112,7 +112,6 @@ export default {
   cursor: pointer;
 }
 
-
 .musicContainer {
   width: inherit;
 }
@@ -122,18 +121,16 @@ export default {
 }
 
 @media only screen and (max-width: 376px) {
-  .slider{
+  .slider {
     width: 257px;
   }
 
-  .buttons{
+  .buttons {
     top: 37%;
   }
 
-  .arrow{
+  .arrow {
     width: 20px;
   }
 }
-
-
 </style>

@@ -1,11 +1,11 @@
 <template>
   <section class="gallery">
     <div class="galleryInWrapper" >
-      <div v-for="image in arr" :key="image" class="imageWrapper">
-        <img  :src="image" class="galleryImg" />
+      <div v-for="image in galleryArr" :key="image.id" class="imageWrapper">
+        <img  :src="image.acf.img.url" class="galleryImg" />
       </div>
-      <div v-for="image in arr" :key="image" class="imageWrapper">
-        <img  :src="image" class="galleryImg" />
+      <div v-for="image in galleryArr" :key="image.id" class="imageWrapper">
+        <img  :src="image.acf.img.url" class="galleryImg" />
       </div>
     </div>
   </section>
@@ -18,19 +18,7 @@
 export default {
   data() {
     return {
-      galleryArr: null,
-      arr: [
-        "/heroImg.png",
-        "/heroImg.png",
-        "/heroImg.png",
-        "/heroImg.png",
-        "/heroImg.png",
-        "/heroImg.png",
-        "/heroImg.png",
-        "/heroImg.png",
-        "/heroImg.png",
-        "/heroImg.png",
-      ],
+      galleryArr: [],
       index: 0,
       slider: 0,
     };
@@ -41,7 +29,7 @@ export default {
     }
   },
   created() {
-    fetch("https://vmadev.com/wp-json/wp/v2/posts?&categories=12&per_page=100")
+    fetch("https://vmadev.com/wp-json/wp/v2/posts?&categories=21&per_page=100")
       .then((response) => response.json())
       .then((data) => {
         this.galleryArr = data;

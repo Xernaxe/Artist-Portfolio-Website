@@ -10,23 +10,25 @@
       <div class="popupWrapper">
         <h3 class="popupSongName">{{ songName }}</h3>
         <h3 class="popupAlbumName">{{ albumName }}</h3>
-        <h4 class="popupYear">2022</h4>
+        <h4 class="popupYear">{{year}}</h4>
         <div class="links">
-          <img class="popupLink" src="/applemusic.svg" alt="Apple music" />
-          <img class="popupLink" src="/spotify.svg" alt="Spotify" />
-          <img class="popupLink" src="/youtube.svg" alt="Youtube" />
-          <img class="popupLink" src="/soundcloud.svg" alt="Soundcloud" />
+          <a :href="applemusicLink" v-if="applemusicLink">
+            <img class="popupLink" src="/applemusic.svg" alt="Apple music" />
+          </a>
+          <a :href="spotifyLink" v-if="spotifyLink">
+            <img class="popupLink" src="/spotify.svg" alt="Spotify" />
+          </a>
+          <a :href="youtubeLink" v-if="youtubeLink">
+            <img class="popupLink" src="/youtube.svg" alt="Youtube" />
+          </a>
+          <a :href="soundcloudLink" v-if="soundcloudLink">
+            <img class="popupLink" src="/soundcloud.svg" alt="Soundcloud" />
+          </a>
         </div>
         <h4 class="popupSubHeader">Line-up:</h4>
         <ul class="popupUL">
-          <li class="popupLI">Jaap de Vries - trumpet</li>
-          <li class="popupLI">Tadas Pasaravičius/Lauri Kadalipp - tenor saxophone</li>
-          <li class="popupLI">Denis Pavlenko/Josh Schofield - alto saxophone</li>
-          <li class="popupLI">Casper Hejlesen/Glen Montanaro - guitar</li>
-          <li class="popupLI">Julia Perminova/Sandro Sáez - piano</li>
-          <li class="popupLI">Jan Sedlák - double bass</li>
-          <li class="popupLI">Dominic Harrison - drums</li>
-          <li class="popupLI">Clara Fornander - vocal</li>
+          <li class="popupLI" v-for="item in lineupArray" :key="item">
+          {{ item }}</li>
         </ul>
       </div>
     </div>
@@ -73,6 +75,26 @@ export default {
       type: String,
       required: true,
     },
+    year: {
+      type: String,
+      required: true,
+    },
+    applemusicLink:{
+      type: String,
+    },
+    spotifyLink:{
+      type: String,
+    },
+    youtubeLink:{
+      type: String,
+    },
+    soundcloudLink:{
+      type: String,
+    },
+    lineupArray: {
+      type: Array,
+    }
+    
   },
 };
 </script>
@@ -82,6 +104,7 @@ export default {
   position: absolute;
   right: 3%;
   top: 3%;
+  cursor: pointer;
 }
 .popupSongName, .popupAlbumName, .popupSubHeader{
   color: #9D9171;
@@ -126,7 +149,7 @@ export default {
   flex-basis: 31%;
   gap: 20px;
   cursor: pointer;
-  width: 300px;
+  min-width: 296px;
   height: 320px;
   background: linear-gradient(
     315deg,

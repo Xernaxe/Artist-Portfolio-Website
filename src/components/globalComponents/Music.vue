@@ -4,7 +4,7 @@
       {{ quote }}
     </blockquote>
     <p class="musicP">{{ audioTitle }}</p>
-    <audio controls :src="audioSrc" volume="0.5" type="audio/mpeg"></audio>
+    <audio class="musicPlayer" controls :src="audioSrc" volume="0.5" type="audio/mpeg"></audio>
     <!-- <div class="musicPlayer">
       <div class="musicControls">
         <div class="controlsPlay"><img src="../../assets/playerPause.svg" alt=""></div>
@@ -55,6 +55,10 @@ export default {
 @media only screen and (max-width: 376px) {
   .musicSection{
     width: 275px;
+    
+  }
+  .musicPlayer{
+    width: 80%;
   }
   
 }

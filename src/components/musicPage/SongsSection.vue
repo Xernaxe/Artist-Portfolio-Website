@@ -4,11 +4,35 @@
 
 <template>
   <section class="Songs">
-    <SongsContainerVue :section-text="'Discography'" :headerText="`Albums and EP’s`"/>
-    <SongsContainerVue :headerText="`Singles`"/>
+    <!-- <SongsContainerVue  :dataArr="singlesArr" :section-text="'Discography'" :headerText="`Albums and EP’s`"/> -->
+    <SongsContainerVue :dataArr="singlesArr" :headerText="`Singles`"/>
   </section>
 </template>
 
+<script>
+export default {
+  data() {
+    return {
+      epArr: [],
+      singlesArr: [],
+    };
+  },
+  created() {
+    fetch("https://vmadev.com/wp-json/wp/v2/posts?&categories=17&per_page=100")
+      .then((response) => response.json())
+      .then((data) => {
+        this.epArr = data;
+        console.log(data);
+      });
+    fetch("https://vmadev.com/wp-json/wp/v2/posts?&categories=20&per_page=100")
+      .then((response) => response.json())
+      .then((data) => {
+        this.singlesArr = data;
+        console.log(data);
+      });
+  },
+};
+</script>
 
 <style scoped>
 
