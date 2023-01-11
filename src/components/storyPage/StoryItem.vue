@@ -1,6 +1,6 @@
 <template>
   <div class="storyItem">
-    <h2 class="sectionH">Hi, my name is Jan, nice to meet you!</h2>
+    <h2 class="sectionH">{{ sectionHeader }}</h2>
     <div class="storyWrapper" :class="reverse ? 'reverseFlex' : 'asd'">
       <img class="storyImg" :src="sectionImg" alt="Photo of me" />
       <p class="storyP" v-html="description">
@@ -19,6 +19,10 @@ export default {
         required: true
       },
       description:{
+        type: String,
+        required: true
+      },
+      sectionHeader:{
         type: String,
         required: true
       }

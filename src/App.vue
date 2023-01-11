@@ -22,7 +22,8 @@ console.log(isMobile());
 
 
 <template>
-  <div class="bg"><img class='imgBg' src="/bg.svg" alt=""></div>
+  <img class="lights" src="/lights.svg" alt="UI">
+  <!-- <div class="bg"><img class='imgBg' src="/bg.svg" alt="BG"></div> -->
   <NavbarVue v-if="!isMobile()" />
   <main>
     <RouterView />
@@ -40,6 +41,13 @@ console.log(isMobile());
     align-items: center;
     position: relative;
     
+  }
+
+
+
+  .lights{
+    position: absolute;
+    top: 0;
   }
 
   .imgBg{
