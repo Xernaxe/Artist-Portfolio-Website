@@ -4,7 +4,7 @@
 
 <template>
   <section class="Songs">
-    <!-- <SongsContainerVue  :dataArr="singlesArr" :section-text="'Discography'" :headerText="`Albums and EP’s`"/> -->
+    <SongsContainerVue  :dataArr="epArr" :section-text="'Discography'" :headerText="`Albums and EP’s`"/>
     <SongsContainerVue :dataArr="singlesArr" :headerText="`Singles`"/>
   </section>
 </template>
@@ -18,7 +18,7 @@ export default {
     };
   },
   created() {
-    fetch("https://vmadev.com/wp-json/wp/v2/posts?&categories=17&per_page=100")
+    fetch("https://vmadev.com/wp-json/wp/v2/posts?&categories=19&per_page=100")
       .then((response) => response.json())
       .then((data) => {
         this.epArr = data;

@@ -3,6 +3,7 @@ import { RouterLink, RouterView } from 'vue-router'
 import GalleryVue from './components/globalComponents/Gallery.vue';
 import MobileNavbarVue from './components/globalComponents/MobileNavbar.vue';
 import NavbarVue from './components/globalComponents/Navbar.vue';
+import FooterSection from './components/globalComponents/FooterSection.vue';
 
 
 
@@ -27,6 +28,7 @@ console.log(isMobile());
     <RouterView />
     <GalleryVue v-if="!isMobile()"/>
   </main>
+  <FooterSection/>
   <MobileNavbarVue v-if="isMobile()"/>
 </template>
 

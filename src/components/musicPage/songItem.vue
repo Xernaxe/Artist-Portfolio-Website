@@ -57,9 +57,11 @@ export default {
       this.showPopup = !this.showPopup;
     },
     outsideClick(e) {
-      if (e.target.className != "popupBox") {
-        this.togglePopup();
+      console.log(e.target.className);
+      if(e.target.className == "popup"){
+        this.togglePopup()
       }
+
     },
   },
   props: {
@@ -173,7 +175,7 @@ export default {
 .popupCd {
   display: flex;
   justify-content: center;
-  margin: 30px 0;
+  margin: 5px 0;
 }
 
 .popupWrapper{

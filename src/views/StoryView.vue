@@ -4,6 +4,14 @@ import MusicVue from "../components/globalComponents/Music.vue";
 import StoryVue from "../components/storyPage/Story.vue";
 </script>
 
+<script>
+  export default{
+    mounted(){
+      document.title = 'Story Page'
+    }
+  }
+</script>
+
 <template>
   <MusicVue
     :audioSrc="'./RustyBridges.mp3'"

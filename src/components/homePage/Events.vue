@@ -2,10 +2,8 @@
   <section class="Events">
     <h2 class="sectionH">Upcoming and news</h2>
     <div class="eventsWrapper">
-      <EventItem/>
-      <EventItem/>
-      <EventItem/>
-      <EventItem/>
+      <EventItem v-for="item in eventArr" :key="item.id" :link="item.acf.link" :eventImg="item.acf.img.url"/>
+
 
     </div>
   </section>
@@ -17,7 +15,19 @@ import EventItem from './EventItem.vue';
 
 <script>
 export default {
-
+  data() {
+    return {
+      eventArr: []
+    };
+  },
+  created() {
+    fetch("https://vmadev.com/wp-json/wp/v2/posts?&categories=22&per_page=100")
+      .then((response) => response.json())
+      .then((data) => {
+        this.eventArr = data;
+        console.log(data);
+      });
+  },
 }
 </script>
 
@@ -25,7 +35,6 @@ export default {
 
 .Events{
   display: flex;
-  margin: 130px 0 0 0;
 }
 
 .eventsWrapper{

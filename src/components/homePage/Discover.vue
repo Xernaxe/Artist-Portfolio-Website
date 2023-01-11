@@ -41,14 +41,14 @@ export default {
 }
 
 .buttonLink:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   cursor: pointer;
 }
 
 .discoverLeft{
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 35px;
 }
 
 .buttonsWrapper{
@@ -56,9 +56,7 @@ export default {
   gap: 25px;
 }
 
-.discoverSection{
-  margin: 0 0 130px;
-}
+
 
 @media only screen and (max-width: 376px) {
   .buttonsWrapper{

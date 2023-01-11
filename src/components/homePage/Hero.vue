@@ -16,6 +16,9 @@
             <img class="socialsImg" src="/facebook.svg" alt="Facebook">
           </a>
           <a href="">
+            <img class="socialsImg" src="/instagram.svg" alt="Instagram">
+          </a>
+          <a href="">
             <img class="socialsImg" src="/mail.svg" alt="Email">
           </a>
           <a href="">
@@ -51,7 +54,6 @@ export default {};
   display: flex;
   align-items: flex-end;
   gap: 20px;
-  margin: 40px 0;
   flex-direction: row;
 }
 
@@ -96,12 +98,12 @@ export default {};
 }
 
 .socialsImg:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
   cursor: pointer;
 }
 
 .buttonLink:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   cursor: pointer;
 }
 

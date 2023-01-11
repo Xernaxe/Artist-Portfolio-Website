@@ -33,6 +33,7 @@ export default {
       .then((response) => response.json())
       .then((data) => {
         this.galleryArr = data;
+        console.log(data);
       });
   },
 };
@@ -45,6 +46,7 @@ export default {
   position: relative;
   overflow: hidden;
   flex-direction: row;
+  margin-bottom: 0;
 }
 .galleryInWrapper {
   display: flex;
@@ -54,7 +56,7 @@ export default {
 
 .imageWrapper{
   padding: 10px;
-  width: 289px;
+  min-width: 289px;
   display: flex;
   align-items: center;
 }
