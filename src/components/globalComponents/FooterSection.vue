@@ -77,6 +77,11 @@ export default {};
 
   .socialsImg{
     width: 28px;
+    transition: all .3s ease-in-out;
+  }
+
+  .socialsImg:hover {
+    transform: scale(1.2);
   }
   .buttonLink img {
     width: 70px;
