@@ -107,6 +107,7 @@ export default {
   right: 3%;
   top: 3%;
   cursor: pointer;
+  z-index: 999999;
 }
 .popupSongName, .popupAlbumName, .popupSubHeader{
   color: #9D9171;

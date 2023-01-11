@@ -45,7 +45,7 @@ export default {
 .galleryInWrapper {
   display: flex;
   width: calc(289px * 20);
-  animation: move 60s linear infinite;
+  animation: move 100s linear infinite;
 }
 
 .imageWrapper {
