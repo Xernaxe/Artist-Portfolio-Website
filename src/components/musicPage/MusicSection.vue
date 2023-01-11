@@ -1,13 +1,17 @@
 <template>
   <section class="Music">
+    <img class="loading" v-if="isLoading1" src="/loading.svg" alt="Loading" />
     <MusicContainerVue
+      v-else
       :dataArr="projectsArr"
       :sectionText="'Projects'"
       :headerText="'As bandleader'"
     />
-    <MusicContainerVue 
-    :dataArr="playerArr"
-    :headerText="'As a bass player'" 
+    <img class="loading" v-if="isLoading2" src="/loading.svg" alt="Loading" />
+    <MusicContainerVue
+      v-else
+      :dataArr="playerArr"
+      :headerText="'As a bass player'"
     />
   </section>
 </template>
@@ -22,20 +26,22 @@ export default {
     return {
       projectsArr: [],
       playerArr: [],
+      isLoading1: true,
+      isLoading2: true,
     };
   },
   created() {
     fetch("https://vmadev.com/wp-json/wp/v2/posts?&categories=17&per_page=100")
       .then((response) => response.json())
       .then((data) => {
+        this.isLoading1 = false;
         this.projectsArr = data;
-        // console.log(data);
       });
     fetch("https://vmadev.com/wp-json/wp/v2/posts?&categories=18&per_page=100")
       .then((response) => response.json())
       .then((data) => {
+        this.isLoading2 = false;
         this.playerArr = data;
-        // console.log(data);
       });
   },
 };
