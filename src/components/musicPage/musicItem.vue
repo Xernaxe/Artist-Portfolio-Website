@@ -103,6 +103,14 @@ export default {
   gap: 15px;
   align-items: center;
 }
+
+.socialsWrapper img {
+  transition: all .3s ease-in-out;
+}
+
+.socialsWrapper img:hover {
+  transform: scale(1.2);
+}
 .musicYoutubeEMB{
   width: 467px;
   height: 263px;
