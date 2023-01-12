@@ -2,15 +2,18 @@
   <section class="gallery">
     <img class="loading" v-if="isLoading1" src="/loading.svg" alt="Loading" />
     <div class="galleryInWrapper">
-      <div v-for="image in galleryArr" :key="image.id" class="imageWrapper">
-        <a :href="image.acf.url" target="_blank"><img :src="image.acf.img.url" class="galleryImg" /></a>
+      <div class="wrapper" v-for="image in galleryArr" :key="image.id">
+        <GalleryItemVue :ext-link="image.acf.url" :img-url="image.acf.img.url"/>
       </div>
-      <div v-for="image in galleryArr" :key="image.id" class="imageWrapper">
-        <a :href="image.acf.url" target="_blank"><img :src="image.acf.img.url" class="galleryImg" /></a>
+      <div class="wrapper" v-for="image in galleryArr" :key="image.id">
+        <GalleryItemVue :ext-link="image.acf.url" :img-url="image.acf.img.url"/>
       </div>
     </div>
   </section>
 </template>
+<script setup>
+import GalleryItemVue from './GalleryItem.vue';
+</script>
 
 <script>
 export default {
@@ -20,6 +23,7 @@ export default {
       index: 0,
       slider: 0,
       isLoading1: true,
+      isHovered: false,
     };
   },
   created() {
@@ -35,6 +39,8 @@ export default {
 
 <style scoped>
 /* https://www.youtube.com/watch?v=3Z780EOzIQs endless gallery animation */
+
+
 .gallery {
   width: 100%;
   position: relative;
@@ -48,26 +54,12 @@ export default {
   animation: move 100s linear infinite;
 }
 
-.imageWrapper {
-  padding: 10px;
-  min-width: 289px;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  transition: filter .6s;
-}
 
-.imageWrapper:hover{
-  filter: blur(2px);
-}
 
 /* .galleryInWrapper:hover{
   animation-play-state: paused;
 } */
-.galleryImg {
-  width: 100%;
-  border-radius: 10px;
-}
+
 
 @keyframes move {
   0% {

@@ -1,8 +1,8 @@
-<!-- @click.native is deprecated but due to convenience it should work -->
+<!-- eslint-disable -->
 <template>
   <div class="popup" v-if="showPopup" @click.native="outsideClick">
     <div class="popupBox">
-      <img class="close" src="/close.svg" alt="CLOSE" @click="togglePopup">
+      <img class="close" src="/close.svg" alt="CLOSE" @click="togglePopup" />
       <div class="popupCd">
         <img class="popupCdImg" :src="imgSrc" alt="" />
         <div class="popupCdHole"></div>
@@ -10,7 +10,7 @@
       <div class="popupWrapper">
         <h3 class="popupSongName">{{ songName }}</h3>
         <h3 class="popupAlbumName">{{ albumName }}</h3>
-        <h4 class="popupYear">{{year}}</h4>
+        <h4 class="popupYear">{{ year }}</h4>
         <div class="links">
           <a :href="applemusicLink" v-if="applemusicLink">
             <img class="popupLink" src="/applemusic.svg" alt="Apple music" />
@@ -28,7 +28,8 @@
         <h4 class="popupSubHeader">Line-up:</h4>
         <ul class="popupUL">
           <li class="popupLI" v-for="item in lineupArray" :key="item">
-          {{ item }}</li>
+            {{ item }}
+          </li>
         </ul>
       </div>
     </div>
@@ -57,10 +58,9 @@ export default {
       this.showPopup = !this.showPopup;
     },
     outsideClick(e) {
-      if(e.target.className == "popup"){
-        this.togglePopup()
+      if (e.target.className == "popup") {
+        this.togglePopup();
       }
-
     },
   },
   props: {
@@ -80,54 +80,55 @@ export default {
       type: String,
       required: true,
     },
-    applemusicLink:{
+    applemusicLink: {
       type: String,
     },
-    spotifyLink:{
+    spotifyLink: {
       type: String,
     },
-    youtubeLink:{
+    youtubeLink: {
       type: String,
     },
-    soundcloudLink:{
+    soundcloudLink: {
       type: String,
     },
     lineupArray: {
       type: Array,
-    }
-    
+    },
   },
 };
 </script>
 
 <style scoped>
-.close{
+.close {
   position: absolute;
   right: 3%;
   top: 3%;
   cursor: pointer;
   z-index: 999999;
 }
-.popupSongName, .popupAlbumName, .popupSubHeader{
-  color: #9D9171;
+.popupSongName,
+.popupAlbumName,
+.popupSubHeader {
+  color: #9d9171;
 }
-.popupSubHeader{
+.popupSubHeader {
   font-size: 20px;
 }
 
-.popupLink{
+.popupLink {
   width: 48px;
 }
 
-.popupYear{
-  color: #F1F1E6;
+.popupYear {
+  color: #f1f1e6;
 }
-.links{
+.links {
   margin: 10px 0;
   display: flex;
   gap: 30px;
 }
-.popupSongName{
+.popupSongName {
   font-size: 24px;
 }
 .popup {
@@ -160,7 +161,8 @@ export default {
   );
   cursor: pointer;
 }
-.cdImg, .popupCdImg {
+.cdImg,
+.popupCdImg {
   width: 200px;
   border-radius: 50%;
   height: 200px;
@@ -178,7 +180,7 @@ export default {
   margin: 5px 0;
 }
 
-.popupWrapper{
+.popupWrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -202,7 +204,8 @@ export default {
   height: 200px;
 }
 
-.cdHole, .popupCdHole {
+.cdHole,
+.popupCdHole {
   position: absolute;
   width: 40px;
   height: 40px;
@@ -217,7 +220,7 @@ export default {
   border-radius: 50%;
 }
 
-.popupCdHole{
+.popupCdHole {
   background: linear-gradient(#2e0b36 0%, #350b3c 100%);
 }
 
@@ -248,7 +251,7 @@ export default {
 }
 
 @media only screen and (max-width: 376px) {
-  .song{
+  .song {
     min-width: 140px;
     width: 140px;
     min-height: 200px;
@@ -258,24 +261,24 @@ export default {
     padding-top: 10px;
   }
 
-  .songAlbum, .songName{
+  .songAlbum,
+  .songName {
     font-size: 12px;
   }
 
-  .cdHole{
+  .cdHole {
     width: 18px;
     height: 18px;
   }
 
-  .cdImg{
+  .cdImg {
     width: 95px;
     height: 95px;
   }
 
-  .cd{
+  .cd {
     width: auto;
     height: auto;
   }
-  
 }
 </style>
