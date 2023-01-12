@@ -1,26 +1,26 @@
 <template>
   <footer class="Footer">
     <div class="footerWrapper">
-      <p class="footerP">My other socials platforms:</p>
+      <p class="footerP">My socials platforms:</p>
       <div class="socialsWrapper">
         <a href="">
           <img class="socialsImg" src="/soundcloud.svg" alt="Soundcloud" />
         </a>
-        <a href="">
+        <a href="https://open.spotify.com/artist/6eslWoqLqMP35uERDUwFQO?si=FYTk6g7BQDGLhHeBzvB9FQ">
           <img class="socialsImg" src="/spotify.svg" alt="Spotify" />
         </a>
-        <a href="">
+        <a href="https://music.apple.com/tm/artist/jan-sedlak/519939094">
           <img class="socialsImg" src="/applemusic.svg" alt="AppleMusic" />
         </a>
         <a href="https://jansedlakmusic.bandcamp.com/" class="buttonLink"
         ><img src="/bandcamp.svg" alt="Shop" /> Shop</a>
-        <a href="">
+        <a href="https://www.instagram.com/jansedlakmusic/">
           <img class="socialsImg" src="/instagram.svg" alt="Instagram" />
         </a>
-        <a href="">
+        <a href="mailto:contact@jansedlakmusic.com">
           <img class="socialsImg" src="/mail.svg" alt="Email" />
         </a>
-        <a href="">
+        <a href="https://www.youtube.com/channel/UC_9pTBpqYj7uC65ENli4fBg">
           <img class="socialsImg" src="/youtube.svg" alt="Youtube" />
         </a>
       </div>
