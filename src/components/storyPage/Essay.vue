@@ -24,6 +24,11 @@ export default {
 .essayP{
   text-align: center;
   width: 750px;
+  margin-bottom: 15px;
+}
+
+a {
+  text-decoration: underline;
 }
 
 @media only screen and (max-width: 376px) {
