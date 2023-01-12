@@ -3,10 +3,10 @@
     <img class="loading" v-if="isLoading1" src="/loading.svg" alt="Loading" />
     <div class="galleryInWrapper">
       <div v-for="image in galleryArr" :key="image.id" class="imageWrapper">
-        <img :src="image.acf.img.url" class="galleryImg" />
+        <a :href="image.acf.url" target="_blank"><img :src="image.acf.img.url" class="galleryImg" /></a>
       </div>
       <div v-for="image in galleryArr" :key="image.id" class="imageWrapper">
-        <img :src="image.acf.img.url" class="galleryImg" />
+        <a :href="image.acf.url" target="_blank"><img :src="image.acf.img.url" class="galleryImg" /></a>
       </div>
     </div>
   </section>
@@ -53,6 +53,12 @@ export default {
   min-width: 289px;
   display: flex;
   align-items: center;
+  cursor: pointer;
+  transition: filter .6s;
+}
+
+.imageWrapper:hover{
+  filter: blur(2px);
 }
 
 /* .galleryInWrapper:hover{

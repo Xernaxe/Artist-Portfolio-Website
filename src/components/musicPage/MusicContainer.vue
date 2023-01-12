@@ -59,11 +59,9 @@ export default {
     Slider(move) {
       if (move == "next") {
         this.index++;
-        console.log(this.index);
       }
       if (move == "back") {
         this.index--;
-        console.log(this.index);
       }
     },
   },

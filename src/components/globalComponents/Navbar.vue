@@ -36,7 +36,6 @@ export default {
   },
   computed: {
     orderedNavItems() {
-      console.log(this.$route.name);
       switch (this.$route.name) {
         case "story":
           this.navItems = [

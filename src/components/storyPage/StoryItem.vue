@@ -41,6 +41,7 @@ export default {
 .storyImg{
   width: 467px;
   height: 467px;
+  border-radius: 10px;
 }
 
 .reverseFlex{

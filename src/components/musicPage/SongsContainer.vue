@@ -2,7 +2,7 @@
   <div class="songsContainer">
     <h2 class="sectionH">{{ sectionText }}</h2>
     <h3 class="songsH">{{ headerText }}</h3>
-    <div class="songsWrapper" :style="{ height: height + 'px' }">
+    <div class="songsWrapper" :style="{ height: height + 'px!important' }">
       <songItemVue
         v-for="item in dataArr"
         :key="item.id"

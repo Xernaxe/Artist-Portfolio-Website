@@ -8,7 +8,6 @@ import FooterSection from './components/globalComponents/FooterSection.vue';
 
 
 function isMobile(){
-  console.log(screen.width);
   if(screen.width <= 765){
     return true
   } else if (screen.width >= 765){
@@ -17,12 +16,11 @@ function isMobile(){
   
 }
 
-console.log(isMobile());
 </script>
 
 
 <template>
-  <img class="lights" src="/lights.svg" alt="UI">
+  <!-- <img class="lights" src="/lights.svg" alt="UI"> -->
   <!-- <div class="bg"><img class='imgBg' src="/bg.svg" alt="BG"></div> -->
   <NavbarVue v-if="!isMobile()" />
   <main>
@@ -48,6 +46,7 @@ console.log(isMobile());
   .lights{
     position: absolute;
     top: 0;
+    width: 100%;
   }
 
   .imgBg{

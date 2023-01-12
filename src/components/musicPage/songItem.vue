@@ -57,7 +57,6 @@ export default {
       this.showPopup = !this.showPopup;
     },
     outsideClick(e) {
-      console.log(e.target.className);
       if(e.target.className == "popup"){
         this.togglePopup()
       }

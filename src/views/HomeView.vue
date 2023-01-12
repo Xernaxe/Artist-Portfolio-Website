@@ -5,7 +5,6 @@ import MusicVue from '../components/globalComponents/Music.vue';
 import Events from '../components/homePage/Events.vue';
 
 function isMobile(){
-  console.log(screen.width);
   if(screen.width <= 765){
     return true
   } else if (screen.width >= 765){

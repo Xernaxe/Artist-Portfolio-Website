@@ -12,28 +12,28 @@
           music help us find a way to each other."
         </p>
         <div class="socialsWrapper">
-          <a href="">
+          <a href="" target="_blank">
             <img class="socialsImg" src="/facebook.svg" alt="Facebook">
           </a>
-          <a href="">
+          <a href="" target="_blank">
             <img class="socialsImg" src="/instagram.svg" alt="Instagram">
           </a>
-          <a href="">
+          <a href="" target="_blank">
             <img class="socialsImg" src="/mail.svg" alt="Email">
           </a>
-          <a href="">
+          <a href="" target="_blank">
             <img class="socialsImg" src="/spotify.svg" alt="Spotify">
           </a>
-          <a href="">
+          <a href="" target="_blank">
             <img class="socialsImg" src="/youtube.svg" alt="Youtube">
           </a>
-          <a href="">
+          <a href="" target="_blank">
             <img class="socialsImg" src="/soundcloud.svg" alt="Soundcloud">
           </a>
         </div>
       </div>
       <!-- <div class="shopButton"> -->
-      <a href="https://jansedlakmusic.bandcamp.com/" class="buttonLink"><img src="/bandcamp.svg" alt="Shop" /> Shop</a>
+      <a href="https://jansedlakmusic.bandcamp.com/" class="buttonLink" target="_blank"><img src="/bandcamp.svg" alt="Shop" /> Shop</a>
       <!-- </div> -->
     </div>
   </section>
