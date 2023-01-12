@@ -2,9 +2,11 @@
   <section class="discoverSection">
     <div class="discoverWrapper">
       <div class="discoverLeft">
-        <p class="discoverP">Discover more of me and my music by clicking the links underneath</p>
+        <p class="discoverP">
+          Discover more of me and my music by clicking the links underneath
+        </p>
         <div class="buttonsWrapper">
-          <routerLink to="/about" class="buttonLink">Story</routerLink>
+          <routerLink to="/story" class="buttonLink">Story</routerLink>
           <routerLink to="/music" class="buttonLink">Music</routerLink>
           <routerLink to="/lessons" class="buttonLink">Lessons</routerLink>
           <routerLink to="/contact" class="buttonLink">Contact</routerLink>
@@ -15,29 +17,29 @@
 </template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
 <style>
-
-
-.discoverP{
+.discoverP {
   text-align: center;
   font-size: 24px;
-  color: #9D9171;
+  color: #9d9171;
 }
 
-.buttonLink{
-  padding:9px 75px;
+.buttonLink {
+  padding: 9px 75px;
   width: 220px;
   text-align: center;
   border-radius: 10px;
-  background: linear-gradient(0deg, rgba(157,145,113,1) 0%, rgba(215,215,215,1) 100%);
-  color: #201D1C;
+  background: linear-gradient(
+    0deg,
+    rgba(157, 145, 113, 1) 0%,
+    rgba(215, 215, 215, 1) 100%
+  );
+  color: #201d1c;
   flex-basis: 50%;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .buttonLink:hover {
@@ -45,21 +47,19 @@ export default {
   cursor: pointer;
 }
 
-.discoverLeft{
+.discoverLeft {
   display: flex;
   flex-direction: column;
   gap: 35px;
 }
 
-.buttonsWrapper{
+.buttonsWrapper {
   display: flex;
   gap: 25px;
 }
 
-
-
 @media only screen and (max-width: 376px) {
-  .buttonsWrapper{
+  .buttonsWrapper {
     flex-wrap: wrap;
   }
 }
