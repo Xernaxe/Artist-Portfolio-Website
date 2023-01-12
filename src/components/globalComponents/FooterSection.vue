@@ -3,9 +3,9 @@
     <div class="footerWrapper">
       <p class="footerP">My socials platforms:</p>
       <div class="socialsWrapper">
-        <a href="" target="_blank">
-          <img class="socialsImg" src="/soundcloud.svg" alt="Soundcloud" />
-        </a>
+        <a href="https://www.facebook.com/JanSedlakMusic" target="_blank">
+            <img class="socialsImg" src="/facebook.svg" alt="Facebook">
+          </a>
         <a href="https://open.spotify.com/artist/6eslWoqLqMP35uERDUwFQO?si=FYTk6g7BQDGLhHeBzvB9FQ" target="_blank">
           <img class="socialsImg" src="/spotify.svg" alt="Spotify" />
         </a>

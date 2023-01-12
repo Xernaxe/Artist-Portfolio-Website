@@ -12,23 +12,20 @@
           music help us find a way to each other."
         </p>
         <div class="socialsWrapper">
-          <a href="" target="_blank">
+          <a href="https://www.facebook.com/JanSedlakMusic" target="_blank">
             <img class="socialsImg" src="/facebook.svg" alt="Facebook">
           </a>
-          <a href="" target="_blank">
+          <a href="https://www.instagram.com/jansedlakmusic/" target="_blank">
             <img class="socialsImg" src="/instagram.svg" alt="Instagram">
           </a>
-          <a href="" target="_blank">
+          <a href="mailto:contact@jansedlakmusic.com" target="_blank">
             <img class="socialsImg" src="/mail.svg" alt="Email">
           </a>
-          <a href="" target="_blank">
+          <a href="https://open.spotify.com/artist/6eslWoqLqMP35uERDUwFQO?si=FYTk6g7BQDGLhHeBzvB9FQ" target="_blank">
             <img class="socialsImg" src="/spotify.svg" alt="Spotify">
           </a>
-          <a href="" target="_blank">
+          <a href="https://www.youtube.com/channel/UC_9pTBpqYj7uC65ENli4fBg" target="_blank">
             <img class="socialsImg" src="/youtube.svg" alt="Youtube">
-          </a>
-          <a href="" target="_blank">
-            <img class="socialsImg" src="/soundcloud.svg" alt="Soundcloud">
           </a>
         </div>
       </div>
