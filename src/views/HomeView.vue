@@ -23,7 +23,7 @@ function isMobile(){
 </script>
 
 <template>
-  <MusicVue :audioTitle="'Black Coal Meadow - Jan Sedlák Trio'" :audioSrc="'/BlackCoalMeadow.mp3'" quote="“Black Coal Meadow” is a landscape around my hometown - a beautiful medieval town from the 11th century which was torn down in 1965 to leave space for colossal coal mines, turning the entire region into moon-like landscape. “"/>
+  <MusicVue :audioTitle="'Black Coal Meadow - Jan Sedlák Trio'" :audioSrc="'./BlackCoalMeadow.mp3'" quote="“Black Coal Meadow” is a landscape around my hometown - a beautiful medieval town from the 11th century which was torn down in 1965 to leave space for colossal coal mines, turning the entire region into moon-like landscape. “"/>
   <Events/>
   <HeroVue/>
   <DiscoverVue v-if="!isMobile()"/>

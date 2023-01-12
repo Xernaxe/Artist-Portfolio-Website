@@ -15,7 +15,7 @@ import Contact from '../components/contactPage/Contact.vue';
 
 
 <template>
-  <MusicVue :audioTitle="'I’ll See You Again - Footprints by Pasaravičienė/Sedlák'" :audioSrc="'/SeeYouAgain.mp3'" quote="“Remembering the time we just spent together, realizing the time which is to pass before we meet again. Saying good-bye and promising each other: I’ll See You Again.”
+  <MusicVue :audioTitle="'I’ll See You Again - Footprints by Pasaravičienė/Sedlák'" :audioSrc="'./SeeYouAgain.mp3'" quote="“Remembering the time we just spent together, realizing the time which is to pass before we meet again. Saying good-bye and promising each other: I’ll See You Again.”
 "/>
   <HeroVue/>
   <Contact/>
