@@ -12,16 +12,16 @@
         <h3 class="popupAlbumName">{{ albumName }}</h3>
         <h4 class="popupYear">{{ year }}</h4>
         <div class="links">
-          <a :href="applemusicLink" v-if="applemusicLink">
+          <a :href="applemusicLink" v-if="applemusicLink" target="_blank">
             <img class="popupLink" src="/applemusic.svg" alt="Apple music" />
           </a>
-          <a :href="spotifyLink" v-if="spotifyLink">
+          <a :href="spotifyLink" v-if="spotifyLink" target="_blank">
             <img class="popupLink" src="/spotify.svg" alt="Spotify" />
           </a>
-          <a :href="youtubeLink" v-if="youtubeLink">
+          <a :href="youtubeLink" v-if="youtubeLink" target="_blank">
             <img class="popupLink" src="/youtube.svg" alt="Youtube" />
           </a>
-          <a :href="soundcloudLink" v-if="soundcloudLink">
+          <a :href="soundcloudLink" v-if="soundcloudLink" target="_blank">
             <img class="popupLink" src="/soundcloud.svg" alt="Soundcloud" />
           </a>
         </div>
