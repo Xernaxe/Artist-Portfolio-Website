@@ -1,6 +1,6 @@
 <template>
   <div class="eventItem" @mouseover="isHovered = true" @mouseleave="isHovered = false">
-    <a class="eventLink" :href="link">
+    <a class="eventLink" :href="link" target="_blank">
       <img class="eventImg" :src="eventImg" alt="Event" />
     </a>
     <img :class="isHovered ? 'active' : 'asd'" class="socialImg" src="/instagram.svg" alt="Instagram">

@@ -42,8 +42,8 @@ export default {};
 
 <style scoped>
 .heroImg {
-  width: 467px;
-  height: 467px;
+  width: 367px;
+  height: 367px;
   border-radius: 15px;
 }
 
