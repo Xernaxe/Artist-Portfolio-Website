@@ -4,6 +4,7 @@ import SongsContainerVue from "./SongsContainer.vue";
 
 <template>
   <section class="Songs">
+    <h2 class="sectionText">Discography</h2>
     <div class="buttonsWrapperMusic">
       <div class="btn bandLeaderBtn"  @click="handleSoloBtn">
       <p :style="this.isSolo ? 'transition: color 0.3s; color: #9D9171' : ''">
@@ -76,9 +77,6 @@ export default {
 </script>
 
 <style scoped>
-.Songs {
-  gap: 50px;
-}
 
 .btn{
   cursor: pointer;

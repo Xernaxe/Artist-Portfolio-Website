@@ -1,10 +1,10 @@
 <template>
   <section class="Lessons">
-    <h1 class="sectionH">Learning music must be fun!</h1>
+    <h2 class="sectionH">Learning music must be fun!</h2>
     <p class="lessonsP">I enjoy teaching composition, double bass and bass guitar. If you’d like to study with me, I will create a personalized plan for you. A part of the plan will be personalized exercises in the form of PDF files and videos which you can play along with. In this way, we can maximize your learning potential.
     </p>
     <div class="lessonsInfo">
-      <h2 class="infoH">Average educational plan:</h2>
+      <h3 class="infoH">Average educational plan:</h3>
       <div class="infoWrapper">
 
         <div class="info">
@@ -47,6 +47,10 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .info p {
+    margin-top: 10px;
   }
   .Lessons{
     margin: 110px 0 130px 0;

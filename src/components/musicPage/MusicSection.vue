@@ -1,6 +1,6 @@
 <template>
   <section class="Music">
-    <h1 class="sectionText">Projects</h1>
+    <h2 class="sectionText">Projects</h2>
     <div class="buttonsWrapperMusic">
       <div class="btn bandLeaderBtn"  @click="handleBandLeaderBtn">
       <p :style="this.isBandLeader ? 'transition: color 0.3s; color: #9D9171' : ''">
@@ -120,9 +120,5 @@ export default {
 
 .hidden{
   display: none;
-}
-.Music {
-  /* gap: 70px; */
-  margin: 90px 0 130px 0;
 }
 </style>

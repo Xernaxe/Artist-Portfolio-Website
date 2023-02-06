@@ -23,17 +23,17 @@
             <img class="socialsImg" src="/instagram.svg" alt="Instagram" >
             <label for="socials">Instagram</label>
           </a>
-          <a href="mailto:contact@jansedlakmusic.com" target="_blank">
-            <img class="socialsImg" src="/mail.svg" alt="Email" style="width:36px">
-            <label for="socials">Gmail</label>
+          <a href="https://www.youtube.com/channel/UC_9pTBpqYj7uC65ENli4fBg" target="_blank">
+            <img class="socialsImg" src="/youtube.svg" alt="Youtube" style="width:42px">
+            <label for="socials">Youtube</label>
           </a>
           <a href="https://open.spotify.com/artist/6eslWoqLqMP35uERDUwFQO?si=FYTk6g7BQDGLhHeBzvB9FQ" target="_blank">
             <img class="socialsImg" src="/spotify.svg" alt="Spotify">
             <label for="socials">Spotify</label>
           </a>
-          <a href="https://www.youtube.com/channel/UC_9pTBpqYj7uC65ENli4fBg" target="_blank">
-            <img class="socialsImg" src="/youtube.svg" alt="Youtube" style="width:42px">
-            <label for="socials">Youtube</label>
+          <a href="https://music.apple.com/tm/artist/jan-sedlak/519939094" target="_blank">
+            <img class="socialsImg" src="/applemusic.svg" alt="AppleMusic" />
+            <label for="socials">Apple music</label>
           </a>
           <a href="https://jansedlakmusic.bandcamp.com/" target="_blank">
             <img class="socialsImg" src="/bandcampNew.svg" alt="Bandcamp" style="width:30px">
@@ -43,7 +43,7 @@
           </a>
         </div>
         <div class="contact">
-          <a class="contactWrapper">
+          <a href="mailto:contact@jansedlakmusic.com" target="_blank" class="contactWrapper">
             <div class="iconWrapper">
               <img src="/mailIcon.svg" alt="Mail Icon">
             </div>
@@ -59,7 +59,7 @@
             <div class="iconWrapper">
               <img src="/locationIcon.svg" alt="Location Icon">
             </div>
-            <p class="locationP">Aalborg, Denmark, 9000</p>
+            <p class="locationP">Aalborg 9000, Denmark</p>
           </a>
     </div>
       </div>
@@ -83,11 +83,11 @@ export default {};
 }
 
 .contact{
-  margin-top: 10px;
+  margin-top: 30px;
   width:fit-content;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
   /* margin-left: 10vw; */
 }
 .spanColor{
@@ -100,6 +100,10 @@ export default {};
     gap: 5px;
     align-items: center;
   }
+
+.socialsWrapper label {
+  font-size: 10px;
+}
 
 .heroImg {
   width: fit-content;

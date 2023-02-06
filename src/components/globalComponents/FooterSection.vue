@@ -4,13 +4,13 @@
       <p class="footerLogo">Jan'S</p>
       <div class="verticalLine"></div>
       <div class="socialsWrapper">
-          <a href="https://music.apple.com/tm/artist/jan-sedlak/519939094" target="_blank">
-            <img class="socialsImg" src="/applemusic.svg" alt="AppleMusic" />
-            <label for="socials">Apple music</label>
+          <a href="https://www.facebook.com/JanSedlakMusic" target="_blank">
+            <img class="socialsImg" src="/facebook.svg" alt="Facebook">
+            <label for="socials">Facebook</label>
           </a>
-          <a href="https://music.apple.com/tm/artist/jan-sedlak/519939094" target="_blank">
-            <img class="socialsImg" src="/soundcloud.svg" alt="SoundCloud" />
-            <label for="socials">SoundCloud</label>
+          <a href="https://www.instagram.com/jansedlakmusic/" target="_blank">
+            <img class="socialsImg" src="/instagram.svg" alt="Instagram" />
+            <label for="socials">Instagram</label>
           </a>
           <a href="https://www.youtube.com/channel/UC_9pTBpqYj7uC65ENli4fBg" target="_blank">
             <img class="socialsImg" src="/youtube.svg" alt="Youtube" style="width: 42px"/>
@@ -20,18 +20,26 @@
             <img class="socialsImg" src="/spotify.svg" alt="Spotify" />
             <label for="socials">Spotify</label>
           </a>
-          <a href="https://www.instagram.com/jansedlakmusic/" target="_blank">
-            <img class="socialsImg" src="/instagram.svg" alt="Instagram" />
-            <label for="socials">Instagram</label>
+          <a href="https://music.apple.com/tm/artist/jan-sedlak/519939094" target="_blank">
+            <img class="socialsImg" src="/applemusic.svg" alt="AppleMusic" />
+            <label for="socials">Apple music</label>
           </a>
-          <a href="mailto:contact@jansedlakmusic.com">
-            <img class="socialsImg" src="/mail.svg" alt="Email" style="width: 36px"/>
-            <label for="socials">Gmail</label>
+          <a href="https://jansedlakmusic.bandcamp.com/" target="_blank">
+            <img class="socialsImg" src="/bandcampNew.svg" alt="Bandcamp" style="width:30px">
+            <label for="socials" style="display: flex; gap: 5px;">Bandcamp
+              <img src="/shop.svg" alt="shop">
+            </label>
           </a>
-          
+       
       </div>
     </div>
     <div class="contact">
+      <a href="mailto:contact@jansedlakmusic.com" target="_blank" class="contactWrapper">
+            <div class="iconWrapper">
+              <img src="/mailIcon.svg" alt="Mail Icon">
+            </div>
+            <p class="locationP">contact@jansedlakmusic.com</p>
+      </a>
       <div class="contactWrapper">
         <img src="/phoneIcon.svg" alt="Phone Icon">
         <p class="phoneNrP">+45 42 31 43 34</p>
@@ -52,7 +60,9 @@ export default {};
 
 .contact{
   display: flex;
-  gap: 30px;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 70px;
   /* margin-left: 10vw; */
 }
 
@@ -86,6 +96,11 @@ export default {};
     display: flex;
     align-items: center;
     gap: 30px
+  }
+
+  .socialsWrapper label {
+    font-size: 10px;
+    margin-top: 5px;
   }
 
   .buttonLink{
