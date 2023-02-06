@@ -74,6 +74,9 @@ export default {
   width: 100%;
   height: auto;
   position: relative;
+  background: rgba(8,13,26, 0.3);
+    padding: 15px;
+  border-radius: 10px;
 }
 
 .musicInWrapper{

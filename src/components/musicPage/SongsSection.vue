@@ -4,15 +4,26 @@ import SongsContainerVue from "./SongsContainer.vue";
 
 <template>
   <section class="Songs">
+    <div class="buttonsWrapperMusic">
+      <div class="btn bandLeaderBtn"  @click="handleBandLeaderBtn">
+      <p :style="this.isBandLeader ? 'transition: color 0.3s; color: #9D9171' : ''">
+        Singles
+      </p>
+      </div>
+      <div class="btnActive" :style="this.isBassPlayer ? 'left: 50%' : 'left: 0%'"></div>
+      <div class="btn bassPlayerBtn"  @click="handleBassPlayerBtn">
+      <p :style="this.isBassPlayer ? 'transition: color 0.3s; color: #9D9171' : ''">
+        Albums and EP’s
+      </p>
+      </div>
+
+    </div>
     <img class="loading" v-if="isLoading1" src="/loading.svg" alt="Loading" />
     <SongsContainerVue
       v-else
       :dataArr="epArr"
-      :section-text="'Discography'"
-      :headerText="`Albums and EP’s`"
     />
-    <img class="loading" v-if="isLoading2" src="/loading.svg" alt="Loading" />
-    <SongsContainerVue v-else :dataArr="singlesArr" :headerText="`Singles`" />
+    <SongsContainerVue :dataArr="singlesArr" />
   </section>
 </template>
 
@@ -46,6 +57,47 @@ export default {
 <style scoped>
 .Songs {
   gap: 50px;
+}
+
+.btn{
+  cursor: pointer;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 100;
+}
+
+.buttonsWrapperMusic{
+  background: rgba(8, 13, 26, 0.3);
+  /* padding: 5px 15px; */
+  width: 278px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 10px;
+}
+
+.btnActive{
+  background: rgba(8, 13, 26, 0.6);
+  border-radius: 10px;
+  /* width:auto; */
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  left: 0%;
+  z-index: 99;
+  align-items: center;
+  justify-content: center;
+  transition: left 0.3s;
+}
+
+.hidden{
+  display: none;
 }
 
 @media only screen and (max-width: 376px) {

@@ -3,7 +3,9 @@
     <h2 class="sectionH">Reflections, essays and poetry</h2>
     <p class="essayP">“Once a while, I still enjoy writing. In 2020, I finished my first collection of poetry and once in a while, I enjoy reflecting on my creative process and on musicians’ life in general. Some of my texts are available here.”</p>
     <div class="essayEMB">
-      <a href="https://drive.google.com/file/d/1ml1ui6XEnzH_dmKhXBdoKf7JVQoFDKaH/view?usp=share_link" target="_blank">Sunset-March-and-my-compositional-process</a>
+      <a style="display: flex;" href="https://drive.google.com/file/d/1ml1ui6XEnzH_dmKhXBdoKf7JVQoFDKaH/view?usp=share_link" target="_blank">Sunset-March-and-my-compositional-process
+        <img src="/pdfIcon.svg" style="margin-left: 10px" alt="PDF">
+      </a>
     </div>
   </section>
 </template>
@@ -26,6 +28,7 @@ export default {
   width: 750px;
   margin-bottom: 15px;
 }
+
 
 a {
   text-decoration: underline;

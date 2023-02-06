@@ -26,11 +26,11 @@ export default {
   data() {
     return {
       navItems: [
-        { text: "Contact", path: "/contact" },
-        { text: "Story", path: "/story" },
         { text: "Home", path: "/", active: true },
         { text: "Music", path: "/music" },
+        { text: "Story", path: "/story" },
         { text: "Lessons", path: "/lessons" },
+        { text: "Contact", path: "/contact" },
       ],
     };
   },
@@ -39,48 +39,48 @@ export default {
       switch (this.$route.name) {
         case "story":
           this.navItems = [
-            { text: "Contact", path: "/contact" },
-            { text: "Home", path: "/" },
             { text: "Story", path: "/story", active: true },
+            { text: "Home", path: "/" },
             { text: "Music", path: "/music" },
             { text: "Lessons", path: "/lessons" },
+            { text: "Contact", path: "/contact" },
           ];
           break;
 
         case "home":
           this.navItems = [
-            { text: "Contact", path: "/contact" },
-            { text: "Story", path: "/story" },
-            { text: "Home", path: "/", active: true },
-            { text: "Music", path: "/music" },
-            { text: "Lessons", path: "/lessons" },
+          { text: "Home", path: "/", active: true },
+          { text: "Music", path: "/music" },
+          { text: "Story", path: "/story" },
+          { text: "Lessons", path: "/lessons" },
+          { text: "Contact", path: "/contact" },
           ];
           break;
         case "contact":
           this.navItems = [
-            { text: "Story", path: "/story" },
-            { text: "Home", path: "/" },
             { text: "Contact", path: "/contact", active: true },
+            { text: "Home", path: "/" },
             { text: "Music", path: "/music" },
+            { text: "Story", path: "/story" },
             { text: "Lessons", path: "/lessons" },
           ];
           break;
         case "music":
           this.navItems = [
-            { text: "Contact", path: "/contact" },
-            { text: "Home", path: "/" },
             { text: "Music", path: "/music", active: true },
+            { text: "Home", path: "/" },
             { text: "Story", path: "/story"},
             { text: "Lessons", path: "/lessons" },
+            { text: "Contact", path: "/contact" },
           ];
           break;
         case "lessons":
           this.navItems = [
-            { text: "Contact", path: "/contact" },
-            { text: "Home", path: "/" },
             { text: "Lessons", path: "/lessons", active: true },
-            { text: "Story", path: "/story"},
+            { text: "Home", path: "/" },
             { text: "Music", path: "/music" },
+            { text: "Story", path: "/story"},
+            { text: "Contact", path: "/contact" },
           ];
           break;
       }
@@ -113,7 +113,7 @@ export default {
   width: 100vw;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .navLI {
@@ -125,6 +125,8 @@ export default {
 }
 
 .router-link-active {
-  font-size: 20px;
+  font-size: 40px;
+  font-weight: lighter;
+  color: #9D9171;
 }
 </style>

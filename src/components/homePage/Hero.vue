@@ -5,7 +5,10 @@
     </div>
     <div class="heroWrapperRight">
       <div class="heroInWrapper">
-        <h1 class="heroHeader">Jan’Sedlák</h1>
+        <h1 class="heroHeader"><span class="spanColor">Jan</span>’<span class="spanColor">Sedlák</span></h1>
+        <p class="heroP">
+          I am <span class="spanColor">bass player</span>, <span class="spanColor">band leader</span> and also a <span class="spanColor">teacher</span>. Welcome to my portfolio and get to know me better!
+        </p>
         <p class="heroP">
           “To me, there is great power in connecting people. I believe that
           through music, we can communicate regardless language barriers. Let
@@ -14,24 +17,52 @@
         <div class="socialsWrapper">
           <a href="https://www.facebook.com/JanSedlakMusic" target="_blank">
             <img class="socialsImg" src="/facebook.svg" alt="Facebook">
+            <label for="socials">Facebook</label>
           </a>
           <a href="https://www.instagram.com/jansedlakmusic/" target="_blank">
-            <img class="socialsImg" src="/instagram.svg" alt="Instagram">
+            <img class="socialsImg" src="/instagram.svg" alt="Instagram" >
+            <label for="socials">Instagram</label>
           </a>
           <a href="mailto:contact@jansedlakmusic.com" target="_blank">
-            <img class="socialsImg" src="/mail.svg" alt="Email">
+            <img class="socialsImg" src="/mail.svg" alt="Email" style="width:36px">
+            <label for="socials">Gmail</label>
           </a>
           <a href="https://open.spotify.com/artist/6eslWoqLqMP35uERDUwFQO?si=FYTk6g7BQDGLhHeBzvB9FQ" target="_blank">
             <img class="socialsImg" src="/spotify.svg" alt="Spotify">
+            <label for="socials">Spotify</label>
           </a>
           <a href="https://www.youtube.com/channel/UC_9pTBpqYj7uC65ENli4fBg" target="_blank">
-            <img class="socialsImg" src="/youtube.svg" alt="Youtube">
+            <img class="socialsImg" src="/youtube.svg" alt="Youtube" style="width:42px">
+            <label for="socials">Youtube</label>
+          </a>
+          <a href="https://jansedlakmusic.bandcamp.com/" target="_blank">
+            <img class="socialsImg" src="/bandcampNew.svg" alt="Bandcamp" style="width:30px">
+            <label for="socials" style="display: flex; gap: 5px;">Bandcamp
+              <img src="/shop.svg" alt="shop">
+            </label>
           </a>
         </div>
+        <div class="contact">
+          <a class="contactWrapper">
+            <div class="iconWrapper">
+              <img src="/mailIcon.svg" alt="Mail Icon">
+            </div>
+            <p class="locationP">contact@jansedlakmusic.com</p>
+          </a>
+          <div class="contactWrapper">
+            <div class="iconWrapper">
+              <img src="/phoneIcon.svg" alt="Phone Icon">
+            </div>
+        <p class="phoneNrP">+45 42 31 43 34</p>
       </div>
-      <!-- <div class="shopButton"> -->
-      <a href="https://jansedlakmusic.bandcamp.com/" class="buttonLink" target="_blank"><img src="/bandcamp.svg" alt="Shop" /> Shop</a>
-      <!-- </div> -->
+          <a href="https://goo.gl/maps/ZyraNidTe1Wg3FYt9" class="contactWrapper">
+            <div class="iconWrapper">
+              <img src="/locationIcon.svg" alt="Location Icon">
+            </div>
+            <p class="locationP">Aalborg, Denmark, 9000</p>
+          </a>
+    </div>
+      </div>
     </div>
   </section>
 </template>
@@ -41,21 +72,57 @@ export default {};
 </script>
 
 <style scoped>
+.iconWrapper{
+  width: 30px;
+}
+
+.contactWrapper{
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.contact{
+  margin-top: 10px;
+  width:fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* margin-left: 10vw; */
+}
+.spanColor{
+  color: #9D9171;
+}
+
+.socialsWrapper > a{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+  }
+
 .heroImg {
-  width: 367px;
-  height: 367px;
+  width: fit-content;
+  height: fit-content;
   border-radius: 15px;
+}
+
+.heroWrapperLeft{
+  width: 467px;
+  height: 467px;
 }
 
 .heroSection {
   display: flex;
   align-items: flex-end;
   gap: 20px;
+  justify-content: center;
   flex-direction: row;
 }
 
 .heroWrapperRight {
   width: 440px;
+  height: 467px;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -107,11 +174,11 @@ export default {};
 .socialsWrapper{
   display: flex;
   gap: 30px;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .socialsImg {
-  width: 48px;
+  width: 28px;
   transition: all 0.3s ease-in-out;
 }
 

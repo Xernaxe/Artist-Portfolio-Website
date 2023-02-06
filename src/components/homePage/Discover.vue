@@ -6,10 +6,10 @@
           Discover more of me and my music by clicking the links underneath
         </p>
         <div class="buttonsWrapper">
-          <routerLink to="/story" class="buttonLink">Story</routerLink>
-          <routerLink to="/music" class="buttonLink">Music</routerLink>
-          <routerLink to="/lessons" class="buttonLink">Lessons</routerLink>
-          <routerLink to="/contact" class="buttonLink">Contact</routerLink>
+          <routerLink to="/home" class="buttonLink"><img src="/homeBtn.svg" alt="Home"></routerLink>
+          <routerLink to="/music" class="buttonLink"><img src="/musicBtn.svg" alt="Music"></routerLink>
+          <routerLink to="/story" class="buttonLink"><img src="/storyBtn.svg" alt="Story"></routerLink>
+          <routerLink to="/contact" class="buttonLink"><img src="/contactBtn.svg" alt="Contact"></routerLink>
         </div>
       </div>
     </div>
@@ -28,16 +28,6 @@ export default {};
 }
 
 .buttonLink {
-  padding: 9px 75px;
-  width: 220px;
-  text-align: center;
-  border-radius: 10px;
-  background: linear-gradient(
-    0deg,
-    rgba(157, 145, 113, 1) 0%,
-    rgba(215, 215, 215, 1) 100%
-  );
-  color: #201d1c;
   flex-basis: 50%;
   transition: all 0.3s ease-in-out;
 }

@@ -1,29 +1,45 @@
 <template>
   <footer class="Footer">
     <div class="footerWrapper">
-      <p class="footerP">My socials platforms:</p>
+      <p class="footerLogo">Jan'S</p>
+      <div class="verticalLine"></div>
       <div class="socialsWrapper">
-        <a href="https://www.facebook.com/JanSedlakMusic" target="_blank">
-            <img class="socialsImg" src="/facebook.svg" alt="Facebook">
+          <a href="https://music.apple.com/tm/artist/jan-sedlak/519939094" target="_blank">
+            <img class="socialsImg" src="/applemusic.svg" alt="AppleMusic" />
+            <label for="socials">Apple music</label>
           </a>
-        <a href="https://open.spotify.com/artist/6eslWoqLqMP35uERDUwFQO?si=FYTk6g7BQDGLhHeBzvB9FQ" target="_blank">
-          <img class="socialsImg" src="/spotify.svg" alt="Spotify" />
-        </a>
-        <a href="https://music.apple.com/tm/artist/jan-sedlak/519939094" target="_blank">
-          <img class="socialsImg" src="/applemusic.svg" alt="AppleMusic" />
-        </a>
-        <a href="https://jansedlakmusic.bandcamp.com/" class="buttonLink" target="_blank"
-        ><img src="/bandcamp.svg" alt="Shop" /> Shop</a>
-        <a href="https://www.instagram.com/jansedlakmusic/" target="_blank">
-          <img class="socialsImg" src="/instagram.svg" alt="Instagram" />
-        </a>
-        <a href="mailto:contact@jansedlakmusic.com">
-          <img class="socialsImg" src="/mail.svg" alt="Email" />
-        </a>
-        <a href="https://www.youtube.com/channel/UC_9pTBpqYj7uC65ENli4fBg" target="_blank">
-          <img class="socialsImg" src="/youtube.svg" alt="Youtube" />
-        </a>
+          <a href="https://music.apple.com/tm/artist/jan-sedlak/519939094" target="_blank">
+            <img class="socialsImg" src="/soundcloud.svg" alt="SoundCloud" />
+            <label for="socials">SoundCloud</label>
+          </a>
+          <a href="https://www.youtube.com/channel/UC_9pTBpqYj7uC65ENli4fBg" target="_blank">
+            <img class="socialsImg" src="/youtube.svg" alt="Youtube" style="width: 42px"/>
+            <label for="socials">Youtube</label>
+          </a>
+          <a href="https://open.spotify.com/artist/6eslWoqLqMP35uERDUwFQO?si=FYTk6g7BQDGLhHeBzvB9FQ" target="_blank">
+            <img class="socialsImg" src="/spotify.svg" alt="Spotify" />
+            <label for="socials">Spotify</label>
+          </a>
+          <a href="https://www.instagram.com/jansedlakmusic/" target="_blank">
+            <img class="socialsImg" src="/instagram.svg" alt="Instagram" />
+            <label for="socials">Instagram</label>
+          </a>
+          <a href="mailto:contact@jansedlakmusic.com">
+            <img class="socialsImg" src="/mail.svg" alt="Email" style="width: 36px"/>
+            <label for="socials">Gmail</label>
+          </a>
+          
       </div>
+    </div>
+    <div class="contact">
+      <div class="contactWrapper">
+        <img src="/phoneIcon.svg" alt="Phone Icon">
+        <p class="phoneNrP">+45 42 31 43 34</p>
+      </div>
+      <a href="https://goo.gl/maps/ZyraNidTe1Wg3FYt9" class="contactWrapper">
+        <img src="/locationIcon.svg" alt="Location Icon">
+        <p class="locationP">Aalborg DK 9000</p>
+      </a>
     </div>
   </footer>
 </template>
@@ -33,11 +49,22 @@ export default {};
 </script>
 
 <style scoped>
+
+.contact{
+  display: flex;
+  gap: 30px;
+  /* margin-left: 10vw; */
+}
+
+.contactWrapper{
+  display: flex;
+  gap: 10px;
+}
   .Footer{
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin: 50px;
+    justify-content: space-between;
+    margin: 30px 5vw 30px 5vw;
   }
 
   .footerP{
@@ -47,9 +74,12 @@ export default {};
 
   .footerWrapper{
     display: flex;
-    flex-direction: column;
     align-items: center;
     gap: 30px;
+  }
+
+  .footerLogo{
+    font-size: 48px;
   }
 
   .socialsWrapper{
@@ -74,6 +104,11 @@ export default {};
     align-items: center;
     justify-content: center;
   }
+  .verticalLine{
+    width: 1px;
+    height: 80px;
+    background-color: #9D9171;
+  }
 
   .socialsImg{
     width: 28px;
@@ -85,6 +120,12 @@ export default {};
   }
   .buttonLink img {
     width: 70px;
+  }
+
+  .socialsWrapper > a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   @media only screen and (max-width: 376px) {

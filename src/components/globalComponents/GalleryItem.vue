@@ -48,8 +48,8 @@ export default {
   opacity: 1;
 }
 .galleryImg {
-  padding: 10px;
-  min-width: 289px;
+  /* padding: 10px; */
+  min-width: calc(20vw - 10px);
   display: flex;
   align-items: center;
   cursor: pointer;

@@ -3,24 +3,6 @@
     <h2 class="sectionH">{{ sectionText }}</h2>
     <h3 class="songsH">{{ headerText }}</h3>
     <div class="sliderWrapper">
-      <div class="buttons">
-        <div
-          class="Back"
-          @click="Slider('back')"
-          :class="index ? '' : 'invisible'"
-        >
-          <img
-            class="arrow"
-            style="transform: rotate(180deg)"
-            src="/musicArrow.svg"
-            alt="NEXT"
-          />
-        </div>
-        <div class="Next" @click="Slider('next')"
-          :class="index == dataArr.length - 1 ? 'invisible' : ''">
-          <img class="arrow" src="/musicArrow.svg" alt="NEXT" />
-        </div>
-      </div>
       <div class="slider">
         <div
           class="musicWrapper"
@@ -40,6 +22,15 @@
           />
         </div>
       </div>
+      <div class="btnWrapper">
+    <div @click="backArrow" class="arrow"><img src="/mobileArrow.svg" style="rotate: -90deg;" alt="Back"></div>
+    <div class="musicNav">
+      <div @click="this.index = 0" class="button" :class="index == 0 ? 'activeBtn' : ''"></div>
+      <div @click="this.index = 1" class="button" :class="index == 1 ? 'activeBtn' : ''"></div>
+      <div @click="this.index = 2" class="button" :class="index == 2 ? 'activeBtn' : ''"></div>
+    </div>
+    <div @click="nextArrow" class="arrow"><img src="/mobileArrow.svg" style="rotate: 90deg;" alt="Next"></div>
+      </div>
     </div>
   </div>
 </template>
@@ -56,14 +47,16 @@ export default {
     };
   },
   methods: {
-    Slider(move) {
-      if (move == "next") {
-        this.index++;
-      }
-      if (move == "back") {
-        this.index--;
-      }
+    nextArrow(){
+      this.index++
+      this.index %= 3
     },
+    backArrow(){
+      if(this.index === 0){
+        this.index = 3
+      }
+      this.index--
+    }
   },
   props: {
     headerText: {
@@ -83,6 +76,46 @@ export default {
 </script>
 
 <style scoped>
+
+.arrow{
+  cursor: pointer;
+}
+
+.sliderWrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.musicNav{
+  width: 80px;
+  height: 20px;
+  background: linear-gradient(0deg, #623755 0%, #9B8E70 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  gap: 10px;
+}
+.button{
+  width: 12px;
+  height: 12px;
+  background-color: #0E131F;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.activeBtn{
+  background-color: #F1F1E6;
+}
+
+.btnWrapper{
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+  gap: 30px;
+  align-items: center;
+}
 .slider {
   position: relative;
   overflow: hidden;

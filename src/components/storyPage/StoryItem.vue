@@ -44,6 +44,10 @@ export default {
   border-radius: 10px;
 }
 
+.sectionH{
+  margin-bottom: 30px;
+}
+
 .reverseFlex{
   flex-direction: row-reverse;
 }

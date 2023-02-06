@@ -1,17 +1,30 @@
 <template>
   <section class="Music">
+    <h1 class="sectionText">Projects</h1>
+    <div class="buttonsWrapperMusic">
+      <div class="btn bandLeaderBtn"  @click="handleBandLeaderBtn">
+      <p :style="this.isBandLeader ? 'transition: color 0.3s; color: #9D9171' : ''">
+        As a band leader
+      </p>
+      </div>
+      <div class="btnActive" :style="this.isBassPlayer ? 'left: 50%' : 'left: 0%'"></div>
+      <div class="btn bassPlayerBtn"  @click="handleBassPlayerBtn">
+      <p :style="this.isBassPlayer ? 'transition: color 0.3s; color: #9D9171' : ''">
+        As a bass player
+      </p>
+      </div>
+
+    </div>
     <img class="loading" v-if="isLoading1" src="/loading.svg" alt="Loading" />
     <MusicContainerVue
       v-else
+      :class="this.isBandLeader ? '' : 'hidden'"
       :dataArr="projectsArr"
-      :sectionText="'Projects'"
-      :headerText="'As bandleader'"
     />
-    <img class="loading" v-if="isLoading2" src="/loading.svg" alt="Loading" />
+    <!-- <img class="loading" v-if="isLoading2" src="/loading.svg" alt="Loading" /> -->
     <MusicContainerVue
-      v-else
+      :class="this.isBassPlayer ? '' : 'hidden'"
       :dataArr="playerArr"
-      :headerText="'As a bass player'"
     />
   </section>
 </template>
@@ -28,6 +41,8 @@ export default {
       playerArr: [],
       isLoading1: true,
       isLoading2: true,
+      isBandLeader: true,
+      isBassPlayer: false,
     };
   },
   created() {
@@ -44,12 +59,70 @@ export default {
         this.playerArr = data;
       });
   },
+  methods:{
+    handleBandLeaderBtn(){
+      if(!this.isBandLeader){
+        this.isBandLeader = true
+        this.isBassPlayer = false
+      }
+      return
+    },
+    handleBassPlayerBtn(){
+      if(!this.isBassPlayer){
+        this.isBassPlayer = true
+        this.isBandLeader = false
+      }
+      return
+
+    }
+  }
 };
 </script>
 
 <style scoped>
+
+.btn{
+  cursor: pointer;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 100;
+}
+
+.buttonsWrapperMusic{
+  background: rgba(8, 13, 26, 0.3);
+  /* padding: 5px 15px; */
+  width: 278px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 10px;
+}
+
+.btnActive{
+  background: rgba(8, 13, 26, 0.6);
+  border-radius: 10px;
+  /* width:auto; */
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  left: 0%;
+  z-index: 99;
+  align-items: center;
+  justify-content: center;
+  transition: left 0.3s;
+}
+
+.hidden{
+  display: none;
+}
 .Music {
-  gap: 70px;
+  /* gap: 70px; */
   margin: 90px 0 130px 0;
 }
 </style>
