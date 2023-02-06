@@ -121,8 +121,4 @@ export default {
 .hidden{
   display: none;
 }
-.Music {
-  /* gap: 70px; */
-  margin: 90px 0 130px 0;
-}
 </style>

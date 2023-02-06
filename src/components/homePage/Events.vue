@@ -2,7 +2,7 @@
   <img class="loading" v-if="isLoading1" src="/loading.svg" alt="Loading" />
   <section v-else class="Events">
     
-    <h2 class="sectionH">Follow links beneath to visit my Instagram page and follow my music news</h2>
+    <h2 class="sectionH">Follow my Instagram account to stay updated with music news</h2>
     <div class="eventsWrapper">
       <EventItem v-for="item in eventArr" :key="item.id" :link="item.acf.link" :eventImg="item.acf.img.url"/>
 

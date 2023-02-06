@@ -74,7 +74,7 @@ export default {};
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 30px 5vw 30px 5vw;
+    margin: 100px 5vw 30px 5vw;
   }
 
   .footerP{

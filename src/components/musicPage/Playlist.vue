@@ -1,6 +1,6 @@
 <template>
   <section class="Playlist">
-    <h2 class="sectionH">Music videos</h2>
+    <h2>Music videos</h2>
     <p class="playlistP">A few music videos with my own compositions.</p>
     <iframe class="youtubeEMB" src="https://www.youtube.com/embed/videoseries?list=PLM3qsirXawixt9EsWyty-vJJkF2FAk97W" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
   </section>
@@ -13,14 +13,11 @@ export default {
 </script>
 
 <style scoped>
-.Playlist{
-  margin: 130px 0;
-}
 
 .playlistP{
   text-align: center;
   width: 750px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 .youtubeEMB{

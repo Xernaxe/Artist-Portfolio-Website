@@ -21,6 +21,7 @@ section{
 
 h2 {
   color: #9D9171;
+  margin-bottom: 30px;
 }
 
 body{
@@ -33,8 +34,6 @@ body{
 .sectionH,
 .songsH {
   text-align: center;
-  margin: 20px;
-  color: #9D9171;
 }
 
 .loading{

@@ -2,9 +2,9 @@
   <section class="discoverSection">
     <div class="discoverWrapper">
       <div class="discoverLeft">
-        <p class="discoverP">
+        <h2 class="discoverP">
           Discover more of me and my music by clicking the links underneath
-        </p>
+        </h2>
         <div class="buttonsWrapper">
           <routerLink to="/home" class="buttonLink"><img src="/homeBtn.svg" alt="Home"></routerLink>
           <routerLink to="/music" class="buttonLink"><img src="/musicBtn.svg" alt="Music"></routerLink>
@@ -40,7 +40,6 @@ export default {};
 .discoverLeft {
   display: flex;
   flex-direction: column;
-  gap: 35px;
 }
 
 .buttonsWrapper {

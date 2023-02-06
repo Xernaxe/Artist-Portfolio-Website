@@ -29,7 +29,7 @@ export default {
 <style scoped>
 
 .musicSection{
-  gap: 15px;
+  gap: 20px;
   width: 750px;
   margin-top: 130px;
 }
