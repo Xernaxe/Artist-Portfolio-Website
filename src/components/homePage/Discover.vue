@@ -6,7 +6,7 @@
           Discover more of me and my music by clicking the links underneath
         </p>
         <div class="buttonsWrapper">
-          <routerLink to="/home" class="buttonLink"><img src="/homeBtn.svg" alt="Home"></routerLink>
+          <routerLink to="/" class="buttonLink"><img src="/homeBtn.svg" alt="Home"></routerLink>
           <routerLink to="/music" class="buttonLink"><img src="/musicBtn.svg" alt="Music"></routerLink>
           <routerLink to="/story" class="buttonLink"><img src="/storyBtn.svg" alt="Story"></routerLink>
           <routerLink to="/contact" class="buttonLink"><img src="/contactBtn.svg" alt="Contact"></routerLink>

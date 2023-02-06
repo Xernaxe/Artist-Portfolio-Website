@@ -6,13 +6,52 @@
           <li v-for="item in orderedNavItems" :key="item.text">
             <div class="navDiv" v-if="item.active">
               <p class="navLogo">Jan'S</p>
-              <routerLink :to="item.path">{{ item.text }}</routerLink>
+              <routerLink :to="item.path" class="navLink">
+                <div class="transitionWrapper">
+                  <div class="lettersWrapper">
+                    <template v-for="(letter, index) in getLetters(item.text)" :key='letter + index'>
+                      <span 
+                      class="navLetter active coloredSpan"
+                      :style="{ transitionDelay: (index * 0.1) + 's' }"
+                      >{{ letter }}</span>
+                    </template>
+                  </div>
+                  <div class="lettersWrapper">
+                    <template v-for="(letter, index) in getLetters(item.text)" :key='letter + index'>
+                      <span 
+                      class="navLetter active whiteSpan"
+                      :style="{ transitionDelay: (index * 0.1) + 's' }"
+                      >{{ letter }}</span>
+                    </template>
+                  </div>
+                </div>
+              </routerLink>
+
             </div>
             <routerLink
               v-else
               :to="item.path"
-              :class="item.active ? 'abc' : 'nay'"
-              >{{ item.text }}</routerLink
+              class="navLink"
+              >
+              <div class="transitionWrapper">
+                  <div class="lettersWrapper">
+                    <template v-for="(letter, index) in getLetters(item.text)" :key='index'>
+                      <span 
+                      class="navLetter"
+                      :style="{ transitionDelay: (index * 0.1) + 's' }"
+                      >{{ letter }}</span>
+                    </template>
+                  </div>
+                  <div class="lettersWrapper">
+                    <template v-for="(letter, index) in getLetters(item.text)" :key='index'>
+                      <span 
+                      class="navLetter coloredSpan"
+                      :style="{ transitionDelay: (index * 0.1) + 's' }"
+                      >{{ letter }}</span>
+                    </template>
+                  </div>
+                </div>
+              </routerLink
             >
           </li>
         </ul>
@@ -32,6 +71,7 @@ export default {
         { text: "Lessons", path: "/lessons" },
         { text: "Contact", path: "/contact" },
       ],
+      lettersArr: []
     };
   },
   computed: {
@@ -87,10 +127,63 @@ export default {
       return this.navItems;
     },
   },
+  methods: {
+  getLetters(word) {
+    if (!this.lettersArr.includes(word)) {
+      this.lettersArr = []
+      word.split('').forEach(letter => this.lettersArr.push(letter))
+    }
+    return this.lettersArr
+  }
+}
 };
 </script>
 
 <style scoped>
+
+.whiteSpan{
+  color: white !important;
+}
+.coloredSpan{
+  color: #9D9171;
+}
+.active{
+  font-size: 40px!important;
+}
+.transitionWrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: absolute;
+  top: 0;
+}
+.lettersWrapper{
+  display: flex;
+  height: min-content;
+}
+.navLink {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  width: 131px;
+  height: 35px;
+  /* transform: translateY(-10px); */
+}
+
+.navLetter {
+  display: inline-block;
+  position: relative;
+  font-size: 20px;
+  transition: all 0.5s ease-in-out;
+  line-height: 30px;
+  height: min-content;
+}
+
+.navLink:hover .navLetter {
+  transform: translateY(-50px);
+
+}
+
 .navDiv {
   display: flex;
   align-items: center;
@@ -112,16 +205,8 @@ export default {
 .navUL {
   width: 100vw;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: space-evenly;
-}
-
-.navLI {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100px;
-  height: 100px;
 }
 
 .router-link-active {

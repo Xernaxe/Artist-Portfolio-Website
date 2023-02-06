@@ -18,6 +18,11 @@
       />
     </div>
     <div class="more" @click="changeHeight" v-if="dataArr.length > 3">
+      <div class="disclosureWrapper" :class="isMoreTriggered ? 'hidden': ''">
+        <div class="disclosure" :class="isMoreTriggered ? 'hidden': ''"></div>
+        <div class="disclosure" :class="isMoreTriggered ? 'hidden': ''"></div>
+        <div class="disclosure" :class="isMoreTriggered ? 'hidden': ''"></div>
+      </div>
       <img
         class="songArrow"
         src="/songArrow.svg"
@@ -38,6 +43,7 @@ export default {
     return {
       height: 340,
       lineupArr: [],
+      isMoreTriggered: false,
     };
   },
   methods: {
@@ -47,6 +53,7 @@ export default {
       } else {
         this.height = 340;
       }
+      this.isMoreTriggered = !this.isMoreTriggered
     },
     createLineupArr(obj){
       return this.lineupArr =  obj.acf.lineup.split(';')
@@ -73,6 +80,13 @@ export default {
 </script>
 
 <style scoped>
+
+.disclosureWrapper{
+  display: flex;
+  gap: 25px;
+  height: 114px;
+  transition: height 0.8s;
+}
 .songsWrapper {
   display: flex;
   overflow: hidden;
@@ -83,12 +97,27 @@ export default {
   transition: height 0.8s;
 }
 
+.disclosure{
+  width: 296px;
+  height: 114px;
+  border-radius: 10px;
+  background: linear-gradient(-15deg, rgba(255, 255, 255, 0) 40%,  #613554 100%);
+  transition: height 1s;
+}
+
 .more {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 10px 0 30px 0;
   cursor: pointer;
+  flex-direction: column;
+  gap: 20px;
+}
+.hidden{
+  height: 0!important;
+  transition: height 0.8s;
+
 }
 
 .songArrow {

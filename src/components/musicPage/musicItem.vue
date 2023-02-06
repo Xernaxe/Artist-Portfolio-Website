@@ -6,17 +6,21 @@
       <div class="musicInWrapper">
         <h4 class="songName">{{songName}}</h4>
         <div class="socialsWrapper">
-          <a :href="applemusicLink" v-if="applemusicLink" target="_blank">
-            <img class="musicImg" src="/applemusic.svg" alt="Apple music" />
+          <a class="musicA" :href="applemusicLink" v-if="applemusicLink" target="_blank" >
+            <img class="musicImg" src="/applemusic.svg" alt="Apple music" style="width: 24px"/>
+            <label for="socials">Apple Music</label>
           </a>
-          <a :href="spotifyLink" v-if="spotifyLink" target="_blank">
-            <img class="musicImg" src="/spotify.svg" alt="Spotify" />
+          <a class="musicA" :href="spotifyLink" v-if="spotifyLink" target="_blank" >
+            <img class="musicImg" src="/spotify.svg" alt="Spotify" style="width: 24px"/>
+            <label for="socials">Spotify</label>
           </a>
-          <a :href="youtubeLink" v-if="youtubeLink" target="_blank">
-            <img class="musicImg" src="/youtube.svg" alt="Youtube" />
+          <a class="musicA" :href="youtubeLink" v-if="youtubeLink" target="_blank" >
+            <img class="musicImg" src="/youtube.svg" alt="Youtube" style="width: 28px"/>
+            <label for="socials">Youtube</label>
           </a>
-          <a :href="soundcloudLink" v-if="soundcloudLink" target="_blank">
-            <img class="musicImg" src="/soundcloud.svg" alt="Soundcloud" />
+          <a class="musicA" :href="soundcloudLink" v-if="soundcloudLink" target="_blank" >
+            <img class="musicImg" src="/soundcloud.svg" alt="Soundcloud" style="width: 28px" />
+            <label for="socials">SoundCloud</label>
           </a>
         </div>
       </div>
@@ -68,6 +72,11 @@ export default {
 </script>
 
 <style scoped>
+.musicA{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .musicItem{
   display: flex;
   gap: 20px;
@@ -82,7 +91,7 @@ export default {
 .musicInWrapper{
   display: flex;
   gap: 20px;
-  
+  align-items: center;
 }
 .musicWrapper{
   width: 468px;
@@ -104,7 +113,7 @@ export default {
   display: flex;
   flex-direction: row;
   gap: 15px;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .socialsWrapper img {

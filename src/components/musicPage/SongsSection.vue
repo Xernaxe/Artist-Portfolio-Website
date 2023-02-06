@@ -5,14 +5,14 @@ import SongsContainerVue from "./SongsContainer.vue";
 <template>
   <section class="Songs">
     <div class="buttonsWrapperMusic">
-      <div class="btn bandLeaderBtn"  @click="handleBandLeaderBtn">
-      <p :style="this.isBandLeader ? 'transition: color 0.3s; color: #9D9171' : ''">
+      <div class="btn bandLeaderBtn"  @click="handleSoloBtn">
+      <p :style="this.isSolo ? 'transition: color 0.3s; color: #9D9171' : ''">
         Singles
       </p>
       </div>
-      <div class="btnActive" :style="this.isBassPlayer ? 'left: 50%' : 'left: 0%'"></div>
-      <div class="btn bassPlayerBtn"  @click="handleBassPlayerBtn">
-      <p :style="this.isBassPlayer ? 'transition: color 0.3s; color: #9D9171' : ''">
+      <div class="btnActive" :style="this.isAlbums ? 'left: 50%' : 'left: 0%'"></div>
+      <div class="btn bassPlayerBtn"  @click="handleAlbumsBtn">
+      <p :style="this.isAlbums ? 'transition: color 0.3s; color: #9D9171' : ''">
         Albums and EP’s
       </p>
       </div>
@@ -21,9 +21,13 @@ import SongsContainerVue from "./SongsContainer.vue";
     <img class="loading" v-if="isLoading1" src="/loading.svg" alt="Loading" />
     <SongsContainerVue
       v-else
+      :class="this.isSolo ? '' : 'hidden'"
       :dataArr="epArr"
     />
-    <SongsContainerVue :dataArr="singlesArr" />
+    <SongsContainerVue 
+    :class="this.isAlbums ? '' : 'hidden'"
+    :dataArr="singlesArr"
+    />
   </section>
 </template>
 
@@ -35,6 +39,8 @@ export default {
       singlesArr: [],
       isLoading1: true,
       isLoading2: true,
+      isSolo: true,
+      isAlbums: false,
     };
   },
   created() {
@@ -51,7 +57,22 @@ export default {
         this.singlesArr = data;
       });
   },
-};
+  methods: {
+    handleSoloBtn(){
+      if(!this.isSolo){
+        this.isSolo = true
+        this.isAlbums = false
+      }
+      return
+    },
+    handleAlbumsBtn(){
+      if(!this.isAlbums){
+        this.isAlbums = true
+        this.isSolo = false
+      }
+      return
+    }
+}};
 </script>
 
 <style scoped>

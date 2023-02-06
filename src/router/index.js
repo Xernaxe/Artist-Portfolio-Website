@@ -12,27 +12,32 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView
+      component: HomeView,
+      props: true
     },
     {
       path: '/story',
       name: 'story',
-      component: StoryView
+      component: StoryView,
+      props: true
     },
     {
       path: '/music',
       name: 'music',
-      component: MusicView
+      component: MusicView,
+      props: true
     },
     {
       path: '/contact',
       name: 'contact',
-      component: ContactView
+      component: ContactView,
+      props: true
     },
     {
       path: '/lessons',
       name: 'lessons',
-      component: LessonsView
+      component: LessonsView,
+      props: true
     }
   ]
 })

@@ -3,28 +3,42 @@
   <div class="popup" v-if="showPopup" @click.native="outsideClick">
     <div class="popupBox">
       <img class="close" src="/close.svg" alt="CLOSE" @click="togglePopup" />
-      <div class="popupCd">
-        <img class="popupCdImg" :src="imgSrc" alt="" />
-        <div class="popupCdHole"></div>
+      <div class="showLineup">
+        <p class="lineupP">Lineup</p>
+        <img src="/mobileArrow.svg" alt="Expand" class="expand">
       </div>
       <div class="popupWrapper">
-        <h3 class="popupSongName">{{ songName }}</h3>
-        <h3 class="popupAlbumName">{{ albumName }}</h3>
-        <h4 class="popupYear">{{ year }}</h4>
+        <div class="popupDetails">
+          <h3 class="popupSongName">{{ songName }}</h3>
+          <h3 class="popupAlbumName">{{ albumName }}</h3>
+          <h4 class="popupYear">{{ year }}</h4>
+        </div>
+        <div class="wrap">
+          <div class="popupCd">
+        <img class="popupCdImg" :src="imgSrc" alt="" />
+        <div class="popupCdHole"></div>
+        </div>
         <div class="links">
-          <a :href="applemusicLink" v-if="applemusicLink" target="_blank">
-            <img class="popupLink" src="/applemusic.svg" alt="Apple music" />
+          <a :href="applemusicLink" v-if="applemusicLink" target="_blank" class="link">
+            <img class="popupLink" src="/applemusic.svg" alt="Apple music" style="width: 24px;"/>
+            <label for="socials">Apple Music</label>
           </a>
-          <a :href="spotifyLink" v-if="spotifyLink" target="_blank">
-            <img class="popupLink" src="/spotify.svg" alt="Spotify" />
+          <a :href="spotifyLink" v-if="spotifyLink" target="_blank" class="link">
+            <img class="popupLink" src="/spotify.svg" alt="Spotify" style="width: 24px;"/>
+            <label for="socials">Spotify</label>
           </a>
-          <a :href="youtubeLink" v-if="youtubeLink" target="_blank">
-            <img class="popupLink" src="/youtube.svg" alt="Youtube" />
+          <a :href="youtubeLink" v-if="youtubeLink" target="_blank" class="link">
+            <img class="popupLink" src="/youtube.svg" alt="Youtube" style="width: 24px;"/>
+            <label for="socials">Youtube</label>
           </a>
-          <a :href="soundcloudLink" v-if="soundcloudLink" target="_blank">
-            <img class="popupLink" src="/soundcloud.svg" alt="Soundcloud" />
+          <a :href="soundcloudLink" v-if="soundcloudLink" target="_blank" class="link">
+            <img class="popupLink" src="/soundcloud.svg" alt="Soundcloud" style="width: 24px;"/>
+            <label for="socials">SoundCloud</label>
           </a>
         </div>
+      </div>
+      </div>
+      <div class="popupWrapperRight">
         <h4 class="popupSubHeader">Line-up:</h4>
         <ul class="popupUL">
           <li class="popupLI" v-for="item in lineupArray" :key="item">
@@ -100,6 +114,46 @@ export default {
 </script>
 
 <style scoped>
+
+.popupWrapperRight, .popupSubHeader, .popupUL{
+  width: 0px;
+}
+
+.popupDetails{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+.showLineup{
+  position: absolute;
+  top:50%;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.expand{
+  width: 15px;
+}
+.lineupP, .expand{
+  rotate: 90deg;
+  cursor: pointer;
+}
+
+.link{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wrap{
+  display: flex;
+}
 .close {
   position: absolute;
   right: 3%;
@@ -126,7 +180,9 @@ export default {
 .links {
   margin: 10px 0;
   display: flex;
-  gap: 30px;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
 }
 .popupSongName {
   font-size: 24px;
@@ -138,7 +194,7 @@ export default {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 101;
   width: 100vw;
   height: 100vh;
   background-color: #07071390;
@@ -184,20 +240,9 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5px;
+  gap: 20px;
 }
 
-/* .popupCdHole {
-  width: 58px;
-  height: 58px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  background: linear-gradient(#2e0b36 0%, #350b3c 100%);
-  background-attachment: fixed;
-} */
 .cd {
   position: relative;
   width: 200px;
@@ -243,8 +288,10 @@ export default {
 }
 
 .popupBox {
-  width: 486px;
-  height: 650px;
+  width: 413px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
   z-index: 2;
   background: linear-gradient(-20deg, #04070d 0%, #430c4a 100%);
   border-radius: 15px;
