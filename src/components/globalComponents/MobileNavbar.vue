@@ -14,7 +14,7 @@
           <p class="navMain"
             
           >
-            {{ getCurrentRoute.charAt(0).toUpperCase() + getCurrentRoute.slice(1, getCurrentRoute.length) }}
+            {{ (getCurrentRoute + '').charAt(0).toUpperCase() + (getCurrentRoute + '').slice(1, (getCurrentRoute + '').length) }}
           </p>
           <img :class="clicked ? '': 'rotate'" class="navArrow" src="/mobileArrow.svg" alt="">
         </div>
