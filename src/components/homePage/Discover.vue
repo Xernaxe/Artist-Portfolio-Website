@@ -162,7 +162,7 @@ computed:{
   }
 }
 
-@media (max-width: 420px){
+@media (max-width: 425px){
   .discoverSection{
     display: none;
   }

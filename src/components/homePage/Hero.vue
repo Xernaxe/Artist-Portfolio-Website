@@ -1,7 +1,7 @@
 <template>
   <section class="heroSection">
     <div class="heroWrapperLeft">
-      <img class="heroImg" src="/heroImage.png" alt="Photo of me" />
+      <img class="heroImg" :src="photoSrc" alt="Photo of me" />
     </div>
     <div class="heroWrapperRight">
       <div class="heroInWrapper">
@@ -68,7 +68,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+  props:{
+    photoSrc:{
+      type: String,
+    }
+  }
+};
 </script>
 
 <style scoped>

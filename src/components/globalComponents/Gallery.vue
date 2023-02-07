@@ -74,7 +74,7 @@ export default {
 </script>
 
 <style scoped>
-@media (max-width: 420px){
+@media (max-width: 425px){
   .gallery, .galleryNavWrapper{
     display: none!important;
   }
