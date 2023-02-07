@@ -41,27 +41,27 @@ computed: {
 }
 
 .bgImg{
-    width: 100%;
+    width: 100vw;
 }
 
 .homeBG{
-    width: 100%;
+    width: 100vw;
 }
 
 .storyBG{
     margin-top: 40px;
-    width: 100%;
+    width: 100vw;
 }
 
 .musicBG{
     position: absolute;
     top: 0;
     rotate: 180deg;
-    width: 100%;
+    width: 100vw;
 }
 
 .lessonsBG{
-    width: 90%;
+    width: 90vw;
     left: 50%;
     transform: translateX(-50%);
     margin-top: 50px;
@@ -71,5 +71,6 @@ computed: {
     left: 50%;
     transform: translateX(-50%);
     margin-top: 50px;
+    width: 90vw;
 }
 </style>

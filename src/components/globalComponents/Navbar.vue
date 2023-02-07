@@ -200,12 +200,12 @@ export default {
   display: flex;
   align-items: center;
   height: 100px;
+  margin-left: 10vw;
 }
 
 .navUL {
   width: 100vw;
   display: flex;
-  /* align-items: center; */
   justify-content: space-evenly;
 }
 

@@ -2,7 +2,7 @@
   <section class="discoverSection">
     <div class="discoverWrapper">
       <div class="discoverLeft">
-        <h2 class="discoverP">
+        <h2 class="sectionH">
           Discover more of me and my music by clicking the links underneath
         </h2>
         <div class="buttonsWrapper">
@@ -33,7 +33,6 @@ export default {};
 }
 
 .buttonLink:hover {
-  transform: scale(1.05);
   cursor: pointer;
 }
 
@@ -47,9 +46,21 @@ export default {};
   gap: 25px;
 }
 
-@media only screen and (max-width: 376px) {
+@media only screen and (max-width: 970px) {
   .buttonsWrapper {
     flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .buttonLink {
+    flex-basis: 0;
+  }
+}
+
+@media only screen and (max-width: 730px) {
+  .buttonsWrapper {
+    flex-direction: column;
+    align-items: center;
   }
 }
 </style>

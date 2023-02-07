@@ -111,10 +111,6 @@ export default {};
   border-radius: 15px;
 }
 
-.heroWrapperLeft{
-  width: 467px;
-  height: 467px;
-}
 
 .heroSection {
   display: flex;
@@ -126,7 +122,6 @@ export default {};
 
 .heroWrapperRight {
   width: 440px;
-  height: 467px;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -190,30 +185,32 @@ export default {};
   margin: 10px 0 30px;
 }
 
-@media only screen and (max-width: 376px) {
+@media only screen and (max-width: 970px) {
   .heroSection {
     flex-direction: column;
-  }
-
-  .heroImg{
-    width: 257px;
-    height: 257px;
-  }
-
-  .heroWrapperRight{
-    width: 257px;
     align-items: center;
   }
 
-  .heroP{
-    text-align: center;
+.heroHeader {
+  text-align: center;
+}
+
+.contact {
+  margin: 50px auto 0 auto;
+}
+}
+
+@media only screen and (max-width: 490px) {
+  .heroImg {
+    width: 90vw;
+    align-self: center;
   }
 
-  .heroHeader{
-    text-align: center;
+  .heroWrapperRight {
+    width: 90vw;
   }
 
-  .socialsWrapper{
+  .socialsWrapper {
     flex-wrap: wrap;
     justify-content: center;
   }

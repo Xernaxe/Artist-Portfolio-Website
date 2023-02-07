@@ -56,11 +56,17 @@ export default {
   filter: blur(3px);
 }
 
-@media only screen and (max-width: 376px) {
+@media only screen and (max-width: 970px) {
   .eventImg{
-    width: 118px;
-    height: 118px;
-    
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .eventImg{
+    width: 260px;
+    height: 250px;
   }
 }
 </style>

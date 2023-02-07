@@ -45,9 +45,9 @@ export default {
   gap: 20px;
 }
 
-@media only screen and (max-width: 376px) {
+@media only screen and (max-width: 700px) {
   .eventsWrapper{
-    flex-wrap: wrap;
+    flex-direction: column;
   }
 }
 

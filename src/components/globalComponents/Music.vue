@@ -30,7 +30,7 @@ export default {
 
 .musicSection{
   gap: 20px;
-  width: 750px;
+  width: 80vw;
   margin-top: 130px;
 }
 

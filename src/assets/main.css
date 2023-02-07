@@ -12,7 +12,6 @@ li{
 }
 
 section{
-  width: 954px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -50,7 +49,13 @@ body{
   
 }
 
-@media only screen and (max-width: 376px) {
+@media only screen and (max-width: 730px) {
+  .sectionH {
+    width: 80vw;
+  }
+} 
+
+/*@media only screen and (max-width: 376px) {
   section{
     width: 257px;
   }
@@ -63,4 +68,4 @@ body{
 @media only screen and (max-width: 426px) {
   
   
-}
+}*/
