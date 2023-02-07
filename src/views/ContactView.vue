@@ -3,6 +3,8 @@ import ContactVue from '../components/contactPage/Contact.vue';
 import MusicVue from '../components/globalComponents/Music.vue';
 import HeroVue from '../components/homePage/Hero.vue';
 import Contact from '../components/contactPage/Contact.vue';
+import Discover from '../components/homePage/Discover.vue';
+
 </script>
 
 <script>
@@ -19,6 +21,7 @@ import Contact from '../components/contactPage/Contact.vue';
 "/>
   <HeroVue/>
   <Contact/>
+  <Discover/>
 </template>
 
 <style>

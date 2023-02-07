@@ -6,13 +6,13 @@ import SongsContainerVue from "./SongsContainer.vue";
   <section class="Songs">
     <h2 class="sectionText">Discography</h2>
     <div class="buttonsWrapperMusic">
-      <div class="btn bandLeaderBtn"  @click="handleSoloBtn">
+      <div class="btn bandLeaderBtn"  @click="handleBtn">
       <p :style="this.isSolo ? 'transition: color 0.3s; color: #9D9171' : ''">
         Singles
       </p>
       </div>
       <div class="btnActive" :style="this.isAlbums ? 'left: 50%' : 'left: 0%'"></div>
-      <div class="btn bassPlayerBtn"  @click="handleAlbumsBtn">
+      <div class="btn bassPlayerBtn"  @click="handleBtn">
       <p :style="this.isAlbums ? 'transition: color 0.3s; color: #9D9171' : ''">
         Albums and EP’s
       </p>
@@ -59,19 +59,9 @@ export default {
       });
   },
   methods: {
-    handleSoloBtn(){
-      if(!this.isSolo){
-        this.isSolo = true
-        this.isAlbums = false
-      }
-      return
-    },
-    handleAlbumsBtn(){
-      if(!this.isAlbums){
-        this.isAlbums = true
-        this.isSolo = false
-      }
-      return
+    handleBtn(){
+      this.isSolo = !this.isSolo
+      this.isAlbums = !this.isAlbums
     }
 }};
 </script>

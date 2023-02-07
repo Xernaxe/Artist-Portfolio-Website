@@ -2,13 +2,13 @@
   <section class="Music">
     <h2 class="sectionText">Projects</h2>
     <div class="buttonsWrapperMusic">
-      <div class="btn bandLeaderBtn"  @click="handleBandLeaderBtn">
+      <div class="btn bandLeaderBtn"  @click="handleBtn">
       <p :style="this.isBandLeader ? 'transition: color 0.3s; color: #9D9171' : ''">
         As a band leader
       </p>
       </div>
       <div class="btnActive" :style="this.isBassPlayer ? 'left: 50%' : 'left: 0%'"></div>
-      <div class="btn bassPlayerBtn"  @click="handleBassPlayerBtn">
+      <div class="btn bassPlayerBtn"  @click="handleBtn">
       <p :style="this.isBassPlayer ? 'transition: color 0.3s; color: #9D9171' : ''">
         As a bass player
       </p>
@@ -60,20 +60,9 @@ export default {
       });
   },
   methods:{
-    handleBandLeaderBtn(){
-      if(!this.isBandLeader){
-        this.isBandLeader = true
-        this.isBassPlayer = false
-      }
-      return
-    },
-    handleBassPlayerBtn(){
-      if(!this.isBassPlayer){
-        this.isBassPlayer = true
-        this.isBandLeader = false
-      }
-      return
-
+    handleBtn(){
+      this.isBassPlayer = !this.isBassPlayer
+      this.isBandLeader = !this.isBandLeader
     }
   }
 };

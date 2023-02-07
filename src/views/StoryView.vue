@@ -2,6 +2,7 @@
 import EssayVue from "../components/storyPage/Essay.vue";
 import MusicVue from "../components/globalComponents/Music.vue";
 import StoryVue from "../components/storyPage/Story.vue";
+import Discover from '../components/homePage/Discover.vue';
 </script>
 
 <script>
@@ -21,6 +22,7 @@ import StoryVue from "../components/storyPage/Story.vue";
   />
   <StoryVue />
   <EssayVue />
+  <Discover/>
 </template>
 
 <style></style>

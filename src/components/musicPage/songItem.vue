@@ -1,13 +1,13 @@
 <!-- eslint-disable -->
 <template>
   <div class="popup" v-if="showPopup" @click.native="outsideClick">
-    <div class="popupBox">
+    <div class="popupBox" :style="this.showLineup ? 'width: 613px':''">
       <img class="close" src="/close.svg" alt="CLOSE" @click="togglePopup" />
-      <div class="showLineup">
+      <div class="showLineup" @click="this.showLineup = !this.showLineup">
         <p class="lineupP">Lineup</p>
         <img src="/mobileArrow.svg" alt="Expand" class="expand">
       </div>
-      <div class="popupWrapper">
+      <div class="popupWrapper" :style="this.showLineup ? 'width: 50%':''">
         <div class="popupDetails">
           <h3 class="popupSongName">{{ songName }}</h3>
           <h3 class="popupAlbumName">{{ albumName }}</h3>
@@ -38,9 +38,9 @@
         </div>
       </div>
       </div>
-      <div class="popupWrapperRight">
-        <h4 class="popupSubHeader">Line-up:</h4>
-        <ul class="popupUL">
+      <div class="popupWrapperRight" v-if="showLineup" >
+        <h4 class="popupSubHeader"  >Line-up:</h4>
+        <ul class="popupUL" >
           <li class="popupLI" v-for="item in lineupArray" :key="item">
             {{ item }}
           </li>
@@ -65,6 +65,7 @@ export default {
   data() {
     return {
       showPopup: false,
+      showLineup: false,
     };
   },
   methods: {
@@ -76,6 +77,7 @@ export default {
         this.togglePopup();
       }
     },
+    
   },
   props: {
     songName: {
@@ -115,8 +117,13 @@ export default {
 
 <style scoped>
 
-.popupWrapperRight, .popupSubHeader, .popupUL{
-  width: 0px;
+.popupWrapperRight{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  transition: 0.5s;
 }
 
 .popupDetails{
@@ -208,15 +215,17 @@ export default {
   flex-basis: 31%;
   gap: 20px;
   cursor: pointer;
-  min-width: 296px;
+  max-width: 296px;
   height: 320px;
-  background: linear-gradient(
-    315deg,
-    rgba(157, 145, 113, 1) 0%,
-    rgba(97, 53, 84, 1) 100%
-  );
+  transition: 1s;
   cursor: pointer;
+  background: linear-gradient(315deg, rgba(157, 145, 113, 1) 0%, rgba(97, 53, 84, 1) 80%) var(--pos, 0%)/ 200% ;
 }
+
+.song:hover{
+  --pos: 100%;
+}
+
 .cdImg,
 .popupCdImg {
   width: 200px;
@@ -241,6 +250,8 @@ export default {
   flex-direction: column;
   align-items: center;
   gap: 20px;
+  width: 100%;
+  transition: 0.5s;
 }
 
 .cd {
@@ -289,12 +300,13 @@ export default {
 
 .popupBox {
   width: 413px;
+  padding: 0 20px;
   height: 400px;
   display: flex;
-  justify-content: center;
   z-index: 2;
   background: linear-gradient(-20deg, #04070d 0%, #430c4a 100%);
   border-radius: 15px;
+  transition: .5s;
 }
 
 @media only screen and (max-width: 376px) {

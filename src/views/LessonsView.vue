@@ -1,5 +1,6 @@
 <script setup>
 import LessonsVue from '../components/lessonsPage/Lessons.vue';
+import Discover from '../components/homePage/Discover.vue';
 </script>
 
 <script>
@@ -12,6 +13,7 @@ import LessonsVue from '../components/lessonsPage/Lessons.vue';
 
 <template>
   <LessonsVue/>
+  <Discover/>
 </template>
 
 <style>

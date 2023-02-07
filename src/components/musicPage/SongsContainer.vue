@@ -89,12 +89,14 @@ export default {
 }
 .songsWrapper {
   display: flex;
-  overflow: hidden;
-  flex-wrap: wrap;
-  flex-direction: row;
-  max-height: fit-content;
-  gap: 30px;
-  transition: height 0.8s;
+    overflow: hidden;
+    flex-wrap: wrap;
+    flex-direction: row;
+    max-height: fit-content;
+    width: 1000px;
+    gap: 30px;
+    transition: height 0.8s;
+    justify-content: center;
 }
 
 .disclosure{

@@ -2,6 +2,8 @@
 import SongsSectionVue from "../components/musicPage/SongsSection.vue"
 import MusicSectionVue from "../components/musicPage/MusicSection.vue";
 import Playlist from "../components/musicPage/Playlist.vue";
+import Discover from "../components/homePage/Discover.vue";
+
 </script>
 
 <script>
@@ -15,7 +17,8 @@ import Playlist from "../components/musicPage/Playlist.vue";
 <template>
   <MusicSectionVue/>
   <SongsSectionVue/>
-  <Playlist/>
+<Playlist/>
+  <Discover/>
 </template>
 
 <style>
