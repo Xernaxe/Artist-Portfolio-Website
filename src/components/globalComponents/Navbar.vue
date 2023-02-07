@@ -1,6 +1,6 @@
 <template>
   <header>
-    <nav class="nav">
+    <!-- <nav class="nav">
       <div class="navWrapper">
         <ul class="navUL">
           <li v-for="item in orderedNavItems" :key="item.text">
@@ -55,8 +55,8 @@
             >
           </li>
         </ul>
-      </div>
-    </nav>
+      </div> -->
+    <!-- </nav> -->
   </header>
 </template>
 
