@@ -34,7 +34,7 @@
       </div>
     </div>
     <div class="contact">
-      <a class="contactWrapper">
+      <a href="https://goo.gl/maps/ZyraNidTe1Wg3FYt9" target="_blank" class="contactWrapper">
         <img src="/locationIcon.svg" alt="Location Icon" style="width:20px">
         <p class="locationP">Aalborg DK 9000</p>
       </a>
