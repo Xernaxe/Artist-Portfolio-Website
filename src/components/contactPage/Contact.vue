@@ -12,4 +12,9 @@ export default {
 iframe {
   margin-top: 60px;
 }
+@media (max-width: 660px){
+  iframe{
+    width: 100%;
+  }
+}
 </style>

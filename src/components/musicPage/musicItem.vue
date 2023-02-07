@@ -145,8 +145,7 @@ export default {
   .musicItem{
     flex-direction: column;
   }
-
-
+  
   .musicYoutubeEMB{
     width: 257px;
     height: 148px;
@@ -174,5 +173,18 @@ export default {
     text-align: center;
   }
 }
-
+@media (max-width: 755px){
+.musicItem{
+    flex-direction: column;
+  }
+  .musicYoutubeEMB{
+    width: 100%;
+  }
+  .musicWrapper{
+    width: 66vw;
+  }
+  .musicDescription{
+    width: fit-content;
+  }
+}
 </style>

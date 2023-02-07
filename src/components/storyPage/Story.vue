@@ -23,6 +23,13 @@ import StoryItemVue from './StoryItem.vue'
 .Story{
   margin: 130px 0;
   gap: 130px;
+  width: 51vw;
+}
+
+@media (max-width: 1550px){
+  .Story{
+    width: 80vw;
+  }
 }
 
 </style>

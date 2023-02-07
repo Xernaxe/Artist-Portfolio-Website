@@ -52,13 +52,9 @@ export default {
   font-size: 12px;
 }
 
-@media only screen and (max-width: 376px) {
+@media only screen and (max-width: 420px) {
   .musicSection{
-    width: 275px;
-    
-  }
-  .musicPlayer{
-    width: 80%;
+    display: none;
   }
   
 }

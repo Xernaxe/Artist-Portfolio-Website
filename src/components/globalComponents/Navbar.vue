@@ -134,6 +134,11 @@ export default {
 
 <style scoped>
 
+@media (max-width: 850px){
+  header{
+    display: none;
+  }
+}
 .whiteSpan{
   color: white !important;
 }

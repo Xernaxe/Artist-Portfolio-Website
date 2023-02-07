@@ -37,4 +37,13 @@ export default {
   }
 }
 
+@media (max-width: 970px){
+  .playlistP{
+    width: 100%;
+  }
+  .youtubeEMB{
+    max-width: 90vw;
+  }
+}
+
 </style>

@@ -1,10 +1,10 @@
 <template>
         <div class="transition" :style="{ 'background-image': gradient }">
-            <img v-if="this.$route.path == '/'" class="homeBG" src="/homeBG.svg" alt="Background">
-            <img v-if="this.$route.path == '/music'" class="musicBG" src="/musicBG.svg" alt="Background">
-            <img v-if="this.$route.path == '/story'" class="storyBG" src="/storyBG.svg" alt="Background">
-            <img v-if="this.$route.path == '/lessons'" class="lessonsBG" src="/lessonsBG.svg" alt="Background">
-            <img v-if="this.$route.path == '/contact'" class="contactBG" src="/contactBG.svg" alt="Background">
+            <img v-if="this.$route.path == '/'" class="bg homeBG" src="/homeBG.svg" alt="Background">
+            <img v-if="this.$route.path == '/music'" class="bg musicBG" src="/musicBG.svg" alt="Background">
+            <img v-if="this.$route.path == '/story'" class="bg storyBG" src="/storyBG.svg" alt="Background">
+            <img v-if="this.$route.path == '/lessons'" class="bg lessonsBG" src="/lessonsBG.svg" alt="Background">
+            <img v-if="this.$route.path == '/contact'" class="bg contactBG" src="/contactBG.svg" alt="Background">
         </div>
 </template>
 
@@ -67,5 +67,11 @@ computed: {
     transform: translateX(-50%);
     margin-top: 50px;
     width: 90vw;
+}
+
+@media (max-width: 1023px){
+    .bg{
+        display: none;
+    }
 }
 </style>

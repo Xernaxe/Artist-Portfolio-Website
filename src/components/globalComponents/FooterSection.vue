@@ -62,7 +62,7 @@ export default {};
   display: flex;
   flex-direction: column;
   gap: 15px;
-  margin-top: 70px;
+  /* margin-top: 70px; */
   /* margin-left: 10vw; */
 }
 
@@ -75,6 +75,7 @@ export default {};
     align-items: center;
     justify-content: space-between;
     padding: 30px 5vw 30px 5vw;
+    margin-top: 70px;
   }
 
   .footerP{
@@ -143,13 +144,8 @@ export default {};
     align-items: center;
   }
 
-  @media only screen and (max-width: 376px) {
-    .socialsWrapper{
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-bottom: 15px;
-    }
-    .buttonLink{
+  @media (max-width: 1023px) {
+    .Footer{
       display: none;
     }
 }

@@ -131,5 +131,31 @@ export default {
     gap: 15px;
     height: 200px !important;
   }
+  .disclosure:nth-last-child(2){
+    display: none;
+  }
+  .disclosure{
+    width: 140px;
+  }
+}
+
+@media (max-width: 970px){
+  .disclosure{
+    max-width: 30vw;
+  }
+  .songsContainer{
+    width: 100%;
+  }
+  
+  .songsWrapper{
+    width: 100%;
+    gap: 25px;
+  }
+}
+
+@media (max-width: 767px) {
+  .disclosure:nth-last-child(1){
+    display: none;
+  }
 }
 </style>

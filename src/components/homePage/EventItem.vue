@@ -112,12 +112,17 @@ export default {
 
 
 
-@media only screen and (max-width: 970px) {
-  .eventImg{
-    width: 150px;
-    height: 150px;
+@media (max-width: 420px){
+  .eventLink{
+    width: auto;
+    height: auto;
+  }
+
+  .imgOverlay{
+    max-width: fit-content!important;;
   }
 }
+
 
 @media only screen and (max-width: 700px) {
   .eventImg{
