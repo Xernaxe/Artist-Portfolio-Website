@@ -74,6 +74,10 @@ export default {};
   gap: 10px;
   align-items: center;
 }
+
+.contactWrapper p {
+  font-size: 10px;
+}
   .Footer{
     display: flex;
     align-items: center;
