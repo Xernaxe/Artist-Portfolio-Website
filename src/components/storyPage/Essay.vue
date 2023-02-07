@@ -46,4 +46,10 @@ a {
     width: 257px;
   }
 }
+
+@media (max-width: 1023px){
+  .essayP{
+    width: 70vw;
+  }
+}
 </style>

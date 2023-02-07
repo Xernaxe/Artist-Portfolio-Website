@@ -62,4 +62,16 @@ export default {
   height: 257px;
 }
 }
+@media (max-width: 1023px){
+  .storyWrapper{
+    flex-direction: column!important;;
+    align-items: center;
+  }
+}
+
+@media (max-width: 460px){
+  .storyImg{
+    width: 90vw;
+  }
+}
 </style>
