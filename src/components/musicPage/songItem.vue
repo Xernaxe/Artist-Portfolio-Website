@@ -15,9 +15,10 @@
         </div>
         <div class="wrap">
           <div class="popupCd">
-        <img class="popupCdImg" :src="imgSrc" alt="" />
-        <div class="popupCdHole"></div>
-        </div>
+          <img class="popupCdImg spinCd" :src="imgSrc" alt="" />
+          <img class="cdAnimation" src="/cdAnimation.svg" alt="">
+          <div class="popupCdHole"></div>
+          </div>
         <div class="links">
           <a :href="applemusicLink" v-if="applemusicLink" target="_blank" class="link">
             <img class="popupLink" src="/applemusic.svg" alt="Apple music" style="width: 24px;"/>
@@ -116,7 +117,10 @@ export default {
 </script>
 
 <style scoped>
-
+.cdAnimation{
+  position: absolute;
+  right: -30px;
+}
 .popupWrapperRight{
   display: flex;
   flex-direction: column;
@@ -160,6 +164,7 @@ export default {
 }
 .wrap{
   display: flex;
+  gap: 35px;
 }
 .close {
   position: absolute;
@@ -231,6 +236,14 @@ export default {
   width: 200px;
   border-radius: 50%;
   height: 200px;
+}
+.spinCd{
+  animation: spin 60s infinite linear;
+
+}
+@keyframes spin {
+  from {rotate: 0deg}
+  to {rotate: 360deg}
 }
 
 /* .popupCdImg {
