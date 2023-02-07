@@ -3,13 +3,13 @@
     <h2 class="sectionText">Projects</h2>
     <div class="buttonsWrapperMusic">
       <div class="btn bandLeaderBtn"  @click="handleBtn">
-      <p :style="this.isBandLeader ? 'transition: color 0.3s; color: #9D9171' : ''">
+      <p :style="isBandLeader ? 'transition: color 0.3s; color: #9D9171' : ''">
         As a band leader
       </p>
       </div>
-      <div class="btnActive" :style="this.isBassPlayer ? 'left: 50%' : 'left: 0%'"></div>
+      <div class="btnActive" :style="isBassPlayer ? 'left: 50%' : 'left: 0%'"></div>
       <div class="btn bassPlayerBtn"  @click="handleBtn">
-      <p :style="this.isBassPlayer ? 'transition: color 0.3s; color: #9D9171' : ''">
+      <p :style="isBassPlayer ? 'transition: color 0.3s; color: #9D9171' : ''">
         As a bass player
       </p>
       </div>
@@ -18,12 +18,12 @@
     <img class="loading" v-if="isLoading1" src="/loading.svg" alt="Loading" />
     <MusicContainerVue
       v-else
-      :class="this.isBandLeader ? '' : 'hidden'"
+      :class="isBandLeader ? '' : 'hidden'"
       :dataArr="projectsArr"
     />
     <!-- <img class="loading" v-if="isLoading2" src="/loading.svg" alt="Loading" /> -->
     <MusicContainerVue
-      :class="this.isBassPlayer ? '' : 'hidden'"
+      :class="isBassPlayer ? '' : 'hidden'"
       :dataArr="playerArr"
     />
   </section>

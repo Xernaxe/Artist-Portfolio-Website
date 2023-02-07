@@ -7,13 +7,13 @@ import SongsContainerVue from "./SongsContainer.vue";
     <h2 class="sectionText">Discography</h2>
     <div class="buttonsWrapperMusic">
       <div class="btn bandLeaderBtn"  @click="handleBtn">
-      <p :style="this.isSolo ? 'transition: color 0.3s; color: #9D9171' : ''">
+      <p :style="isSolo ? 'transition: color 0.3s; color: #9D9171' : ''">
         Albums and EPs
       </p>
       </div>
-      <div class="btnActive" :style="this.isAlbums ? 'left: 50%' : 'left: 0%'"></div>
+      <div class="btnActive" :style="isAlbums ? 'left: 50%' : 'left: 0%'"></div>
       <div class="btn bassPlayerBtn"  @click="handleBtn">
-      <p :style="this.isAlbums ? 'transition: color 0.3s; color: #9D9171' : ''">
+      <p :style="isAlbums ? 'transition: color 0.3s; color: #9D9171' : ''">
         Singles
       </p>
       </div>
@@ -22,11 +22,11 @@ import SongsContainerVue from "./SongsContainer.vue";
     <img class="loading" v-if="isLoading1" src="/loading.svg" alt="Loading" />
     <SongsContainerVue
       v-else
-      :class="this.isSolo ? '' : 'hidden'"
+      :class="isSolo ? '' : 'hidden'"
       :dataArr="epArr"
     />
     <SongsContainerVue 
-    :class="this.isAlbums ? '' : 'hidden'"
+    :class="isAlbums ? '' : 'hidden'"
     :dataArr="singlesArr"
     />
   </section>

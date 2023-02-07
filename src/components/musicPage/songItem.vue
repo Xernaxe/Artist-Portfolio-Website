@@ -1,13 +1,13 @@
 <!-- eslint-disable -->
 <template>
   <div class="popup" v-if="showPopup" @click.native="outsideClick">
-    <div class="popupBox" :style="this.showLineup ? 'width: 613px':''">
+    <div class="popupBox" :style="showLineup ? 'width: 613px':''">
       <img class="close" src="/close.svg" alt="CLOSE" @click="togglePopup" />
-      <div class="showLineup" @click="this.showLineup = !this.showLineup">
+      <div class="showLineup" @click="showLineup = !showLineup">
         <p class="lineupP">Lineup</p>
-        <img src="/mobileArrow.svg" alt="Expand" class="expand" :class="this.showLineup ? 'expandActive': ''">
+        <img src="/mobileArrow.svg" alt="Expand" class="expand" :class="showLineup ? 'expandActive': ''">
       </div>
-      <div class="popupWrapper" :style="this.showLineup ? 'width: 50%':''">
+      <div class="popupWrapper" :style="showLineup ? 'width: 50%':''">
         <div class="popupDetails">
           <h3 class="popupSongName">{{ songName }}</h3>
           <h3 class="popupAlbumName">{{ albumName }}</h3>
