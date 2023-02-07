@@ -24,10 +24,10 @@ export default {
   data(){
     return {
       buttonsMap: [
-      {src: "/homeBtn.svg", alt: "Home", btnP:"Home", btnSubP:"Go to homepage", path:'/'},
-      {src: "/storyBtn.svg", alt: "Story", btnP:"Story", btnSubP:"Read more about my journey here", path:"/story"},
-      {src: "/lessonsBtn.svg", alt: "Lessons", btnP:"Lessons", btnSubP:"Learn about educational opputunities", path:"/lessons"},
-      {src: "/contactBtn.svg", alt: "Contact", btnP:"Contact", btnSubP:"Click here to contact me", path:"/contact"}]
+      {src: "./homeBtn.svg", alt: "Home", btnP:"Home", btnSubP:"Go to homepage", path:'/'},
+      {src: "./storyBtn.svg", alt: "Story", btnP:"Story", btnSubP:"Read more about my journey here", path:"/story"},
+      {src: "./lessonsBtn.svg", alt: "Lessons", btnP:"Lessons", btnSubP:"Learn about educational opputunities", path:"/lessons"},
+      {src: "./contactBtn.svg", alt: "Contact", btnP:"Contact", btnSubP:"Click here to contact me", path:"/contact"}]
   }
 },
 computed:{
@@ -35,42 +35,42 @@ computed:{
     switch (this.$route.name) {
       case "music":
         this.buttonsMap = [
-        {src: "/homeBtn.svg", alt: "Home", btnP:"Home", btnSubP:"Go to homepage", path:'/'},
-        {src: "/storyBtn.svg", alt: "Story", btnP:"Story", btnSubP:"Read more about my journey here", path:"/story"},
-        {src: "/lessonsBtn.svg", alt: "Lessons", btnP:"Lessons", btnSubP:"Learn about educational opputunities", path:"/lessons"},
-        {src: "/contactBtn.svg", alt: "Contact", btnP:"Contact", btnSubP:"Click here to contact me", path:"/contact"}]
+        {src: "./homeBtn.svg", alt: "Home", btnP:"Home", btnSubP:"Go to homepage", path:'/'},
+        {src: "./storyBtn.svg", alt: "Story", btnP:"Story", btnSubP:"Read more about my journey here", path:"/story"},
+        {src: "./lessonsBtn.svg", alt: "Lessons", btnP:"Lessons", btnSubP:"Learn about educational opputunities", path:"/lessons"},
+        {src: "./contactBtn.svg", alt: "Contact", btnP:"Contact", btnSubP:"Click here to contact me", path:"/contact"}]
       break;
       
       case "home":
         this.buttonsMap = [
-        {src: "/musicBtn.svg", alt: "Music", btnP:"Music", btnSubP:"Get to know my music", path:"/music"},
-        {src: "/storyBtn.svg", alt: "Story", btnP:"Story", btnSubP:"Read more about my journey here", path:"/story"},
-        {src: "/lessonsBtn.svg", alt: "Lessons", btnP:"Lessons", btnSubP:"Learn about educational opputunities", path:"/lessons"},
-        {src: "/contactBtn.svg", alt: "Contact", btnP:"Contact", btnSubP:"Click here to contact me", path:"/contact"}]
+        {src: "./musicBtn.svg", alt: "Music", btnP:"Music", btnSubP:"Get to know my music", path:"/music"},
+        {src: "./storyBtn.svg", alt: "Story", btnP:"Story", btnSubP:"Read more about my journey here", path:"/story"},
+        {src: "./lessonsBtn.svg", alt: "Lessons", btnP:"Lessons", btnSubP:"Learn about educational opputunities", path:"/lessons"},
+        {src: "./contactBtn.svg", alt: "Contact", btnP:"Contact", btnSubP:"Click here to contact me", path:"/contact"}]
       break;
 
       case "story":
         this.buttonsMap = [
-        {src: "/homeBtn.svg", alt: "Home", btnP:"Home", btnSubP:"Go to homepage", path:'/'},
-        {src: "/musicBtn.svg", alt: "Music", btnP:"Music", btnSubP:"Get to know my music", path:"/music"},
-        {src: "/lessonsBtn.svg", alt: "Lessons", btnP:"Lessons", btnSubP:"Learn about educational opputunities", path:"/lessons"},
-        {src: "/contactBtn.svg", alt: "Contact", btnP:"Contact", btnSubP:"Click here to contact me", path:"/contact"}]
+        {src: "./homeBtn.svg", alt: "Home", btnP:"Home", btnSubP:"Go to homepage", path:'/'},
+        {src: "./musicBtn.svg", alt: "Music", btnP:"Music", btnSubP:"Get to know my music", path:"/music"},
+        {src: "./lessonsBtn.svg", alt: "Lessons", btnP:"Lessons", btnSubP:"Learn about educational opputunities", path:"/lessons"},
+        {src: "./contactBtn.svg", alt: "Contact", btnP:"Contact", btnSubP:"Click here to contact me", path:"/contact"}]
       break;
 
       case "lessons":
         this.buttonsMap = [
-        {src: "/homeBtn.svg", alt: "Home", btnP:"Home", btnSubP:"Go to homepage", path:'/'},
-        {src: "/musicBtn.svg", alt: "Music", btnP:"Music", btnSubP:"Get to know my music", path:"/music"},
-        {src: "/storyBtn.svg", alt: "Story", btnP:"Story", btnSubP:"Read more about my journey here", path:"/story"},
-        {src: "/contactBtn.svg", alt: "Contact", btnP:"Contact", btnSubP:"Click here to contact me", path:"/contact"}]
+        {src: "./homeBtn.svg", alt: "Home", btnP:"Home", btnSubP:"Go to homepage", path:'/'},
+        {src: "./musicBtn.svg", alt: "Music", btnP:"Music", btnSubP:"Get to know my music", path:"/music"},
+        {src: "./storyBtn.svg", alt: "Story", btnP:"Story", btnSubP:"Read more about my journey here", path:"/story"},
+        {src: "./contactBtn.svg", alt: "Contact", btnP:"Contact", btnSubP:"Click here to contact me", path:"/contact"}]
       break;
 
       case "contact":
         this.buttonsMap = [
-        {src: "/homeBtn.svg", alt: "Home", btnP:"Home", btnSubP:"Go to homepage", path:'/'},
-        {src: "/musicBtn.svg", alt: "Music", btnP:"Music", btnSubP:"Get to know my music", path:"/music"},
-        {src: "/storyBtn.svg", alt: "Story", btnP:"Story", btnSubP:"Read more about my journey here", path:"/story"},
-        {src: "/lessonsBtn.svg", alt: "Lessons", btnP:"Lessons", btnSubP:"Learn about educational opputunities", path:"/lessons"}]
+        {src: "./homeBtn.svg", alt: "Home", btnP:"Home", btnSubP:"Go to homepage", path:'/'},
+        {src: "./musicBtn.svg", alt: "Music", btnP:"Music", btnSubP:"Get to know my music", path:"/music"},
+        {src: "./storyBtn.svg", alt: "Story", btnP:"Story", btnSubP:"Read more about my journey here", path:"/story"},
+        {src: "./lessonsBtn.svg", alt: "Lessons", btnP:"Lessons", btnSubP:"Learn about educational opputunities", path:"/lessons"}]
       break;
     }
     return this.buttonsMap

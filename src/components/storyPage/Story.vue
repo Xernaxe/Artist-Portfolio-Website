@@ -26,7 +26,7 @@ import StoryItemVue from './StoryItem.vue'
   width: 51vw;
 }
 
-@media (max-width: 1550px){
+@media (max-width: 2050px){
   .Story{
     width: 962px;
   }
