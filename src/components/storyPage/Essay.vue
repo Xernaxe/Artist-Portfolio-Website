@@ -29,6 +29,13 @@ export default {
   margin-bottom: 15px;
 }
 
+.essayEMB {
+  transition: all .3s ease-in-out;
+}
+
+.essayEMB:hover {
+  transform: scale(1.1);
+}
 
 a {
   text-decoration: underline;

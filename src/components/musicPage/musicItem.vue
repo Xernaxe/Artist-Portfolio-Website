@@ -98,7 +98,7 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  gap: 30px;
+  gap: 15px;
 }
 
 .link {
@@ -122,6 +122,10 @@ export default {
 
 .socialsWrapper img:hover {
   transform: scale(1.2);
+}
+
+.socialsWrapper label {
+  font-size: 10px;
 }
 .musicYoutubeEMB{
   width: 467px;

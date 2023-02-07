@@ -135,6 +135,7 @@ export default {
   flex-direction: column;
   align-items: center;
   margin-top: 20px;
+  gap: 10px;
 }
 .showLineup{
   position: absolute;
@@ -177,7 +178,13 @@ export default {
   top: 3%;
   cursor: pointer;
   z-index: 999999;
+  width: 15px;
 }
+
+.popupSongName {
+  font-weight: 600;
+}
+
 .popupSongName,
 .popupAlbumName,
 .popupSubHeader {
@@ -198,8 +205,12 @@ export default {
   margin: 10px 0;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
   align-items: center;
+}
+
+.links label {
+  font-size: 10px;
 }
 .popupSongName {
   font-size: 24px;

@@ -55,7 +55,7 @@
             </div>
         <p class="phoneNrP">+45 42 31 43 34</p>
       </div>
-          <a href="https://goo.gl/maps/ZyraNidTe1Wg3FYt9" class="contactWrapper">
+          <a class="contactWrapper">
             <div class="iconWrapper">
               <img src="/locationIcon.svg" alt="Location Icon">
             </div>

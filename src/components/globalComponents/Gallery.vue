@@ -75,8 +75,17 @@ export default {
 
 <style scoped>
 
-.galleryArrow{
+.galleryArrow, .galleryButton{
   cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+.galleryArrow:hover {
+  transform: scale(1.2);
+}
+
+.galleryButton:hover {
+  transform: scale(1.1);
 }
 
 .galleryNav{
