@@ -61,15 +61,15 @@ export default {
   props: {
     headerText: {
       type: String,
-      required: true,
+      // required: true,
     },
     sectionText: {
       type: String,
-      required: false,
+      // required: false,
     },
     dataArr: {
       type: Array,
-      required: true,
+      // required: true,
     },
   }
 };
