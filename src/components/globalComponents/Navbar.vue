@@ -82,7 +82,7 @@ export default {
           this.navItems = [
             { text: "Story", path: "/story", active: true , letters: ['S','t','o','r','y']},
             { text: "Home", path: "/" , letters: ['H','o','m','e']},
-            { text: "Music", path: "/music", letters: ['S','t','o','r','y']  },
+            { text: "Music", path: "/music", letters: ['M','u','s','i','c']  },
             { text: "Lessons", path: "/lessons", letters: ['L','e','s','s','o','n','s'] },
             { text: "Contact", path: "/contact", letters: ['C','o','n','t','a','c','t'] },
           ];
@@ -91,7 +91,7 @@ export default {
         case "home":
           this.navItems = [
           { text: "Home", path: "/", active: true , letters: ['H','o','m','e']},
-          { text: "Music", path: "/music", letters: ['S','t','o','r','y']   },
+          { text: "Music", path: "/music",  letters: ['M','u','s','i','c']   },
           { text: "Story", path: "/story", letters: ['S','t','o','r','y'] },
           { text: "Lessons", path: "/lessons", letters: ['L','e','s','s','o','n','s'] },
           { text: "Contact", path: "/contact", letters: ['C','o','n','t','a','c','t'] },
@@ -101,14 +101,14 @@ export default {
           this.navItems = [
             { text: "Contact", path: "/contact", active: true, letters: ['C','o','n','t','a','c','t'] },
             { text: "Home", path: "/", letters: ['H','o','m','e'] },
-            { text: "Music", path: "/music", letters: ['S','t','o','r','y'] },
+            { text: "Music", path: "/music",  letters: ['M','u','s','i','c'] },
             { text: "Story", path: "/story" , letters: ['S','t','o','r','y']},
             { text: "Lessons", path: "/lessons", letters: ['L','e','s','s','o','n','s'] },
           ];
           break;
         case "music":
           this.navItems = [
-            { text: "Music", path: "/music", active: true, letters: ['S','t','o','r','y'] },
+            { text: "Music", path: "/music", active: true,  letters: ['M','u','s','i','c'] },
             { text: "Home", path: "/", letters: ['H','o','m','e'] },
             { text: "Story", path: "/story", letters: ['S','t','o','r','y']},
             { text: "Lessons", path: "/lessons", letters: ['L','e','s','s','o','n','s'] },
@@ -119,7 +119,7 @@ export default {
           this.navItems = [
             { text: "Lessons", path: "/lessons", active: true, letters: ['L','e','s','s','o','n','s'] },
             { text: "Home", path: "/", letters: ['H','o','m','e'] },
-            { text: "Music", path: "/music", letters: ['S','t','o','r','y'] },
+            { text: "Music", path: "/music",  letters: ['M','u','s','i','c'] },
             { text: "Story", path: "/story", letters: ['S','t','o','r','y']},
             { text: "Contact", path: "/contact", letters: ['C','o','n','t','a','c','t'] },
           ];

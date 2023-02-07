@@ -2,15 +2,15 @@
   <div class="eventItem" @mouseover="isHovered = true" @mouseleave="isHovered = false">
     <a class="eventLink" :href="link" target="_blank">
       <img class="eventImg" :src="eventImg" alt="Event" />
-      <div class="imgOverlay">
+      <div class="imgOverlay" :class="isHovered ? 'expandOverlay':''">
         <div class="socialsWrapper">
           <img src="/instagramW.svg" alt="Instagram">
           <p class="overlayP">@jansedlakmusic</p>
         </div>
         <p class="overlayDesc">Playing with @eyal.lovett.music and @aidankeithlowe makes me smile like 5 years old. Thank you for the music, guys!</p>
+        <p class="overlayDate">November 15, 2021</p>
       </div>
     </a>
-    <img :class="isHovered ? 'active' : 'asd'" class="socialImg" src="/instagram.svg" alt="Instagram">
   </div>
 </template>
 
@@ -34,20 +34,47 @@ export default {
 </script>
 
 <style scoped>
+
+.overlayDate{
+  text-align: center;
+  margin-bottom: 10px;
+}
+.expandOverlay{
+  height: 222px!important;
+  border-radius:10px!important;
+}
 .socialsWrapper{
   display: flex;
+  gap: 10px;
+  margin: 15px;
+  justify-content: center;
 }
 .overlayDesc{
   text-align: center;
+  text-overflow: ellipsis;
+  margin: auto;
+  width: 95%;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  height: 100px;
 }
 .imgOverlay{
   max-width: 220px;
-  height: 227px;
-  background-color: black;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.65);
   border-radius: 0 0 10px 10px;
   position: absolute;
   bottom: 0;
+  transition: .5s;
   /* transform: translateY(60%); */
+}
+
+.imgOverlay:hover{
+  backdrop-filter: blur(3px);
 }
 
 .socialImg{
@@ -69,15 +96,18 @@ export default {
   border-radius: 10px;
   transition: filter .6s;
 }
+.eventLink{
+  width: 220px;
+  display: flex;
+  height: 220px;
+}
 
 .eventItem{
   position: relative;
   overflow: hidden;
 }
 
-.eventImg:hover{
-  filter: blur(3px);
-}
+
 
 @media only screen and (max-width: 970px) {
   .eventImg{

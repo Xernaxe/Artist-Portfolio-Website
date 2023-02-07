@@ -5,7 +5,7 @@
       <img class="close" src="/close.svg" alt="CLOSE" @click="togglePopup" />
       <div class="showLineup" @click="this.showLineup = !this.showLineup">
         <p class="lineupP">Lineup</p>
-        <img src="/mobileArrow.svg" alt="Expand" class="expand">
+        <img src="/mobileArrow.svg" alt="Expand" class="expand" :class="this.showLineup ? 'expandActive': ''">
       </div>
       <div class="popupWrapper" :style="this.showLineup ? 'width: 50%':''">
         <div class="popupDetails">
@@ -151,10 +151,15 @@ export default {
 
 .expand{
   width: 15px;
+  transition: rotate .5s;
 }
 .lineupP, .expand{
   rotate: 90deg;
   cursor: pointer;
+}
+
+.expandActive{
+  rotate: 270deg;
 }
 
 .link{
