@@ -74,6 +74,11 @@ export default {
 </script>
 
 <style scoped>
+@media (max-width: 420px){
+  .gallery, .galleryNavWrapper{
+    display: none!important;
+  }
+}
 
 .galleryArrow{
   cursor: pointer;

@@ -200,6 +200,22 @@ export default {};
 }
 }
 
+@media (max-width: 420px){
+  .socialsWrapper{
+    gap: 10px;
+    width: 45vw;
+    margin: auto;
+  }
+
+  .socialsWrapper > a{
+    width: 52px;
+  }
+
+  .heroP{
+    text-align: center;
+  }
+}
+
 @media only screen and (max-width: 490px) {
   .heroImg {
     width: 90vw;

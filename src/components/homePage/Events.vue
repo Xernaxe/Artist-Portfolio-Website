@@ -1,12 +1,9 @@
 <template>
   <img class="loading" v-if="isLoading1" src="/loading.svg" alt="Loading" />
   <section v-else class="Events">
-    
     <h2 class="sectionH">Follow my Instagram account to stay updated with music news</h2>
     <div class="eventsWrapper">
       <EventItem v-for="item in eventArr" :key="item.id" :link="item.acf.link" :eventImg="item.acf.img.url"/>
-
-
     </div>
   </section>
 </template>
@@ -45,10 +42,11 @@ export default {
   gap: 20px;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 970px) {
   .eventsWrapper{
     flex-direction: column;
   }
 }
+
 
 </style>

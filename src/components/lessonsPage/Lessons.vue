@@ -76,15 +76,22 @@ export default {
     height: 537px;
   }
 
-  @media only screen and (max-width: 426px) {
-  
-    .lessonsYoutubeEMB{
-      width: 257px;
-      height: 148px;
-    }
-
-    .lessonsP{
+  @media (max-width: 970px){
+    .lessonsP, .sectionH{
     width: 80%
+  }
+    .lessonsYoutubeEMB{
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px){
+  .info{
+    width: min-content;
+  }
+  .infoP{
+    width: 25vw;
+    text-align: center;
   }
 }
 

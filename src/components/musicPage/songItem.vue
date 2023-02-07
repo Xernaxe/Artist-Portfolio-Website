@@ -358,4 +358,10 @@ export default {
     height: auto;
   }
 }
+
+@media (max-width: 970px){
+  .song{
+    max-width: 30vw;
+  }
+}
 </style>

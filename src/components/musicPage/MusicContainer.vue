@@ -164,4 +164,16 @@ export default {
     width: 20px;
   }
 }
+
+@media (max-width: 970px){
+  .slider{
+    width: 90vw;
+  }
+}
+@media (max-width: 755px){
+  
+  .slider{
+    width: 66vw;
+  }
+}
 </style>

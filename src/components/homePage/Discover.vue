@@ -97,6 +97,7 @@ computed:{
 .arrowBtn{
   position: absolute;
   right: 0;
+  height: 100%;
 }
 .discoverP {
   text-align: center;
@@ -158,6 +159,12 @@ computed:{
   .buttonsWrapper {
     flex-direction: column;
     align-items: center;
+  }
+}
+
+@media (max-width: 420px){
+  .discoverSection{
+    display: none;
   }
 }
 </style>

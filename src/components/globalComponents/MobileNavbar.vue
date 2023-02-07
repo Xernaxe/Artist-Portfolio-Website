@@ -104,6 +104,15 @@ export default {
 </script>
 
 <style scoped>
+header{
+  display: none;
+}
+
+@media (max-width: 850px){
+  header{
+    display: flex;
+  }
+}
 .navDiv {
   display: flex;
   align-items: center;
