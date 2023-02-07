@@ -34,20 +34,21 @@
       </div>
     </div>
     <div class="contact">
-      <a href="mailto:contact@jansedlakmusic.com" target="_blank" class="contactWrapper">
+      <a class="contactWrapper">
+        <img src="/locationIcon.svg" alt="Location Icon" style="width:20px">
+        <p class="locationP">Aalborg DK 9000</p>
+      </a>
+      <a href="mailto:contact@jansedlakmusic.com" target="_blank" class="contactWrapper" >
             <div class="iconWrapper">
-              <img src="/mailIcon.svg" alt="Mail Icon">
+              <img src="/mailIcon.svg" alt="Mail Icon" style="width:26px">
             </div>
             <p class="locationP">contact@jansedlakmusic.com</p>
       </a>
       <div class="contactWrapper">
-        <img src="/phoneIcon.svg" alt="Phone Icon">
+        <img src="/phoneIcon.svg" alt="Phone Icon" style="width:28px">
         <p class="phoneNrP">+45 42 31 43 34</p>
       </div>
-      <a class="contactWrapper">
-        <img src="/locationIcon.svg" alt="Location Icon">
-        <p class="locationP">Aalborg DK 9000</p>
-      </a>
+      
     </div>
   </footer>
 </template>
@@ -60,15 +61,18 @@ export default {};
 
 .contact{
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   gap: 15px;
+  align-items: flex-start;
   /* margin-top: 70px; */
   /* margin-left: 10vw; */
 }
 
 .contactWrapper{
   display: flex;
+  flex-direction: column;
   gap: 10px;
+  align-items: center;
 }
   .Footer{
     display: flex;
