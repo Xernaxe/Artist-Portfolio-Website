@@ -7,8 +7,8 @@
           <img src="/instagramW.svg" alt="Instagram">
           <p class="overlayP">@jansedlakmusic</p>
         </div>
-        <p class="overlayDesc">Playing with @eyal.lovett.music and @aidankeithlowe makes me smile like 5 years old. Thank you for the music, guys!</p>
-        <p class="overlayDate">November 15, 2021</p>
+        <p class="overlayDesc">{{ desc }}</p>
+        <p class="overlayDate">{{ date }}</p>
       </div>
     </a>
   </div>
@@ -26,6 +26,14 @@ export default {
       required: true
     },
     eventImg: {
+      type: String,
+      required: true
+    },
+    desc: {
+      type: String,
+      required: true
+    },
+    date: {
       type: String,
       required: true
     }

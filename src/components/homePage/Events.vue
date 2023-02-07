@@ -3,7 +3,7 @@
   <section v-else class="Events">
     <h2 class="sectionH">Follow my Instagram account to stay updated with music news</h2>
     <div class="eventsWrapper">
-      <EventItem v-for="item in eventArr" :key="item.id" :link="item.acf.link" :eventImg="item.acf.img.url"/>
+      <EventItem v-for="item in eventArr" :key="item.id" :link="item.acf.link" :eventImg="item.acf.img.url" :desc="item.acf.desc" :date="item.acf.date"/>
     </div>
   </section>
 </template>

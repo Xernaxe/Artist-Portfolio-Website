@@ -159,6 +159,7 @@ header{
   display: flex;
   justify-content: center;
   position: fixed;
+  z-index: 999999;
   width: 100%;
   bottom: 20px;
 }
