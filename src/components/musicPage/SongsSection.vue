@@ -8,13 +8,13 @@ import SongsContainerVue from "./SongsContainer.vue";
     <div class="buttonsWrapperMusic">
       <div class="btn bandLeaderBtn"  @click="handleBtn">
       <p :style="this.isSolo ? 'transition: color 0.3s; color: #9D9171' : ''">
-        Singles
+        Albums and EPs
       </p>
       </div>
       <div class="btnActive" :style="this.isAlbums ? 'left: 50%' : 'left: 0%'"></div>
       <div class="btn bassPlayerBtn"  @click="handleBtn">
       <p :style="this.isAlbums ? 'transition: color 0.3s; color: #9D9171' : ''">
-        Albums and EP’s
+        Singles
       </p>
       </div>
 

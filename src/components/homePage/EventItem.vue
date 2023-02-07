@@ -38,7 +38,9 @@ export default {
 .overlayDate{
   text-align: center;
   margin-bottom: 10px;
+  font-size: 10px;
 }
+
 .expandOverlay{
   height: 222px!important;
   border-radius:10px!important;
@@ -51,9 +53,10 @@ export default {
 }
 .overlayDesc{
   text-align: center;
+  font-size: 12px;
   text-overflow: ellipsis;
   margin: auto;
-  width: 95%;
+  width: 90%;
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;

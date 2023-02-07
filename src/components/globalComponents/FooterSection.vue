@@ -44,7 +44,7 @@
         <img src="/phoneIcon.svg" alt="Phone Icon">
         <p class="phoneNrP">+45 42 31 43 34</p>
       </div>
-      <a href="https://goo.gl/maps/ZyraNidTe1Wg3FYt9" class="contactWrapper">
+      <a class="contactWrapper">
         <img src="/locationIcon.svg" alt="Location Icon">
         <p class="locationP">Aalborg DK 9000</p>
       </a>

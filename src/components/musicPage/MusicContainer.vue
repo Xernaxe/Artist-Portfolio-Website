@@ -77,8 +77,17 @@ export default {
 
 <style scoped>
 
-.arrow{
+.arrow, .button{
   cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+.button:hover {
+  transform: scale(1.1);
+}
+
+.arrow:hover {
+  transform: scale(1.2);
 }
 
 .sliderWrapper{
@@ -126,6 +135,7 @@ export default {
   display: flex;
   transition: transform 0.5s;
 }
+
 
 .Next,
 .Back {
