@@ -51,7 +51,6 @@ computed: {
 .musicBG{
     position: absolute;
     top: 0;
-    rotate: 180deg;
     width: 100%;
 }
 
