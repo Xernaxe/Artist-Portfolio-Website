@@ -1,6 +1,6 @@
 <template>
   <header>
-    <!-- <nav class="nav">
+    <nav class="nav">
       <div class="navWrapper">
         <ul class="navUL">
           <li v-for="item in orderedNavItems" :key="item.text">
@@ -9,7 +9,7 @@
               <routerLink :to="item.path" class="navLink">
                 <div class="transitionWrapper">
                   <div class="lettersWrapper">
-                    <template v-for="(letter, index) in getLetters(item.text)" :key='letter + index'>
+                    <template v-for="(letter, index) in item.letters" :key='index'>
                       <span 
                       class="navLetter active coloredSpan"
                       :style="{ transitionDelay: (index * 0.1) + 's' }"
@@ -17,7 +17,7 @@
                     </template>
                   </div>
                   <div class="lettersWrapper">
-                    <template v-for="(letter, index) in getLetters(item.text)" :key='letter + index'>
+                    <template v-for="(letter, index) in item.letters" :key='index'>
                       <span 
                       class="navLetter active whiteSpan"
                       :style="{ transitionDelay: (index * 0.1) + 's' }"
@@ -35,7 +35,7 @@
               >
               <div class="transitionWrapper">
                   <div class="lettersWrapper">
-                    <template v-for="(letter, index) in getLetters(item.text)" :key='index'>
+                    <template v-for="(letter, index) in item.letters" :key='index'>
                       <span 
                       class="navLetter"
                       :style="{ transitionDelay: (index * 0.1) + 's' }"
@@ -43,7 +43,7 @@
                     </template>
                   </div>
                   <div class="lettersWrapper">
-                    <template v-for="(letter, index) in getLetters(item.text)" :key='index'>
+                    <template v-for="(letter, index) in item.letters" :key='index'>
                       <span 
                       class="navLetter coloredSpan"
                       :style="{ transitionDelay: (index * 0.1) + 's' }"
@@ -56,7 +56,7 @@
           </li>
         </ul>
       </div>
-    </nav> -->
+    </nav>
   </header>
 </template>
 
@@ -65,12 +65,13 @@ export default {
   data() {
     return {
       navItems: [
-        { text: "Home", path: "/", active: true },
-        { text: "Music", path: "/music" },
-        { text: "Story", path: "/story" },
-        { text: "Lessons", path: "/lessons" },
-        { text: "Contact", path: "/contact" },
+        { text: "Home", path: "/", active: true, letters: ['H','o','m','e']},
+        { text: "Music", path: "/music", letters: ['M','u','s','i','c'] },
+        { text: "Story", path: "/story", letters: ['S','t','o','r','y'] },
+        { text: "Lessons", path: "/lessons", letters: ['L','e','s','s','o','n','s'] },
+        { text: "Contact", path: "/contact", letters: ['C','o','n','t','a','c','t'] },
       ],
+      navItemsCopy: [],
       lettersArr: []
     };
   },
@@ -79,63 +80,55 @@ export default {
       switch (this.$route.name) {
         case "story":
           this.navItems = [
-            { text: "Story", path: "/story", active: true },
-            { text: "Home", path: "/" },
-            { text: "Music", path: "/music" },
-            { text: "Lessons", path: "/lessons" },
-            { text: "Contact", path: "/contact" },
+            { text: "Story", path: "/story", active: true , letters: ['S','t','o','r','y']},
+            { text: "Home", path: "/" , letters: ['H','o','m','e']},
+            { text: "Music", path: "/music", letters: ['S','t','o','r','y']  },
+            { text: "Lessons", path: "/lessons", letters: ['L','e','s','s','o','n','s'] },
+            { text: "Contact", path: "/contact", letters: ['C','o','n','t','a','c','t'] },
           ];
           break;
 
         case "home":
           this.navItems = [
-          { text: "Home", path: "/", active: true },
-          { text: "Music", path: "/music" },
-          { text: "Story", path: "/story" },
-          { text: "Lessons", path: "/lessons" },
-          { text: "Contact", path: "/contact" },
+          { text: "Home", path: "/", active: true , letters: ['H','o','m','e']},
+          { text: "Music", path: "/music", letters: ['S','t','o','r','y']   },
+          { text: "Story", path: "/story", letters: ['S','t','o','r','y'] },
+          { text: "Lessons", path: "/lessons", letters: ['L','e','s','s','o','n','s'] },
+          { text: "Contact", path: "/contact", letters: ['C','o','n','t','a','c','t'] },
           ];
           break;
         case "contact":
           this.navItems = [
-            { text: "Contact", path: "/contact", active: true },
-            { text: "Home", path: "/" },
-            { text: "Music", path: "/music" },
-            { text: "Story", path: "/story" },
-            { text: "Lessons", path: "/lessons" },
+            { text: "Contact", path: "/contact", active: true, letters: ['C','o','n','t','a','c','t'] },
+            { text: "Home", path: "/", letters: ['H','o','m','e'] },
+            { text: "Music", path: "/music", letters: ['S','t','o','r','y'] },
+            { text: "Story", path: "/story" , letters: ['S','t','o','r','y']},
+            { text: "Lessons", path: "/lessons", letters: ['L','e','s','s','o','n','s'] },
           ];
           break;
         case "music":
           this.navItems = [
-            { text: "Music", path: "/music", active: true },
-            { text: "Home", path: "/" },
-            { text: "Story", path: "/story"},
-            { text: "Lessons", path: "/lessons" },
-            { text: "Contact", path: "/contact" },
+            { text: "Music", path: "/music", active: true, letters: ['S','t','o','r','y'] },
+            { text: "Home", path: "/", letters: ['H','o','m','e'] },
+            { text: "Story", path: "/story", letters: ['S','t','o','r','y']},
+            { text: "Lessons", path: "/lessons", letters: ['L','e','s','s','o','n','s'] },
+            { text: "Contact", path: "/contact", letters: ['C','o','n','t','a','c','t'] },
           ];
           break;
         case "lessons":
           this.navItems = [
-            { text: "Lessons", path: "/lessons", active: true },
-            { text: "Home", path: "/" },
-            { text: "Music", path: "/music" },
-            { text: "Story", path: "/story"},
-            { text: "Contact", path: "/contact" },
+            { text: "Lessons", path: "/lessons", active: true, letters: ['L','e','s','s','o','n','s'] },
+            { text: "Home", path: "/", letters: ['H','o','m','e'] },
+            { text: "Music", path: "/music", letters: ['S','t','o','r','y'] },
+            { text: "Story", path: "/story", letters: ['S','t','o','r','y']},
+            { text: "Contact", path: "/contact", letters: ['C','o','n','t','a','c','t'] },
           ];
           break;
       }
-      return this.navItems;
-    },
-  },
-  methods: {
-  getLetters(word) {
-    if (!this.lettersArr.includes(word)) {
-      this.lettersArr = []
-      word.split('').forEach(letter => this.lettersArr.push(letter))
+      this.navItemsCopy = this.navItems
+      return this.navItemsCopy;
     }
-    return this.lettersArr
   }
-}
 };
 </script>
 
