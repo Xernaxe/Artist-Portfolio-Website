@@ -38,7 +38,7 @@
           <a href="https://jansedlakmusic.bandcamp.com/" target="_blank">
             <img class="socialsImg" src="/bandcampNew.svg" alt="Bandcamp" style="width:30px">
             <label for="socials" style="display: flex; gap: 5px;">Bandcamp
-              <img src="/shop.svg" alt="shop">
+              <img src="/shop.svg" alt="shop" style="width:9px">
             </label>
           </a>
         </div>
