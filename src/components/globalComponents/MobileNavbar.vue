@@ -137,7 +137,7 @@ header{
 }
 
 .navMain{
-  width: 80%;
+  width: 60%;
   font-size: 24px;
   text-align: center;
   margin-left: auto;
@@ -169,7 +169,7 @@ header{
 
 .mobileNavLogo{
   position: absolute;
-  left: 12%;
+  left: 24%;
   font-size: 25px;
 }
 
