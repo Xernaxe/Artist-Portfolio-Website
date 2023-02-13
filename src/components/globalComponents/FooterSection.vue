@@ -73,7 +73,12 @@ export default {};
   flex-direction: column;
   gap: 10px;
   align-items: center;
+  transition: all .3s ease-in-out;
 }
+
+.contactWrapper:hover {
+    transform: scale(1.1);
+  }
 
 .contactWrapper p {
   font-size: 10px;
@@ -136,11 +141,14 @@ export default {};
 
   .socialsImg{
     width: 28px;
+  }
+
+  .socialsWrapper a {
     transition: all .3s ease-in-out;
   }
 
-  .socialsImg:hover {
-    transform: scale(1.2);
+.socialsWrapper a:hover {
+    transform: scale(1.1);
   }
   .buttonLink img {
     width: 70px;
