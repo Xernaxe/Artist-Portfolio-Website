@@ -10,9 +10,9 @@
   <div class="galleryNavWrapper">
     <div @click="backArrow" class="galleryArrow"><img src="/mobileArrow.svg" style="rotate: -90deg;" alt="Back"></div>
     <div class="galleryNav">
-      <div @click="this.index = 0" class="galleryButton" :class="index == 0 ? 'activeBtn' : ''"></div>
-      <div @click="this.index = 1" class="galleryButton" :class="index == 1 ? 'activeBtn' : ''"></div>
-      <div @click="this.index = 2" class="galleryButton" :class="index == 2 ? 'activeBtn' : ''"></div>
+      <div @click="index = 0" class="galleryButton" :class="index == 0 ? 'activeBtn' : ''"></div>
+      <div @click="index = 1" class="galleryButton" :class="index == 1 ? 'activeBtn' : ''"></div>
+      <div @click="index = 2" class="galleryButton" :class="index == 2 ? 'activeBtn' : ''"></div>
     </div>
     <div @click="nextArrow" class="galleryArrow"><img src="/mobileArrow.svg" style="rotate: 90deg;" alt="Next"></div>
   </div>

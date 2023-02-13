@@ -11,6 +11,7 @@
           >
         </ul>
         <div class="mainButton" @click="toggleNav">
+          <p class="mobileNavLogo">Jan'S</p>
           <p class="navMain"
             
           >
@@ -136,9 +137,10 @@ header{
 }
 
 .navMain{
-  width: 100%;
+  width: 80%;
   font-size: 24px;
   text-align: center;
+  margin-left: auto;
 }
 
 .toggled {
@@ -163,6 +165,12 @@ header{
   z-index: 999999;
   width: 100%;
   bottom: 0;
+}
+
+.mobileNavLogo{
+  position: absolute;
+  left: 12%;
+  font-size: 25px;
 }
 
 .navWrapper {
