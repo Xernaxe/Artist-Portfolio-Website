@@ -132,6 +132,7 @@ header{
   width: 15px;
   margin-right: 10px;
   transition: transform .7s;
+  cursor: pointer;
 }
 
 .navMain{
@@ -141,7 +142,7 @@ header{
 }
 
 .toggled {
-  height: 150px!important;
+  height: 180px!important;
 }
 
 .UL{
