@@ -161,21 +161,25 @@ header{
   position: fixed;
   z-index: 999999;
   width: 100%;
-  bottom: 20px;
+  bottom: 0;
 }
 
 .navWrapper {
   display: flex;
   align-items: center;
   position: relative;
-  width: 133px;
+  width: 250px;
   height: 35px;
   background: linear-gradient(-15deg, #9D9171 0%, #613554 100%);
-  border-radius: 10px;
+  border-radius: 10px 10px 0 0;
   overflow: hidden;
   flex-direction: column;
   justify-content: flex-end;
   transition: height .7s;
+}
+
+.navWrapper a {
+  font-size: 16px;
 }
 
 .UL {
