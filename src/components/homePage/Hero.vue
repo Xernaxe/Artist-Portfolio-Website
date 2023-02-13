@@ -117,7 +117,6 @@ export default {
   border-radius: 15px;
 }
 
-
 .heroSection {
   display: flex;
   align-items: flex-end;
@@ -137,42 +136,12 @@ export default {
   font-size: 2.5rem;
 }
 
-.buttonLink{
-  border-radius: 10px;
-  background: linear-gradient(
-    0deg,
-    rgba(157, 145, 113, 1) 0%,
-    rgba(215, 215, 215, 1) 100%
-  );
-  width: 220px;
-  height: 45px;
-  text-align: center;
-  color: #201d1c;
-  font-weight: 600;
-  font-size: 18px;
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-  align-items: center;
-  transition: all .3s ease-in-out;
+.socialsWrapper a, .contact a {
+  transition: all 0.3s ease-in-out;
 }
 
-.shopButton {
-  width: 200px;
-  height: 45px;
-  background-color: bisque;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.socialsImg:hover {
+.socialsWrapper a:hover, .contact a:hover {
   transform: scale(1.1);
-  cursor: pointer;
-}
-
-.buttonLink:hover {
-  transform: scale(1.05);
   cursor: pointer;
 }
 
@@ -184,7 +153,6 @@ export default {
 
 .socialsImg {
   width: 28px;
-  transition: all 0.3s ease-in-out;
 }
 
 .heroP {
