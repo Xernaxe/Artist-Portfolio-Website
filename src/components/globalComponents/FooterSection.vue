@@ -44,10 +44,10 @@
             </div>
             <p class="locationP">contact@jansedlakmusic.com</p>
       </a>
-      <div class="contactWrapper">
+      <a href="tel:+45 42 31 43 34" target="_blank" class="contactWrapper">
         <img src="/phoneIcon.svg" alt="Phone Icon" style="width:28px">
         <p class="phoneNrP">+45 42 31 43 34</p>
-      </div>
+      </a>
       
     </div>
   </footer>
