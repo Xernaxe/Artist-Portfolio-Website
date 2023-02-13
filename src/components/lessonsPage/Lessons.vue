@@ -52,9 +52,6 @@ export default {
   .info p {
     margin-top: 10px;
   }
-  .Lessons{
-    margin: 110px 0 130px 0;
-  }
 
   .lessonsYoutubeEMB {
     border-radius: 15px;

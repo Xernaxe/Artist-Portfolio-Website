@@ -19,10 +19,6 @@ export default {
 
 <style scoped>
 
-.Essay{
-  margin-bottom: 130px;
-}
-
 .essayP{
   text-align: center;
   width: 750px;

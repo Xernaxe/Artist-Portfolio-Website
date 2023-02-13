@@ -142,6 +142,7 @@ computed:{
 .buttonsWrapper {
   display: flex;
   gap: 25px;
+  margin-bottom: 30px
 }
 
 @media only screen and (max-width: 970px) {

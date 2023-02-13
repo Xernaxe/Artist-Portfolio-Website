@@ -21,8 +21,7 @@ import StoryItemVue from './StoryItem.vue'
 
 <style scoped>
 .Story{
-  margin: 130px 0;
-  gap: 130px;
+  gap: 100px;
   width: 51vw;
 }
 
