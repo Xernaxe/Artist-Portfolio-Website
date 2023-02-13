@@ -49,12 +49,12 @@
             </div>
             <p class="locationP">contact@jansedlakmusic.com</p>
           </a>
-          <div class="contactWrapper">
+          <a href="tel:+45 42 31 43 34" target="_blank" class="contactWrapper">
             <div class="iconWrapper">
               <img src="/phoneIcon.svg" alt="Phone Icon">
             </div>
-        <p class="phoneNrP">+45 42 31 43 34</p>
-      </div>
+            <p class="phoneNrP">+45 42 31 43 34</p>
+          </a>
           <a href="https://goo.gl/maps/ZyraNidTe1Wg3FYt9" class="contactWrapper" target="_blank">
             <div class="iconWrapper">
               <img src="/locationIcon.svg" alt="Location Icon">
