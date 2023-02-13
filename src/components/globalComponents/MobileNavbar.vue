@@ -179,7 +179,7 @@ header{
   position: relative;
   width: 250px;
   height: 40px;
-  background: rgb(157, 145, 113, 90%);
+  background: linear-gradient(-15deg, rgb(157, 145, 113, 90%) 0%, rgb(76, 46, 95, 90%) 100%);
   border-radius: 10px 10px 0 0;
   overflow: hidden;
   flex-direction: column;
