@@ -189,6 +189,12 @@ header{
 
 .navWrapper a {
   font-size: 16px;
+  margin: 0 15px 5px 0;
+  transition: all .3s ease-in-out;
+}
+
+.navWrapper a:hover {
+  transform: scale(1.1);
 }
 
 .UL {
