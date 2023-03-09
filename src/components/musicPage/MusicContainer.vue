@@ -202,7 +202,7 @@ export default {
 }
 @media (max-width: 755px) {
   .slider {
-    width: 66vw;
+    width: 75vw;
   }
 }
 </style>
